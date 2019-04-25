@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+			img[src$="png"]{border: 3px solid red;}
+		img[src$="jpg"]{border: 2px solid blue;}
+	
+		/*div>ul>li*3>lorem2*/
+		/*맨 아래 것이 적용된다.자손-후손 관계 */
+		div>h1{color: red;}
+		div h1{color: blue;}
+		/*> 가 없어도 위에 한번 있으면 안 적어도 실행된다*/
+		
+		/*div#list_wrap>h1{color: red}		*/
+		/*div#list_wrap h1{color: red}		*/
+
+
+
+		div>h2{color: skyblue;}
+		div h2{color: grey;}
+
+		div>ul>li{color: orange;}
+		div li{color: orange;}
+		h1+h2{color: blue;}
+		/*2번째 h2만 색상변함*/
+		h1~h2{color: blue;}
+		/*h1 첫번째 빼고 다 변함*/
+
+	</style>
+}
+</head>
+<body>
+	<img src="phone1.png" alt=""><br>
+	<img src="phone2.png" alt=""><br>
+	<img src="view01.jpg" alt="">
+
+	<!-- div>ul>li*3>lorem2 -->
+	<div>
+	<!-- <div id="list_wrap"> -->
+		<h1>abc</h1>
+		<h2>def</h2>
+		<ul>
+			<li>Lorem ipsum.</li>
+			<li>Consequuntur, necessitatibus.</li>
+			<li>Rem, ab.</li>
+		</ul>
+	</div>
+
+	<!-- (h1>{header})+(h2*4>{header}) -->
+	<h1>header1</h1>
+	<h2>header2</h2>
+	<h2>header3</h2>
+	<h2>header4</h2>
+	<h2>header5</h2>
+</body>
+</html>
