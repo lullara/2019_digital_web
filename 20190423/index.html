@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>table</title>
+
+<style>td{text-align:center;color: #0000ff;}
+	table{width: 200px}
+	table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+  </style>
+
+</head>
+<body>
+	<table border="1" width="300" height="200">
+		<tr>
+			<th>분류	</th>
+			<th>이름</th>	
+			<th>제목</th> 
+			<th>일시</th>
+		
+		</tr>
+		<tr>
+			<td rowspan="2" colspan="2">1. 홍길동</td>
+		    <td rowspan="2">안녕하세요</td> <td>2019.04.23</td>	    	  
+		</tr>
+		<tr>
+			
+			
+		    	
+		    <td>2019.04.23</td>		  
+		</tr>
+	</table>
+	<br>	<br>
+	<table width="200" height="200">
+		<tr>
+			<th>1</th>
+			<th colspan="2">2</th>
+			
+
+		</tr>
+		<tr>
+			<td rowspan="2">3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			
+			<td colspan="2">6</td>
+			
+		</tr>
+	</table>
+	<br>
+		<br>
+	<table width="400" height="200">
+		<!-- css배우면 픽셀단위 만들때 테이벌당 태그 넣을 필요 없다 -->
+		<tr>
+		<td>순번</td>
+		<td>분류</td>
+		<td colspan="2" >비고</td>
+		</tr>
+		<tr>
+		<td>1</td>
+		<td rowspan="2">Ui</td>
+		<td>홍길동</td>
+		<td>100</td>
+		</tr>
+		<tr>
+		<td>2</td>
+		<td>이순신</td>
+		<td>200</td>
+		</tr>
+		<tr>
+		<td>3</td>
+		<td>ux</td>
+		<td colspan="2">300</td>
+		</tr>
+	</table>	<br>	<br>
+	<!-- table>tr*4>td*4>{$} -->
+	<table>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	
+	<img src="01.jpg" alt="에그타르트" width="200">
+	<img src="nothing" alt="이미지가 없습니다" width="200">
+	<a href="http://www.naver.com"><img src="Levels.jpg" alt="레벨" width="200"></a>
+
+	<form action="action.php">
+		이름 : <input type="text"><br>
+		비밀번호 : <input type="password"><br>
+		파일 : <input type="file"><br>
+		취미 <input type="checkbox">야구 
+		<input type="checkbox"> 축구
+		<input type="checkbox">배구<br>
+		색깔 <input type="radio" name="color"> 빨강
+		<input type="radio" name="color"> 파랑
+		<input type="radio" name="color"> 노랑<br>
+		음식 <select>
+			<option>김밥</option>
+			<option>떡볶이</option>
+			<option>라면</option>
+			<option>순대</option>
+			
+
+
+		</select>
+
+		<br>글쓰기 <br><textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+		<br>
+		<input type="submit"> <input type="reset">
+	</form>
+
+</body>
+</html>
