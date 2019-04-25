@@ -28,6 +28,26 @@
 		/*2번째 h2만 색상변함*/
 		h1~h2{color: blue;}
 		/*h1 첫번째 빼고 다 변함*/
+		h2:hover{color: red;background-color: black;cursor:pointer;}
+		h2:active{background-color: red;}
+		input:focus{background-color: skyblue;}
+		/*폼 배경에 색상 넣는거 포커싱할때 쓰는거 */
+	
+		/*ul>li:first-child{background-color: red;}*/
+		/*ul의 첫번째 li 만 색상이 변함*/
+		/*ul>li:last-child{background-color: skyblue;}*/
+		/*ul의 마지지막 li만 색상이 변함*/
+
+		ul>li:nth-child(2n){background-color: black;}
+		ul>li:nth-child(2n+1){background-color: blue;}
+		/*2n는 짝수 2n+1은 홀수 */
+		.red{background-color: red;}
+		ul.child>li{list-style: none; padding: 15px; margin: 10px;	
+			float:left;color:white;
+			}
+		ul.child>li:first-child{border-radius: 10px 0 0 10px;}
+		ul.child>li:last-child{border-radius: 0px 10px 10px 0px;}
+
 
 	</style>
 }
@@ -55,5 +75,21 @@
 	<h2>header3</h2>
 	<h2>header4</h2>
 	<h2>header5</h2>
+	<form>
+		<input type="text">
+		<input type="text">
+	</form>
+	<!-- ul#child>li*5>{menu$} -->
+	<!-- 아이디 # -->
+	<!-- ul.child>li*5>{menu$} -->
+	<!-- 클래스는 . -->
+	<ul class="child">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+
 </body>
 </html>
