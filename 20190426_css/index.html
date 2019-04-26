@@ -21,17 +21,38 @@
         a:visited,a:link{color:black;}
         /*css에서 파랗게 되었던 것을 검정색으로 되돌린다고 해서 초기값이라고 한다*/
 
+		/*h1의 색상을 바꾸는 3가지 방법
+		div>h1{color: red;}
+		div h1{color: red;}
+		h1>{color: red;}*/
+		/*	목록의 여러개의 h1에서 하나만 바꾸려면 직접적으로 선택해줘야한다
+		div>ul>li>h1{color: red;} */
 
 
+		/*.menu>li>h1{}
+		.menu h1{}
+		div>.menu>li>h1{}
+		div>.menu h1{}
+		div>.menu li h1{}
 
-
-
+		틀린값_ ul 
+		div>ul.menu>h1{}
+		맞는값_
+		div>ul.menu h1{}*/
 	</style>
 </head>
 <body>
+
+
+		<div>
+		<h1>1</h1>
+		<h2>2</h2>
+
+
 	<!-- ul>li*7>{menu$} -->
 	<ul class="menu">
 		<li>menu1</li>
+			<h1>1</h1>
 		<!-- ul>li*3>{submenu$} -->
 		<li>menu2</li>
 		<li>menu3</li>
@@ -40,9 +61,14 @@
 		<li>menu6</li>
 		<li>menu7</li>
 	</ul>
+		<div>
 	<a href="http://www.naver.com">네이버</a><br>
 	<a href="http://bxslider.com">bxslider</a><br>
 	<a href="http://www.gabia.co.kr">가비아</a>
+
+
+
+
 
 	
 </body>
