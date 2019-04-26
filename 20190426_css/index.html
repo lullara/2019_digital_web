@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		ul>li:first-child{color: red;}
+		/*li:first-child{color: red;}*/
+		ul>li:last-child{color: blue;}
+		/*li:first-child{color: red;}이렇게 해도 댐*/
+		/*ul.menu li:last-child{color:blue;}*/
+		/*> :  직접적으로 선택*/
+		/*(띄워쓰기) : 전체 다 */
+		ul>li:nth-child(2n){background-color: skyblue;}
+		ul>li:nth-child(2n+1){background-color: orange;}
+		/*방문했던 홈페이지나 방문전 홈페이지 주소 색상을 검정색으로 바꾸는 것*/
+		/*a:visited{color: black;}*/
+		/*a:link{color: black;}*/
+		a{text-decoration: none;}
+        a:visited,a:link{color:black;}
+        /*css에서 파랗게 되었던 것을 검정색으로 되돌린다고 해서 초기값이라고 한다*/
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<!-- ul>li*7>{menu$} -->
+	<ul class="menu">
+		<li>menu1</li>
+		<!-- ul>li*3>{submenu$} -->
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+		<li>menu6</li>
+		<li>menu7</li>
+	</ul>
+	<a href="http://www.naver.com">네이버</a><br>
+	<a href="http://bxslider.com">bxslider</a><br>
+	<a href="http://www.gabia.co.kr">가비아</a>
+
+	
+</body>
+</html>
