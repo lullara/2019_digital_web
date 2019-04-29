@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		*{margin: 0;}
+		/*opcity값은 0과 1사이값만, 0은 투명 1은 100퍼센트
+		글자와 배경이 함께 투명해진다*/
+		.box1{background-color: violet;width: 150px;display: inline-block;opacity: 0.5;}
+		/*인라인 형태는 글자크기만큼만 영역이 지정된다. 인라인 적용안하면 색상은 지정한 위치 값만큼 변하지만 블록단위요소는 전체 셀로 선택된다. 150px까지 선택했을시에 적용됨*/
+		.box2{background-color: red;width: 150px; visibility: hidden;}
+		/*visibility는 영역을 보여주는것????? 모르겠음*/
+		.box3{background-color: skyblue;width: 150px; display: inline-block;}
+
+	</style>
+</head>
+	<body>
+		<!-- div.box$*3>{안녕하세요$} -->
+		<div class="box1">안녕하세요1</div>
+		<div class="box2">안녕하세요2</div>
+		<div class="box3">안녕하세요3</div>
+	
+
+
+
+	</body>
+</html>

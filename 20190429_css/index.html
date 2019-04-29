@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css	</title>
+	<style>
+		
+
+		/*herf$="com" $ 붙이면 com으로 끝나는 을 선택해준다*/
+		a[href$="com"]{color: red;}
+		img[src$="jpg"]{border: 1px solid#000;}
+		
+		/*★2번째 글에 빨간색으로 넣는 여러가지 방법*/
+		div>ul>li:nth-child(2){color:red;}
+		/*ul>li:nth-child(2){color: red;}*/
+		/*div>li:nth-child(2){color:red;} div의 자손이 li가 아니라서 이건 안됨*/
+		/*div li:nth-child(2){color: red;} div의 후손이라서 됨 */
+		/*li#color{color: red;} id넣는 경우*/
+/*		.red{color:red;} (class명을 집어넣은 모든 값이 변함)
+		li(태그명) li.red{color: red;} li 태그를 넣은 값만 변함*/
+		/*여기까지★*/
+
+
+	</style>
+
+
+</head>
+<body>
+	<!-- a[herf="http://www.naver.com"]>{네이버} -->
+	<!-- 아래랑 동일함 본인에게 편한걸로 선택 -->
+	<img src="imges.jpg" alt="">
+	<a href="http://www.naver.com">네이버</a>
+
+
+	<!-- div>h1>lorem5^h2>lorem2^ul>li*3>lorem2 -->
+	<div>
+		<h1>Lorem ipsum dolor sit amet.</h1>
+		<h2>Lorem ipsum.</h2>
+		<ul>
+			<li>Lorem ipsum.</li>
+			<li class="red">Excepturi, dolor!</li>
+			<li>Cumque, eius!</li>
+		</ul>
+	</div>
+</body>
+</html>
