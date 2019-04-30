@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		*{margin:0;}
+	
+
+
+
+
+		/*	div{width: 100px; height: 100px;
+			background-color: red;*/
+			/*border: 20px solid black;*/
+			/*border-width: 20px; border-style: solid;border-color: black;*/			
+			/*10px 위아래, 20px 좌우 하나만 적으면 상하좌우 전부다 (10px 하나만 적었을 경우 상하좌우 10px)*/
+			/*margin:10px;*/
+			/*		margin: 10px 20px;*/
+			/*	margin-top: 10px;margin-right: 10px; margin-left: 10px; margin-bottom: 10px;
+		margin-top: 10px;margin-right: 10px; margin-bottom: 10px; margin-left: 10px;*/
+		/*margin: 10px 20px 0	0;*/
+		/*	margin-left: 0px;*/
+			/*시계방향으로 돌린다*/
+			/*바디에 div를 두개를 넣으면 20px 안먹어진다, 이유는 ...?*/
+		
+		/*}*/
+
+		div.div_wrap{width: 200px; height: 100px;background-color:gray; }
+
+		div.div_wrap>div{width: 100px; height: 100px; float:left; border:1px solid black; padding:10px;box-sizing: border-box;}
+
+		/*	box-sizing:border-box 라는 css를 입력하면 패딩과 볼더값을 계산을 안해도 된다~~~ 안쪽으로 들어감 패딩과 볼더값 뒤에 넣어주면 됨, 패딩이나 볼더가 뒤로가면 입력이 안된다
+		*/		
+		/*float는 옆으로 넣어주는 것*/
+		/*div>div:nth-child(2){background-color:blue;}	
+		div>div:nth-child(1){background-color:red;}*/
+		div.div_wrap>div:nth-child(1){background-color: red}	
+		div.div_wrap>div:nth-child(2){background-color: blue}		
+
+
+
+
+	</style>
+
+				
+</head>
+<body>
+	<div class="div_wrap">
+		<div>1</div> 
+		<div>2</div>
+
+	</div>
+</body>
+</html>
