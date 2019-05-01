@@ -6,7 +6,7 @@
 	<title>연습</title>
 	<style>
 		*{margin:0px;}
-		div.div_wrap{width:500px; heiht:100px; background-color:gray;}
+		div.div_wrap{width:500px; height:100px; background-color:gray;}
 		div.div_wrap>div{width:100px; height:100px; border :10px solid black; float: left; padding: 10px; box-sizing: border-box;}
 		div.div_wrap>div:nth-child(1){background-color:red}
 		div.div_wrap>div:nth-child(2){background-color:orange}
@@ -14,23 +14,55 @@
 		div.div_wrap>div:nth-child(4){background-color:green}
 		div.div_wrap>div:nth-child(5){background-color:blue}
 		
+		div.bb{width: 300px;height: 200px;
+			background-color:orange;
+		/*	border-width: 10px; 
+			border-style: dashed;
+			border-color:red;*/
+			/*border:10px dashed red;*/
+			/*bd+ 단축키 1px #000  이런거 바꾸고 싶으면 tap키*/
+			border: 1px solid red;}
+		div.rb{width: 150px; height: 50px; background-color: skyblue; 
+			border-radius: 25px; 
+			/*border-radius: 25px 10px 5px 0;*/
+			/*왼쪽 위부터 적용됨*/
+			margin-left: 30px;
+			text-align: center;
+			line-height: 50px;
+			box-sizing: border-box;
+				}
+		div.rb:hover{/*background-color: blue; color:white; */
+			background-color:white; 
+			border: 2px solid blue;
+			box-sizing: border-box;
+			line-height: 46px;
+			/*line-height: 줄간격*/
+		}
 
+		/*높이값50  반절 25하면 둥그렇네 나옴*/
+		
 		
 
 
 		 
 
-		 }
+		 
 	</style>
 </head>
 <body>
 	<!-- div>div*5>{text$} -->
+
 	<div class="div_wrap">
 		<div>1</div>
 		<div>2</div>
 		<div>3</div>
 		<div>4</div>
 		<div>5</div>
+
 	</div>
+	<!-- div.bb -->
+	<!-- .bb -->
+	<div class="bb"></div><br><br>
+	<div class="rb">더보기</div>
 </body>
 </html>
