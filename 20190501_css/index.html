@@ -7,13 +7,18 @@
 	<style>
 		*{margin:0;}
 		/*url값은 폴더명/파일명*/
-		body{background-image:url(images/bg_grid.gif); 	
-	/*	background-size:100% 100%;
+		body{background-image:url(images/bg_grid.gif);
+
+		/*	background-size:100% 100%;
 		background-repeat: no-repeat;
 		background-attachment: fixed;*/
 		/*background-attachment: fixed; 모바일에서는 구현이 안된다*/ 
 
-		/*background-repeat:repeat-x;*/}
+		/*background-repeat:repeat-x;*/
+		font-size: 10px; 	
+		/*바디에서 기본 글자 픽셀을 10으로 했으면 2em=20px이 된다.
+		원래는 기본 16px라서  2em=32px이 된다*/
+		}
 		
 
 
@@ -62,7 +67,7 @@
 			border: 1px solid black;
 				}
 		div#contents>h1{background-color:skyblue;font-weight: normal;}
-		/*	p{font-size:2em;} 적용은 되나 모든 P태그가 다 적용이 되니까 선택자를 사용해야한다*/
+			/*	p{font-size:2em;} 적용은 되나 모든 P태그가 다 적용이 되니까 선택자를 사용해야한다*/
 		div#contents>p{font-size:2em; font-weight: bold}
 
 
@@ -75,13 +80,13 @@
 	<div id="header">header</div>
 	<div id="visual">visaul</div>
 	
-	<!-- div#contents>{contents} -->
+		<!-- div#contents>{contents} -->
 	<div id="contents">
 		<!-- h1>{test contents} -->
 		<h1>test contents</h1>
 		<!-- p>{test1 contents} -->
 		<p>test1 contents</p>
-	<!-- 	p태그나 h1태그는 블럭단위요소이기 떄문에 자동으로 다음 단락으로 넘어간다 -->
+		<!-- 	p태그나 h1태그는 블럭단위요소이기 떄문에 자동으로 다음 단락으로 넘어간다 -->
 
 	</div>
 </body>
