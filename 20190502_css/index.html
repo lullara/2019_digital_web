@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>fonts</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+	<style>
+		/*.font_h1{font-family: 'Gugi', cursive;font-weight: normal;}
+		.font_ex{font-family: 'Roboto', sans-serif;font-weight: normal;}*/
+		*{margin:0;}
+		body{background-image:url(../images/bg_grid.gif)}
+		/*absolute 맨 마지막의 있는 레이어가 상단으로 올라감을 뜻함*/
+		/*.box{width: 100px;height: 100px; position:absolute; 
+		}*/
+		/*.box:nth-child(1){background-color:red; }
+		.box:nth-child(2){background-color:green; left:50px ;top: 50px;}
+		.box:nth-child(3){background-color:blue;  left:100px ;top: 100px;}*/
+		/*똑같은 소스는 , (쉼표=멀티)를 사용한다*/
+		/*.box1,.box2{width: 100px;height: 100px;
+			position: absolute;
+			}
+		.box1{
+		 	background-color:red; 
+			left: 100px;top: 100px ;
+			z-index: 2;}
+		poa, bgc, l100 t100 (단축키)
+		.box2{
+			background-color: #0f0;
+			left: 50px;top: 50px;
+			z-index: 1;}*/
+			/*.box1{width: 100px; height: 100px;position: relative;background-color: #f00;
+			margin:0 auto;}
+		.box2{width: 100px; height: 100px;position: relative;background-color: #0f0;z-index: 1;}
+		.box3{width: 100px; height: 100px;position: absolute;background-color: #00f;right: 0;top: 50px;}
+*/
+		/*div#header{
+		width: 980px;height: 100px;
+		margin:0 auto;
+		background-color: skyblue; 
+		position: relative;}
+		
+		.util_menu,.gnb_menu{position: absolute;}
+
+		이미지일때, width 값 주고 margin 0 auto를 해야지 가운데 정렬이 된다
+
+		h1{background-color:#00f; width: 100px; margin: 0 auto; text-align: center;}
+	
+		.util_menu{width: 200px;
+		background-color: #f00;top: 10px;right: 10px;}
+		
+		.gnb_menu{width: 980px;
+			background-color: #0f0;
+			height: 40px;bottom: 0;}*/
+		div#header{
+			width: 980px;height: 100px;
+			margin: 0 auto; 
+			background-color: skyblue;
+			position: relative;
+			}
+		div#header>h1{width: 100px; margin:0 auto;
+			}
+		div#header>div.util_menu{
+			width: 200px;height: 40px;
+			position: absolute;
+			background-color: #f00;
+			right: 0;top: 0;
+
+			}
+		div#header>div.gnb_menu{
+			width: 980px;height: 40px;
+			position: absolute;
+			background-color: #0f0;
+			bottom: 0;
+			}
+
+
+
+
+		
+	</style>
+</head>
+<body>
+	<!-- ctl+shift+g 를 쓰면 글자를 안에 두고 태그를 쌀 쌀수 있다
+	<h1 class="font_h1">삐죽삐죽한 날개의 윤곽이 밝게 빛났다</h1>
+	h1.font_ex>lorem10
+	<h1 class="font_ex">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, exercitationem.</h1> -->
+		
+	<!-- <div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div> -->
+	<!-- <div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div> -->
+	<div id="header">
+		<h1>logo</h1>
+		<div class="util_menu">util menu</div>
+		<div class="gnb_menu">gnb_menu</div>
+	</div>
+</body>
+</html>
