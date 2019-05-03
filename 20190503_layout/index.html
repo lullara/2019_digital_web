@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+
+		*{margin:0;padding: 0;	box-sizing: border-box;}
+		li{list-style: none;}
+		body{background-image: url(../images/bg_grid.gif);}
+
+		div#header{
+			width: 980px;height: 100px;
+			margin: 0 auto;
+			background-color: skyblue;
+			position: relative;
+			
+
+		}
+		div#header>h1{width: 100px;margin: 0 auto; text-align: center;
+
+		}
+		div#header>div.util_menu{
+			width: 200px;height: 40px;
+			position: absolute;
+			background-color: #f00;
+			top: 0;right: 0;
+
+		}
+		div#header>div.gnb_menu{width: 980px;height: 40px;
+			position: absolute;
+			background-color: #0f0;
+			/*display: none;	*/
+			bottom: 0;
+
+		}
+		/*overflow: hidden; 넘치는 것을 숨겨줌 
+		overflow:scroll; 넘치는것 스크롤이 된다*/
+		div.box{width: 300px;height: 100px;border: 1px solid black;margin: 0 auto;position: relative;overflow: scroll; display: none}
+		div.box1,div.box2,div.box3{width: 100px; height: 100px;position: absolute;}
+		div.box1{background-color: #f00;left: -50;top: 0;}
+		div.box2{background-color: #0f0; left: 50px;top: -50px;}
+		div.box3{background-color: #00f;left: 100px;  bottom: -50;}
+		
+		img{float:left;}
+	
+
+
+		/*(overflow: hidden;=젬코딩oh)
+		float:left하면 밑으로 주르륵 있던 블록단위요소가 옆으로 붙는다*/
+		div.box10{width: 500px;height: 100px;border: 1px solid black;overflow: hidden;display: none;}
+		div.box11,div.box12,div.box13{width: 100px;height: 100px;float:left;}
+		div.box11{background-color: #f00;}
+		div.box12{background-color: #0f0;}
+		div.box13{background-color: #00f;}
+
+
+		/*menu*/
+		/*980/6 + ctrl+shift+Y 계산하기*/
+		ul.menu{width: 980px;margin: 0 auto; position: relative;}
+		ul.menu>li{float: left;width: 196px;height: 40px;
+			background-color: white;text-align: center;
+			line-height: 40px; border-right: 1px solid black;
+				}
+		ul.menu>li:nth-child(1){border-left: 1px solid black;}
+		ul.menu>li:hover{background-color: grey;
+			color:white; cursor:pointer;}
+
+	</style>
+</head>
+<body>
+
+
+	<!-- div#header>h1>{LOGO}>^div.util_menu>{util_menu}^div.gnb_menu{gnb_menu} -->
+	<!-- div#header>(h1>{LOGO})+(div.util_menu>{util_menu})+(div.gnb_menu{gnb_menu}) -->
+	<div id="header">
+		<h1>LOGO</h1>
+		<div class="util_menu">util_menu</div>
+		<div class="gnb_menu">
+			<ul class="menu">
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+
+
+
+
+	<!-- div.box>div.box$*3>{box$} -->
+	<div class="box">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+	</div>
+	<!-- <img src="../images/testimg.jpg" alt=""> -->
+	<!-- 전체 드래그 해서 ctrl+shift+G 하면 앞뒤로 넣을 수 있음 -->
+	<div class="box10">
+		
+	<div class="box11">box1</div>
+	<div class="box12">box2</div>
+	<div class="box13">box3</div>
+	</div>
+
+	<!-- ul.menu>li*5>{menu$} -->
+<!-- 	<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+ -->
+
+</body>
+
+</html>
