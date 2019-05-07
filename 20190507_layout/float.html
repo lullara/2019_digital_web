@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*
+		1. clear:both : 마지막 레이어에 적용
+		2. after{content:""; clear:both; display: block; }
+		3. 부모자에게 overflow:hidden값 넣어주기*/
+
+		
+		div.wrap{width: 500px; 
+			background-color: #ddd; margin: 0 auto;}
+		div.wrap>div{float: left;width: 200px; }
+		div.wrap:after{content: ""; clear: both;display: block;}
+		/*float:left값을 넣을떄는 무조건 width값이 있어야함*/
+		div.wrap>div.box01{background-color: skyblue; float: left; margin-left: 20px;}
+		div.wrap>div.box02{background-color: pink;float:right;margin-right: 20px;}
+		/*float:left와 clear:both, display: block을 사용할 경우, height값을 사용하지 않아도 된다. 알아서 지정*/
+		div.wrap>div.box03{width: 400px; background-color: pink; clear:both;}
+
+		/*clear: both;display: block;를 사용하는 이유
+		부모자(회색)에게 높이값을 지정을 할 경우 , 파란색, 분홍색의 contents 크기가 커지면 회색 바깥으로 콘텐츠가 튀어나가게 된다. 그러나 clear: both;display: block;를 사용하면 부모자 크기가 알아서 같이 길어짐
+		선생님 설명으로는 float:left를 해제해주는 것*/
+		div.box05{width: 500px;height: 100px;background-color: blue; margin: 0 auto;}
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="box01">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid, officia nostrum, nobis magni in, aliquam assumenda fuga veritatis aperiam neque porro laboriosam omnis eveniet earum, libero maiores dolore beatae!</div>
+		<div class="box02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolor assumenda illum aut repudiandae hic enim amet cupiditate mollitia non.</div>
+		<!-- <div class="box03">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quos.</div> -->
+	</div>
+	<div style="height: 400px;background-color: grey;"></div>
+	<div class="box05">안녕하세요.</div>
+</body>
+</html>
