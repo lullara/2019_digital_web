@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		*{margin: 0; padding: 0; }
+		li{list-style: none;
+			height: 40px;line-height: 40px; }
+		nav#menu>ul>li{float:left; width: 200px;
+			text-align: center; }
+		nav#menu>ul>li:nth-child(2n){background-color: skyblue;}
+		nav#menu>ul>li:nth-child(2n+1){background-color: pink;}
+		nav#menu{ width: 1000px; margin: 0 auto; }
+		nav#menu>ul:after{content: ""; clear:both; display: block;}
+		/*메뉴 다음 블록으로 비주얼이 나오도록 하는 방법 float를 해제시키는 방법이다*/
+	/*적응형 페이지(모바일)는 퍼센트 일반 홈페이지(PC)는 픽셀 단위로*/
+		nav#menu>ul>li:hover{background-color: blue; color: white; cursor: pointer;}
+		/*nav#menu>ul{overflow: hidden;}*/
+		/*nav#menu>ul{overflow: hidden;}--->float를 숨겨둔것 , 메뉴 안을 visual이 감싸고 있는것을 숨김*/
+		div.box{width: 1000px;height: 40px;margin: 0 auto; background-color: #cdcdcd;}
+		div.box:after{content:"!!!";}
+		/*div.box:after{content:"!!!";}
+		div.box의:after 영역의 최종 부분에 들어감 before은 안녕하세요의 바로 앞에 들어감*/
+		
+	</style>
+</head>
+<body>
+	<nav id="menu">
+		<!-- ul>li*5>{menu$} -->
+		<ul>
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</nav>
+	<div style="height: 500px; background-color: grey;">
+		
+	</div>
+	<div>
+		<div class="box">
+		안녕하세요.	
+		</div>
+	</div>
+</body>
+</html>
