@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		li{list-style: none;}
+		a:link, a:visited{color:black;}
+		a{text-decoration: none;color:black;}
+
+
+		nav.menu_wrap{width: 980px;
+			background-color: blue; margin: 0 auto;
+				}
+		nav.menu_wrap>ul:after{content:"";clear:both;display: block;}
+		nav.menu_wrap>ul>li{float:left; width: 163.33px;background-color: #aaf;
+			border-right:1px solid #ccf;}
+		nav.menu_wrap>ul>li:first-child{border-left:1px solid #ccf;}
+		nav.menu_wrap>ul>li>a{text-align:center; display: block;
+			height: 45px;line-height: 45px; color:white; }
+		nav.menu_wrap>ul>li>a:hover{background-color: #ccf;}
+		div.visual{height: 400px; background-color: #66f;}
+
+	 	/*li는 블럭단위요소이기 때문에 text-align을 했을때 텍스트가 가운데로오지만, a태그는 inline태그라서 text-align을 해도 가운데 오지 않는다. display:block을 해줌으로써 영역이 선택되고 영역의 가운데가 설정되는 것 
+	 	li에 center-align을 써서 가운데로 보내도 되기도 한다*/
+
+
+	</style>
+</head>
+<body>
+	<nav class="menu_wrap">
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+	
+</body>
+</html>
