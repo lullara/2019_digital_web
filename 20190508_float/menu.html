@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float menu</title>
+	<style>
+		/*reset값*/
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		li{list-style: none;}
+		a:link,a:visited{color:black;}
+		a{text-decoration: none;color: black;}
+		/*a태그는 inline형식이라 글자에만 링크가 걸리는데 display:block을 잡아주면 빈 공간에도 링크가 걸림*/
+
+		/*menu*/
+		nav.menu_wrap{width: 890px;margin: 0 auto;}
+		nav.menu_wrap>ul:after{content:"";clear:both; 
+			display: block;}
+		nav.menu_wrap>ul>li{float:left;width:16.66%; background-color: #1d5da4; border-right: 1px solid #2b67a9 }
+		nav.menu_wrap>ul>li:first-child{border-left:1px solid #2b67a9;}
+		nav.menu_wrap>ul>li>a{display: block;text-align: center; height: 45px; line-height:45px;color:white;font-weight: bold;}
+		/*저번에는 li태그에 호버값을 넣었는데, a태그가 생기면서 a태그에 호버값을 넣어야한다.*/
+		nav.menu_wrap>ul>li>a:hover{color:white;background-color:#477ebb;}
+
+		/*visaul*/
+		div.visual{height: 300px; background-color: pink;}
+
+	</style>
+</head>
+<body>
+	<nav class="menu_wrap">
+		<!-- ul>li*6>a[#]>{MENU$} -->
+		<ul>
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">제품소개</a></li>
+			<li><a href="#">사업영역</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사회공헌</a></li>
+			<li><a href="#">인재채용</a></li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>
