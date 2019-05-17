@@ -4,24 +4,3 @@ li{list-style: none;}
 a:link, a:visited{color:black;}
 a{text-decoration: none;}
 .clearfix:after{content:""; clear:both;display: block;}
-
-/*header*/
-header#header_wrap{width: 980px;height: 100px; margin: 0 auto; background-color: gray;position: relative;}
-header#header_wrap>h1{width: 200px;height: 35px;margin: 0 auto; background-color: pink;text-align: center;}
-header#header_wrap>div.util_menu{background-color: skyblue;
-	position: absolute; right: 0;top: 10px; text-align: center; }
-header#header_wrap>nav.gnb_wrap{width: 980px; height: 45px; background-color: violet;
-	bottom: 0;position: absolute; text-align: center;}
-
-/*.util_menu>ul:after{content:""; clear:both; display: block;} reset.css clear fix로 들어감*/
-.util_menu>ul>h5>li{float: left; line-height: 35px; padding: 0 15px;border-right: 1px solid #000;} /*12 3 6 9 순서*/
-.util_menu>ul>h5>li:last-child{border:none;}
-.util_menu>ul>h5>li>a{color:gray; display: block;}
-.util_menu>ul>h5>li:hover{background-color: blue;}
-.util_menu>ul>h5>li:hover > a{color: white;}
-
-.gnb_wrap>ul{}
-.gnb_wrap>ul>li{float:left; width: 163.33px; line-height: 45px;border-right: 1px solid #f3f; }
-.gnb_wrap>ul>li:first-child{border-left: 1px solid #f3f;}
-.gnb_wrap>ul>li>a{color:white; display: block; font-weight: bold;}
-.gnb_wrap>ul>li>a:hover{background-color: #f8d; }
