@@ -1,1 +1,35 @@
 @charset "utf-8";
+
+/*header*/
+header#header_wrap{width: 980px;height: 100px; margin: 0 auto; background-color: gray;position: relative;}
+header#header_wrap>h1{width: 200px;height: 35px;margin: 0 auto; background-color: pink;text-align: center;}
+header#header_wrap>div.util_menu{background-color: skyblue;
+	position: absolute; right: 0;top: 10px; text-align: center; }
+header#header_wrap>nav.gnb_wrap{width: 980px; height: 45px; background-color: #1d5da4;
+	bottom: 0;position: absolute; text-align: center;}
+
+/*.util_menu>ul:after{content:""; clear:both; display: block;} reset.css clear fix로 들어감*/
+.util_menu>ul>h5>li{float: left; line-height: 35px; padding: 0 15px;border-right: 1px solid #000;} /*12 3 6 9 순서*/
+.util_menu>ul>h5>li:last-child{border:none;}
+.util_menu>ul>h5>li>a{color:gray; display: block;}
+.util_menu>ul>h5>li:hover{background-color: blue;}
+.util_menu>ul>h5>li:hover > a{color: white;}
+
+.gnb_wrap>ul{}
+.gnb_wrap>ul>li{float:left; width: 163.33px; line-height: 45px;border-right: 1px solid #1e3664; }
+.gnb_wrap>ul>li:first-child{border-left: 1px solid #1e3664;}
+.gnb_wrap>ul>li>a{color:white; display: block; font-weight: bold;}
+.gnb_wrap>ul>li>a:hover{background-color: #5579a0; }
+
+/*visual*/
+div#visual{height: 300px;background-color: #1e3664; margin-bottom: 50px;} /*margin-top: 은 주지마라, bottom으로 오류가 남*/
+div#visual>div.slider{width: 980px;height: 300px;background-color: skyblue; margin: 0 auto;}
+
+/*content*/
+div#content{width: 980px;background-color: pink;margin: 0 auto;padding: 20px 0; margin-bottom: 50px;}
+
+div#content>section#section{float: left;width: 700px;height: 1000px;background-color: red;}
+div#content>aside#aside{float: right;width: 260px;height: 500px;background-color: red;}
+
+/*footer*/
+footer#footer_wrap{width: 980px;height: 100px;margin: 0 auto; background-color: gray;}
