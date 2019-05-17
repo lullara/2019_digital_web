@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider01").bxSlider({auto:true, pager:false});
+			$(".slider02").bxSlider({auto:true, fade:true, controls:false});
+		});
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		img{display: block;}
+		.visual_wrap{width: 980px; margin: 0 auto; }
+		.visual01{width: 490px;}
+		.visual02{width: 490px;}
+		
+		.bx-wrapper {
+    -moz-box-shadow:none;
+     -webkit-box-shadow:none; 
+     box-shadow:none; 
+     border: none; 
+     background: #fff; 
+}
+
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+
+    bottom: 20px;
+   
+}	
+
+
+	.bx-wrapper .bx-prev {
+    left: 10px;
+    background: url(../images/btn_left01.jpeg) no-repeat 0 -32px;
+}
+	.bx-wrapper .bx-next {
+    right: 10px;
+    background: url(../images/btn_right01.png) no-repeat -43px -32px;
+}
+
+	</style>
+</head>
+<body>
+	<div id="visual">
+		<div class="visual_wrap">
+			<div class="visual01">
+				<div class="slider01">
+					<div><img src="images/pc01.jpg" alt=""></div>
+					<div><img src="images/pc02.jpg" alt=""></div>
+					<div><img src="images/pc03.jpg" alt=""></div>
+					</div>
+				</div>
+			<div class="visual02">
+				<div class="slider02">
+					<div><img src="images/pc01.jpg" alt=""></div>
+					<div><img src="images/pc02.jpg" alt=""></div>
+					<div><img src="images/pc03.jpg" alt=""></div>
+				</div>
+
+		</div>
+	</div>
+	
+</body>
+</html>
