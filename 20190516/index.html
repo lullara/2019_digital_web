@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!-- script:src -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		// $(document).ready(function(){});
+		// $(document).ready(function(){
+		// 	$(".slider").bxSlider({auto:true, mode:'fade'
+		// 	});
+		// });
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true, pager:false});
+			$(".slider01").bxSlider({controls:false});
+			$(".slider02").bxSlider({controls:false});
+
+
+
+
+		});
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		img{display: block;}
+		div.visual{width: 980px; margin: 0 auto;}
+		
+		div.visual_wrap{width: 980px; margin: 0 auto;}
+		div.visual_wrap:after{content:""; clear:both; display: block;}
+		div.visual01{width: 490px; float: left;}
+		div.visual02{width: 490px; float: left;}
+	
+
+
+		.bx-wrapper {
+   	 -moz-box-shadow: none;
+   	 -webkit-box-shadow: none; 
+    box-shadow: none;
+    background: #fff; 
+    margin-bottom: 0;
+	border: none; 
+	}
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+   
+    bottom: 20px;
+    
+   	}
+	ul.slider>li{width: 980px;height: 408px;}
+
+	</style>
+</head>
+<body>
+	<div class="visual">
+		<!-- ul.slider>li*3>img[src="images/pc0$.jpg"] -->
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt=""></li>
+			<li><img src="images/pc02.jpg" alt=""></li>
+			<li><img src="images/pc03.jpg" alt=""></li>
+		</ul>
+	</div>
+<div class="visual_wrap">
+	<div class="visual01">
+		<div class="slider01">
+			<!-- div*3>img[src="images/pc0$.jpg"] -->
+			<div><img src="images/pc01.jpg" alt=""></div>
+			<div><img src="images/pc02.jpg" alt=""></div>
+			<div><img src="images/pc03.jpg" alt=""></div>
+		</div>
+	
+	</div>
+		<div class="visual02">
+			<div class="slider02">
+				<!-- div*3>img[src="images/pc0$.jpg"] -->
+				<div><img src="images/pc01.jpg" alt=""></div>
+				<div><img src="images/pc02.jpg" alt=""></div>
+				<div><img src="images/pc03.jpg" alt=""></div>
+			</div>
+</div>
+	</div>
+
+
+		
+
+</body>
+</html>
+
+
+
+490
