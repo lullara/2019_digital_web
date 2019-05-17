@@ -1,0 +1,21 @@
+@charset"utf-8";
+
+
+/*header*/
+#header_wrap{width: 980px;height: 100px;background-color: gray; margin: 0 auto;position: relative;}
+#header_wrap>h1{width: 200px;height: 40px; text-align: center; background-color: pink;margin: 0 auto;}
+#header_wrap>.util_wrap{ background-color: blue; position: absolute;right: 0;top: 10px;text-align: center;}
+#header_wrap>.gnb_wrap{width: 980px;height: 35px; background-color: violet;position: absolute;bottom: 0;text-align: center;}
+
+
+.util_warp>ul{}
+.util_wrap>ul>li{float: left; padding:0 15px; border-right: 1px solid black;}
+.util_wrap>ul>li>a{display: block;}
+
+
+.gnb_wrap>ul{}
+.gnb_wrap>ul>li{float:left; width: 163.33px;height: 35px;line-height: 35px; font-weight: bold; border-right: 1px solid black;}
+.gnb_wrap>ul>li>a{display: block; }
+
+
+
