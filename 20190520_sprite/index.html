@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sprite</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+		div.icon_wrap:after{content:''; clear:both;display: block;}
+		div.icon_wrap .btn{width: 30px;height: 30px;background-image: url(../images/icon-sprite.png);
+		text-indent: -1000px; float: left;}
+		/*text-indent: ; icon이라는 글자를 화면에서 안보이게 하기 위해서 저 멀리 보내버림*/
+		/*.item02.active 같은 라인에 있을때는 붙인다*/
+
+		div.icon_wrap .item01{background-position:0 -330px;transition:0.1s;cursor: pointer;}
+		div.icon_wrap .item02{background-position:-40px -330px;transition:0.1s;cursor: pointer;}
+		div.icon_wrap .item03{background-position:-80px -330px;transition:0.1s;cursor: pointer;}
+		div.icon_wrap .item04{background-position:-120px -330px;transition:0.1s;cursor: pointer;}
+		div.icon_wrap .item05{background-position:-160px -330px;transition:0.1s;cursor: pointer;}
+	
+		
+		div.icon_wrap .item01:hover{background-position:0 -360px;}
+		div.icon_wrap .item02:hover{background-position:-40px -360px;}
+		div.icon_wrap .item03:hover{background-position:-80px -360px;}
+		div.icon_wrap .item04:hover{background-position:-120px -360px;}
+		div.icon_wrap .item05:hover{background-position:-160px -360px;}
+	
+		div.icon_wrap .item01.active{background-position:0 -360px;}
+		div.icon_wrap .item02.active{background-position:-40px -360px;}
+		div.icon_wrap .item03.active{background-position:-80px -360px;}
+		div.icon_wrap .item04.active{background-position:-120px -360px;}
+		div.icon_wrap .item05.active{background-position:-160px -360px;}
+
+
+
+
+	/*	div.sns_wrap:after{content:''; clear:both;display: block;}
+		div.sns_wrap .btn{width: 30px;height: 30px;background-image: url(../images/icon-sprite.png);
+		text-indent: -1000px; float: left;}
+		div.sns_wrap .item06{background-position:-200px -450px;transition:0.1s;cursor: pointer;}
+		div.sns_wrap .item07{background-position:-240px -450px;transition:0.1s;cursor: pointer;}
+		div.sns_wrap .item08{background-position:-280px -450px;transition:0.1s;cursor: pointer;}
+		*/
+
+		ul.sns_wrap{}
+		ul.sns_wrap > li{width: 30px;height: 30px;background-image: url(../images/icon-sprite.png);
+			text-indent: -10000px;float: left; opacity: 1; transition: 0.3s;margin-right: 10px;}
+
+		ul.sns_wrap > li:nth-child(1){background-position:-200px -450px;}
+		ul.sns_wrap > li:nth-child(2){background-position:-240px -450px;}
+		ul.sns_wrap > li:nth-child(3){background-position:-280px -450px;}
+		ul.sns_wrap a{display: block;line-height: 30px}
+
+		ul.sns_wrap > li:hover{ opacity: 0.3;}
+
+		.box{width: 100px; height: 100px;background-color: red; color: white; opacity: 1; transition: 0.3s;}
+		.box:hover{opacity: 0.5;}
+		
+		.box1{width: 100px; height: 100px;background-color: red; color: white;background:rgba(0,255,255,1); }
+		.box1:hover{background:rgba(255,0,0,0.5); transition: 0.3s; }
+		
+		.box2{width: 100px; height: 100px;background-color: red; color: white;background:rgba(0,255,255,1);  display: block; margin-bottom: 50px;}
+		.box2:hover{background:rgba(255,0,0,0.5); transition: 0.3s;display: none; }
+		
+
+	
+		nav#gnb .menu{width: 140px;height: 52px; background-image: url(../images/top_gnb.png); text-indent: -10000px;}
+		nav#gnb .item01.active{background-position: 0 -0px;}
+		nav#gnb .item02{background-position: 0 -50px;}
+		nav#gnb .item03{background-position: 0 -100px;}
+		nav#gnb .item04{background-position: 0 -150px;}
+		nav#gnb .item05{background-position: 0 -200px;}
+		nav#gnb .item06{background-position: 0 -250px;}
+	
+		nav#gnb .item01:hover{background-position: 0 -350px;}
+		nav#gnb .item02:hover{background-position: 0 -350px;}
+		nav#gnb .item03:hover{background-position: 0 -350px;}
+		nav#gnb .item04:hover{background-position: 0 -350px;}
+		nav#gnb .item05:hover{background-position: 0 -350px;}
+		nav#gnb .item06:hover{background-position: 0 -350px;}
+
+
+
+		nav#gnb_left .menu{width: 140px;height: 52px; background-image: url(../images/sprites.png); text-indent: -10000px; float: left;}
+		nav#gnb_left .item01.active{background-position: 0 -0px;}
+		nav#gnb_left .item02{background-position: -140px 0}
+		nav#gnb_left .item03{background-position: -280px 0px;}
+		nav#gnb_left .item04{background-position: -420px 0px;}
+		nav#gnb_left .item05{background-position: -560px 0px;}
+		nav#gnb_left .item06{background-position: -700px 0px;}
+	
+		nav#gnb_left .item01:hover{background-position: 0 -50px;}
+		nav#gnb_left .item02:hover{background-position: -140px -50px;}
+		nav#gnb_left .item03:hover{background-position: -280px -50px;}
+		nav#gnb_left .item04:hover{background-position: -420px -50px;}
+		nav#gnb_left .item05:hover{background-position: -560px -50px;}
+		nav#gnb_left .item06:hover{background-position: -700px -50px;}
+
+
+
+
+		
+
+
+
+	</style>
+</head>
+<body>
+	<div class="icon_wrap clearfix">
+		<!-- div.btn.item01>{icon} -->
+		<div class="btn item01">icon</div>
+		<div class="btn item02 active">icon</div>
+		<div class="btn item03">icon</div>
+		<div class="btn item04">icon</div>
+		<div class="btn item05">icon</div>
+	</div>	
+<!-- 	<div class="sns_wrap">
+		
+		<div class="btn item06"><a href="http://www.facebook.com" target="_blank">icon</a></div>
+
+		<a href="http://www.youtube.com" target="_blank">
+		<div class="btn item07">icon</div></a>
+		<a href="http://www.twitter.com" target="_blank">
+		<div class="btn item08">icon</div></a>
+	</div> -->
+
+	<ul class="sns_wrap clearfix">
+		<li><a href="http://www.facebook.com">페이스북</a></li>
+		<li><a href="http://www.youtube.com">유튜브</a></li>
+		<li><a href="http://www.twitter.com">트위터</a></li>
+	</ul>
+	<div class="box">안녕하세요</div>
+	<div class="box1">안녕하세요</div>
+	<div class="box2">안녕하세요</div>
+
+
+	<nav id="gnb">
+		<!-- div.menu.item0$*6>a[#]{menu} -->
+		<div class="menu item01 active" href="#">menu</a></div>
+		<div class="menu item02"><a href="#">menu</a></div>
+		<div class="menu item03"><a href="#">menu</a></div>
+		<div class="menu item04"><a href="#">menu</a></div>
+		<div class="menu item05"><a href="#">menu</a></div>
+		<div class="menu item06"><a href="#">menu</a></div>
+	</nav>
+	<nav id="gnb_left">
+		<!-- div.menu.item0$*6>a[#]{menu} -->
+		<div class="menu item01 active" href="#">menu</a></div>
+		<div class="menu item02"><a href="#">menu</a></div>
+		<div class="menu item03"><a href="#">menu</a></div>
+		<div class="menu item04"><a href="#">menu</a></div>
+		<div class="menu item05"><a href="#">menu</a></div>
+		<div class="menu item06"><a href="#">menu</a></div>
+	</nav>
+</body>
+</html>
