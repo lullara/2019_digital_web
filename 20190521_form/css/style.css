@@ -11,11 +11,32 @@ body{background-color: #cdcdcd;}
 	}
 #header h1.logo a{display: block; text-indent: -9999px; line-height: 44px;}
 
-#content fieldset{ border: 1px solid #dadada; background-color: #fff; }
+#content fieldset{ border: 1px solid #dadada; background-color: #fff; margin-bottom: 10px; }
 #content fieldset .field{border-bottom: : 1px solid #f0f0f0;position: relative;}
 #content fieldset .field .inp-field{width: 350px; height: 49px; border: 0 none; font-size: 14px;text-indent: 12px; color: #999}
 #content fieldset .field .ico{display: block; width: 97px; height: 48px;text-indent: -9999px;
 						background : url(../images/ico_join3_20170202.png) no-repeat; position: absolute;top: 0;right: 11px;}
 #content fieldset .field .ico.mail{background-position: 0 -47px;}						
 #content fieldset .field .ico.pass{background-position: 0 -466px;}						
-#content fieldset .field .ico.pass2{background-position: 0 -515px;}						
+#content fieldset .field .ico.pass2{background-position: 0 -515px;}		
+
+#content fieldset .field .btn-label {display: block; width: 212px; height: 31px; border: 1px solid #dcdcdc; 
+	position: absolute; top: 8px; text-align: center; line-height: 31px; z-index: 10; background-color: #fff;
+	cursor: pointer;}
+
+#content fieldset .field .btn-label.male{left: 15px; }
+#content fieldset .field .btn-label.female{left: 228px;}
+
+#content fieldset .field.btn-radio{height: 49px;}
+#content fieldset .field.btn-radio input{position: relative; left: 50px;top: 14px;}
+
+#content fieldset .field.birth select{ width: 110px; height: 20px; border:0 none;font-size: 15px; font-weight: bold; line-height: 29px;
+	background: url(../images/sel_arr.gif) no-repeat 100% 50%; }
+#content fieldset .field.birth .field-wall{ float: left;width: 0;height: 29px; margin-top: 10px; border-right: 1px solid #f0f0f0;
+	text-indent: -9999px; }
+
+
+/*common				*/
+.w458{width: 458px !important;} 
+.w130{width: 130px !important;}
+.w145{width: 145px !important;}
