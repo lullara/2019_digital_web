@@ -23,7 +23,7 @@
 							<legend>아이디/비밀번호</legend>
 							<p class="field">
 							 	<label for="user-id" class="blind">아이디</label>
-								<input type="text" id="user-id"placeholder="아이디" class="inp-field">
+								<input type="text" id="user-id"placeholder="아이디" class="inp-field" required>
 								<span class="ico mail">@naver.com</span>
 							</p>
 							<p class="field">
@@ -49,7 +49,7 @@
 							 	<label for="female"class="btn-label female">여자</label>
 								<input type="radio" id="female"  name="user-s" value="female">
 							</p>
-							<p class="field birth">
+							<p class="field birth clearfix">
 								<label for="user-birth">생일</label>
 								<input type="text" id="user-birth" placeholder="년(4자)" maxlength="4" class="inp-field w130" >
 								<span class="field-wall">|</span>
@@ -72,13 +72,52 @@
 								<span class="field-wall">|</span>
 								<input type="text" placeholder="일" maxlength="2" class="inp-field w145">
 								</p>
+								<p class="field">
+									<label for="user-email" class="blind">본인확인이메일</label>
+									<input type="text" id="user-email" placeholder="본인 확인 이메일(선택)"class="inp-field w458" >
+									
+								</p>
 						
 						</fieldset>
+						<fieldset>
+							<legend>전화번호인증</legend>
+							<p class="field confirm clearfix" >
+								<label for="user-num" class="blind">인증번호받기</label>
+								<select  id="user-num">
+									<option value="+82">+82</option>
+								</select>
+								<span class="field-wall">|</span>
+								<input type="text" placeholder="휴대전화번호" class="inp-field w205">
+								<button type="button" class="btn-click">인증</button>
+							</p>
+							<p class="field confirm">
+								<label for="user-confirm" class="blind">인증번호입력</label>
+								<input type="text" id="user-confirm" placeholder="인증번호" class="inp-field w330" 
+								>
+								<button type="button" class="btn-click">확인</button>
+							</p>
+						</fieldset>
+						<div class="btn-area">
+							<input type="submit" value="가입하기" class="btn-submit">
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<div id="footer"></div>
+		<div id="footer">
+			<div class="btm-menu">
+				<ul class="clearfix">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">책임의 한계와 법적고지</a></li>
+					<li><a href="#">회원정보 고객센터</a></li>
+				</ul>
+			</div>
+			<address>
+				<strong><a href="#">naver</a></strong>
+				<span>Copyright &copy; <a href="#">NAVER Corp.</a>All Rights, Reserved.</span>
+			</address>
+		</div>
 	</div>
 	
 </body>
