@@ -34,8 +34,31 @@
 		#main_section > .main_article{padding: 20px; border: 1px solid #000; margin-bottom: 10px;}
 		#content>#main_aside{width: 200px; float: right; _background-color: yellow;}
 
+		/*menu*/
+		.inp:nth-child(1){display: none;}
+		.inp:nth-child(1) ~ div.tap_item1{display: none;}
+		.inp:nth-child(1):checked ~ div.tap_item1{display:block;}
 
 
+		.inp:nth-child(2){display: none;}
+		.inp:nth-child(2) ~ div.tap_item2{display: none;}
+		.inp:nth-child(2):checked ~ div.tap_item2{display: block;}
+		
+		section.buttons>label{display: block;float: left; width: 100px; height: 30px; line-height: 30px; text-align: center;
+			_border: 1px solid #000;background-color: #fff; cursor: pointer; border-radius: 10px 10px 0 0; border-bottom: 2px solid #f00;	}
+		
+		section.buttons>label:fisrt-child{border-right: 0 none;}
+
+		.inp:nth-child(1):checked ~ section.buttons > label:first-child {background-color: #f00; color: white;}
+		.inp:nth-child(2):checked ~ section.buttons > label:last-child {background-color: #f00; color: white;}
+
+		.item{padding: 10px;border: 1px solid #000; border-top:0 none;}
+		.thumbnail{float: left;}
+		.description{float: left; margin-left: 10px;}
+		.description > strong{ display: block;width: 120px;  white-space: nowrap; overflow: hidden; text-overflow:ellipsis;}
+
+		/*footer*/
+		#main_footer{width: 960px; margin: 0 auto;padding: 10px; border: 1px solid #000; text-align: center; margin-bottom: 20px;}
 
 	</style>
 </head>
@@ -78,9 +101,102 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dignissimos quaerat inventore voluptas, distinctio nihil magnam quibusdam, incidunt ullam praesentium, ratione cumque iure ex! Id tempora magni recusandae soluta. Est enim error, impedit eum sequi ut ab accusamus aliquid fugit temporibus non commodi necessitatibus quod aliquam tempora rem vero voluptatibus.</p>
 			</article>
 		</section>
-		<aside id="main_aside"></aside>
+		<aside id="main_aside">
+				<input type="radio" id="first" class="inp" name="tap" checked="checked">
+				<input type="radio" id="second" class="inp" name="tap">
+				
+			<section class="buttons clearfix">
+				<label for="first">first</label>				
+				<label for="second">second</label>
 
+			</section>
+		
+		<!-- div.tap_item1+div.tap_item2 -->
+		<div class="tap_item1">
+			<ul>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.11</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+			</ul>
+		</div>
+		<div class="tap_item2">
+			<ul>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.2</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.2</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.2</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+				<li class="item clearfix"><a href="#">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/45" alt="">
+					</div>
+					<div class="description">
+						<strong>Lorem ipsum.2</strong>
+						<p>2019-05-27</p>
+					</div>
+				</a></li>
+			</ul>
+		</div>
+</aside>
 	</div>
-	<footer id="main_footer"></footer>
+	<footer id="main_footer">
+		<h3>html5 + css3</h3>	
+		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eos!</address>
+	</footer>
 </body>
 </html>
