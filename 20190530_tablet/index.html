@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>tablet layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{min-width: 760px;}
+		#main_header{height: 60px; line-height: 60px;padding-left: 10px; border-bottom: 1px solid #000;
+			background-color: #1d4088;color: #fff;}
+		
+		/*main gnb*/
+		#main_gnb{border-bottom: 1px solid #000; background-color: #32394a;_min-width: 760px;}
+		#main_gnb>ul.left{float:left; }
+		#main_gnb>ul.left>li{float: left;}
+		#main_gnb>ul.left>li>a{display: block;padding: 10px 20px;text-align: center;border-right: 1px solid #5f6673;color:white;}
+		
+		#main_gnb>ul.right{float:right;}
+		#main_gnb>ul.right>li{float: left;}
+		#main_gnb>ul.right>li>a{display: block;padding: 10px 20px;text-align: center;border-left: 1px solid #5f6673;color:white;}
+		
+		/*content wrap*/
+		#wrap{overflow: hidden;background-color: #71b1d1;}
+		#wrap>#main_lnb{float:left; width: 200px;  }
+		#wrap>#main_lnb a {float: left;width: 200px; display: block; line-height: 40px; padding-left: 15px;border-bottom: 1px solid #629882; border-top: 1px solid #96d6f6;font-weight: bold; color:white;}
+		
+		#wrap>#content_wrap{float: left; width: 100%;  padding-left: 10px; margin-right: -200px; background-color: #fff;}
+		#wrap>#content_wrap>#content{padding-right: 200px; }
+
+		article{padding: 10px;}
+
+		/*footer*/
+		#main_footer{padding: 10px; border-top: 1px solid #000; text-align: center;}
+
+
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<h1>Fluid</h1>
+	</header>
+	<nav id="main_gnb" class="clearfix">
+		<ul class="left clearfix">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+		<ul class="right clearfix">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+	</nav>
+	<div id="wrap" class="clearfix">
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">Button1</a></li>
+				<li><a href="#">Button2</a></li>
+				<li><a href="#">Button3</a></li>
+				<li><a href="#">Button4</a></li>
+				<li><a href="#">Button5</a></li>
+			</ul>
+		</nav>
+		<div id="content_wrap">
+			<div id="content">
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, consequatur sequi officia perferendis vel laborum. Repellendus quia, tempore dignissimos temporibus corrupti ratione perspiciatis adipisci natus suscipit, molestias voluptatibus quam accusamus delectus, animi assumenda sit enim tenetur maiores vero modi veritatis accusantium nisi non cumque ipsam. Libero cupiditate asperiores cumque sunt earum cum inventore, dolor doloribus delectus vero perferendis quam enim fugiat, ducimus natus saepe consequatur, officia repellendus explicabo omnis nisi facere dolorum consequuntur odit. In, magni esse cum ab eveniet illo, aperiam dignissimos cumque voluptatem natus libero temporibus placeat. Hic tempore assumenda totam accusamus excepturi molestiae quidem accusantium officiis provident!</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, consequatur sequi officia perferendis vel laborum. Repellendus quia, tempore dignissimos temporibus corrupti ratione perspiciatis adipisci natus suscipit, molestias voluptatibus quam accusamus delectus, animi assumenda sit enim tenetur maiores vero modi veritatis accusantium nisi non cumque ipsam. Libero cupiditate asperiores cumque sunt earum cum inventore, dolor doloribus delectus vero perferendis quam enim fugiat, ducimus natus saepe consequatur, officia repellendus explicabo omnis nisi facere dolorum consequuntur odit. In, magni esse cum ab eveniet illo, aperiam dignissimos cumque voluptatem natus libero temporibus placeat. Hic tempore assumenda totam accusamus excepturi molestiae quidem accusantium officiis provident!</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, consequatur sequi officia perferendis vel laborum. Repellendus quia, tempore dignissimos temporibus corrupti ratione perspiciatis adipisci natus suscipit, molestias voluptatibus quam accusamus delectus, animi assumenda sit enim tenetur maiores vero modi veritatis accusantium nisi non cumque ipsam. Libero cupiditate asperiores cumque sunt earum cum inventore, dolor doloribus delectus vero perferendis quam enim fugiat, ducimus natus saepe consequatur, officia repellendus explicabo omnis nisi facere dolorum consequuntur odit. In, magni esse cum ab eveniet illo, aperiam dignissimos cumque voluptatem natus libero temporibus placeat. Hic tempore assumenda totam accusamus excepturi molestiae quidem accusantium officiis provident!</p>
+				</article>
+			</div>
+		</div>
+	</div>
+	<footer id="main_footer">
+		<h3>html + css3</h3>
+		<address>website lay out</address>
+	</footer>
+</body>
+</html>
