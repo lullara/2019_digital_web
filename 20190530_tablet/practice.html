@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{min-width: 760px;}
+		/*header*/
+		#main_header{line-height: 60px; background-color: #33e; color: white; padding-left: 10px;}
+		
+
+		/*main gnb*/
+		#main_gnb{height: 45px; line-height: 45px;background-color: #ddd; border-bottom: 1px solid #000;}
+		#main_gnb>ul.left{float: left;}
+		#main_gnb>ul.left>li{float: left;}
+		#main_gnb>ul.left>li>a{display: block; border-right: 1px solid #000; padding: 0 10px;}
+
+		#main_gnb>ul.right{float: right;}
+		#main_gnb>ul.right>li{float: left}
+		#main_gnb>ul.right>li>a{display: block;border-left: 1px solid #000;padding: 0 10px;}
+
+		#wrap{background-color: #d6f;}
+		#wrap>#main_lnb{float: left;}
+		#wrap>#main_lnb > a{display: block;}
+
+		#wrap>#content_wrap{background-color: #fff;}
+
+
+
+
+		
+
+
+
+
+	</style>
+
+
+
+
+</head>
+<body>
+	<header id="main_header">
+		<h1>Fluid</h1>
+	</header>
+	<nav id="main_gnb" class="clearfix">
+		<ul class="left clearfix">
+			<li><a href="#">Button1</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+		<ul class="right clearfix">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+	</nav>
+	<content id="main_content">
+		<div id="wrap" class="clearfix">
+			<nav id="main_lnb">
+				<ul>
+					<li><a href="#">button1</a></li>
+					<li><a href="#">button2</a></li>
+					<li><a href="#">button3</a></li>
+					<li><a href="#">button4</a></li>
+					<li><a href="#">button5</a></li>
+				</ul>
+			</nav>
+			<div id="content_wrap">
+				<div id="content">
+					<article>
+						<h1>Lorem ipsum dolor sit.</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officia tempore molestiae numquam dolorum aliquid, labore quod tenetur, aut laboriosam mollitia reprehenderit maxime totam id quam nostrum amet aperiam deserunt animi! At eaque sunt obcaecati officiis reprehenderit enim fugiat, quis, incidunt nesciunt voluptate dolor laudantium nulla magnam, qui, tempora molestias itaque. Aliquid corrupti similique hic, illum tempora ipsam fugit a eligendi provident, expedita architecto ad! Esse vitae ex qui architecto adipisci modi quasi aperiam consequatur harum maiores, recusandae laboriosam cumque error! Deserunt dignissimos ducimus in sequi velit voluptates voluptatum, dolorem dolor, explicabo consectetur esse! Repudiandae itaque nulla rerum omnis odit.</p>
+					</article>
+					<article>
+						<h1>Lorem ipsum dolor sit.</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officia tempore molestiae numquam dolorum aliquid, labore quod tenetur, aut laboriosam mollitia reprehenderit maxime totam id quam nostrum amet aperiam deserunt animi! At eaque sunt obcaecati officiis reprehenderit enim fugiat, quis, incidunt nesciunt voluptate dolor laudantium nulla magnam, qui, tempora molestias itaque. Aliquid corrupti similique hic, illum tempora ipsam fugit a eligendi provident, expedita architecto ad! Esse vitae ex qui architecto adipisci modi quasi aperiam consequatur harum maiores, recusandae laboriosam cumque error! Deserunt dignissimos ducimus in sequi velit voluptates voluptatum, dolorem dolor, explicabo consectetur esse! Repudiandae itaque nulla rerum omnis odit.</p>
+					</article>
+					<article>
+						<h1>Lorem ipsum dolor sit.</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officia tempore molestiae numquam dolorum aliquid, labore quod tenetur, aut laboriosam mollitia reprehenderit maxime totam id quam nostrum amet aperiam deserunt animi! At eaque sunt obcaecati officiis reprehenderit enim fugiat, quis, incidunt nesciunt voluptate dolor laudantium nulla magnam, qui, tempora molestias itaque. Aliquid corrupti similique hic, illum tempora ipsam fugit a eligendi provident, expedita architecto ad! Esse vitae ex qui architecto adipisci modi quasi aperiam consequatur harum maiores, recusandae laboriosam cumque error! Deserunt dignissimos ducimus in sequi velit voluptates voluptatum, dolorem dolor, explicabo consectetur esse! Repudiandae itaque nulla rerum omnis odit.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</content>
+	<footer id="main_footer"></footer>
+	
+</body>
+</html>
