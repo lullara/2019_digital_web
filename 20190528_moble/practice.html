@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연습</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		
+		/*header*/
+		#main_header{height: 45px; background-image: url(img/header_background.png);position: relative;text-align: center;margin: 0 auto;}
+		#main_header>h1{color: white;}
+		
+		#main_header>a.left, #main_header>label.right{display: block;height: 32px;position: absolute;top: 7px;text-indent: -9999px;background-image: url(img/sprites.png);top: 5px;
+		}
+
+		#main_header>a.left{width: 62px;background-position: 0 0;}
+
+		#main_header>label.right{width: 32px; right: 5px;background-position: -62px 0;}
+		
+
+	
+		/*toggle gnb*/
+		
+		#toggle_gnb_wrap{background-color: #363636;padding: 10px;}
+		.toggle_gnb{background-color: #fff;padding: 5px;}
+	
+		.toggle_gnb>ul>li{float: left;}
+		.toggle_gnb>ul>li>a{display: block; width: 80px; text-align: center;}
+
+		#toggle{display: none;}
+		#toggle ~ #toggle_gnb_wrap{display: none;}
+		#toggle:checked ~ #toggle_gnb_wrap{display: block;}
+
+
+		/*top gnb*/
+		nav.top_gnb{border-bottom: 1px solid #000;background-color: #b42111;}
+		nav.top_gnb>div{float: left;width: 25%;}
+		nav.top_gnb>div>a{display: block;text-align: center;line-height: 35px; color:white;}
+
+
+
+		/*bottom_gnb*/
+		#bottom_gnb{width: 100%; display:table;border-bottom: 1px solid #000;}
+		#bottom_gnb>div{display: table-cell;text-align: center;}
+		#bottom_gnb>div>a{display: block;line-height: 35px; position: relative;}
+		#bottom_gnb>div>a:after{content:""; display: block; position: absolute; width: 1px; height: 15px; border-left: 1px solid #000; top: 10px; left: -1px;}
+		section#main_section{}
+		header#section_header{padding: 20px;}
+		article#section_article{padding: 20px;}
+
+		/*footer*/
+		#main_footer{padding: 10px; border-top: 1px solid #000;text-align: center;}
+
+	</style>
+</head>
+
+
+
+
+
+<body>
+	<div id="wrap">
+		<input type="checkbox" id="toggle">
+		<header id="main_header">
+			<a href="#" class="left">main</a>	
+			<h1>Mobile</h1>
+			<label for="toggle" class="right">toggle</label>
+			
+		</header>
+		<div id="toggle_gnb_wrap">
+			<div class="toggle_gnb">
+				<ul class="clearfix">
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu4</a></li>
+				</ul>
+			</div>
+		</div>	
+			<nav class="top_gnb clearfix">
+				<div><a href="#">menu1</a></div>
+				<div><a href="#">menu2</a></div>
+				<div><a href="#">menu3</a></div>
+				<div><a href="#">menu4</a></div>
+			</nav>
+			<div id="bottom_gnb">
+				<div><a href="#">button1</a></div>
+				<div><a href="#">button2</a></div>
+				<div><a href="#">button3</a></div>
+				<div><a href="#">button4</a></div>
+				<div><a href="#">button5</a></div>
+			</div>
+	
+	 	<section id="main_section">
+	 	 	<header id="section_header">
+	 	 		<h2>Lorem ipsum.</h2>
+	 	 		<time>2019-12-04 - Birthday</time>
+	 	 	</header>
+	 	 	<article id="section_article">
+	 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit perspiciatis non numquam, nostrum, labore magnam quasi nemo aliquid dolores voluptatibus tempore explicabo ad, harum fuga alias quas similique odio unde voluptatum. Laudantium voluptate, ipsum odio aliquid cupiditate cum dolore nulla voluptas ab ea porro sequi alias est quidem consequatur accusamus.</p>
+	 	 	<p>Architecto modi expedita voluptatibus. Sit, assumenda vel voluptatum, natus, ducimus sapiente quam architecto esse reprehenderit non modi veritatis, quis officiis aliquam ipsum suscipit corrupti. Obcaecati aspernatur illum perferendis fugit. Sint rerum, atque, impedit, at quas fuga doloribus qui sequi perspiciatis voluptate voluptatem consequuntur corrupti neque reiciendis, culpa alias possimus inventore.</p>
+	 	 	<p>Laborum fugiat voluptatem suscipit, hic enim possimus quaerat earum perferendis animi officiis ducimus, nobis, nam! Illo voluptas quis, perferendis cupiditate consectetur nam libero rem dolore magni facilis laudantium quo, eius repellat neque autem nulla architecto nesciunt natus cum similique odit placeat aliquid. Omnis commodi dolores hic nihil cupiditate quisquam, natus!</p>
+	 	 	</article>
+	 	</section>
+	 	<footer id="main_footer">
+	 		<h3>html5 + css3</h3>
+			<address>website layout basic</address>
+	 	</footer>
+	</div>
+</body>
+</html>
