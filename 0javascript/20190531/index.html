@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연산자</title>
+	<script>
+		var incData=1;
+		var decData=5;
+		var r1=r2=0;
+		r1=15%6; //나눈 나머지
+
+		document.write("15%6 = " + r1 + "<br>");
+		document.write("incData++ = " + incData++ +"<br>");
+		//incData++ -> incData = incdata+1
+		//document.write("incData	 = " + incData);
+		document.write("++incData = " + ++incData +"<br>");
+
+		document.write("decData-- =" + decData-- +"<br>");
+		document.write("decData-- =" + decData +"<br>");
+		document.write("--decData	 =" + --decData +"<br>");
+
+		r2=incData*decData;
+
+		// alert(r2);
+
+		console.log("곱한값 = " + r2);
+
+
+		//var i = 2;
+		//document.write(i + "<br>"); 
+		//document.write(++i + "<br>"); 
+		//document.write(i); 
+
+
+
+		var x=5;
+		var y="5";
+		var result;
+
+		result = (x > y);
+
+		document.write("x > y : " + result + "<br>");
+
+		result = ( x == y);
+		document.write("x == y : " + result + "<br>");
+		result = ( x === y);	
+		document.write("x === y : " + result + "<br>");
+
+		result = ( x != y);
+		document.write("x != y : " + result + "<br>");	
+
+		result = ( x !== y);
+		document.write("x !== y : " + result + "<br>");
+
+
+		var i=5;
+		var z=7;
+		var result1;
+
+		result1 = (i > z)? i : z ;
+		document.write(result1);
+
+
+	</script>
+
+	
+</head>
+<body>
+
+</body>
+</html>
