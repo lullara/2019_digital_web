@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>if</title>
+	<script> 
+		var point = 80;
+		var grade ="";
+		var comment ="";
+
+		if(point > 100){
+			comment = "0~100점 사이값을 입력해야합니다." ;
+		}else if(point >= 90){
+			grade = "A";
+			comment = "아주 잘했어요.";
+		}else{
+			grade = "F";
+			comment = "많이 노력하시기 바랍니다.";
+
+		}
+
+		// comment = "학생의 학점은 " + grade + "입니다";
+
+		var day;
+		var week = new Date().getDay();
+		var todayTime = new Date().getTime();
+
+		switch(week){
+			case 0:
+				day="일요일";
+				break;
+			case 1:
+				day="월요일";
+				break;
+			case 2:
+				day="화요일";
+				break;
+			case 3:
+				day="수요일";
+				break;
+			case 4:
+				day="목요일";
+				break;
+			case 5:
+				day="금요일";
+				break;
+			case 6:
+				day="토요일";
+				break;
+
+			default:
+				day="없는 요일";
+
+		}
+
+		document.write("오늘은 " + day + "입니다.<br>");
+		document.write(todayTime);
+
+
+
+	</script>
+
+	<style>
+		*{padding: 0;margin: 0;}
+		li{list-style: none; }
+		.wrap{width: 500px;}
+		.wrap>ul{}
+		.wrap>ul:after{content:'';clear: both; display: block;}
+		.wrap>ul>li{float: left; text-align: center; line-height: 40px;border: 1px solid #000;width: 100px;box-sizing: border-box;}
+		.wrap>ul>li:first-child{background-color: gray;}
+		.wrap>ul>li:last-child{width: 400px;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li>학점</li>
+			<li>
+				<script>
+					document.write(grade);
+				</script>
+			</li>
+		</ul>
+		<ul>
+			<li>코멘트</li>
+			<li>
+				<script>
+					document.write(comment);
+				</script>
+			</li>
+		</ul>
+	</div>
+	<script>
+		// for(var i=1;i<5;i++){
+		// 	document.write("for문실행 " + i + "<br>");
+
+		// }
+
+
+		var num = 2;
+		for(var i=1;i<=9;i++){
+			// document.write(num + " * " + i + " = " + num*i + "<br>");
+			document.write("<li>menu" + i + "</li>")
+		}
+
+			// document.write(num + " * 1 = " + num*1 + "<br>" );
+			// document.write(num + " * 2 = " + num*2 + "<br>" );
+			// document.write(num + " * 3 = " + num*3 + "<br>" );
+			// document.write(num + " * 4 = " + num*4 + "<br>" );
+			// document.write(num + " * 5 = " + num*5 + "<br>" );
+			// document.write(num + " * 6 = " + num*6 + "<br>" );
+			// document.write(num + " * 7 = " + num*7 + "<br>" );
+			// document.write(num + " * 8 = " + num*8 + "<br>" );
+			// document.write(num + " * 9 = " + num*9 + "<br>" );
+
+
+	</script>
+	
+</body>
+</html>
