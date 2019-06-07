@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu_parctice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.menu{width: 1000px; margin: 0 auto;}
+		.menu>ul{}
+		.menu>ul>li{float: left;width: 20%; background-color: skyblue; text-align: center; line-height: 30px; height: 30px; }
+		.menu>ul>li>a:after{content:""; display: block; position: absolute;width: 1px; height: 15px; border-left: 1px solid #000; top: 7px;}
+		.menu>ul>li:first-child a:after{content:""; display: none;}
+		.menu>ul>li>a{display: block; } 
+		.menu>ul>li>a:hover{background-color: #fff;}
+
+
+		.submenu{display: none;}
+		.submenu>li{background-color: pink;}
+		.submenu>li>a{display: block;
+		border-bottom: 2px solid pink; border-top: 2px solid pink;
+		}
+		.submenu>li>a:hover{border-bottom: 2px solid #000; border-top: 2px solid #000;}
+
+
+		.menu>ul>li:hover .submenu{display: block;}
+
+
+
+		.visual{background-color: #dcdcdc; height: 350px;}
+
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu">
+					<li><a href="#">sub0201</a></li>
+					<li><a href="#">sub0202</a></li>
+					<li><a href="#">sub0203</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu">
+					<li><a href="#">sub0301</a></li>
+					<li><a href="#">sub0302</a></li>
+					<li><a href="#">sub0303</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu">
+					<li><a href="#">sub0401</a></li>
+					<li><a href="#">sub0402</a></li>
+					<li><a href="#">sub0403</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu">
+					<li><a href="#">sub0501</a></li>
+					<li><a href="#">sub0502</a></li>
+					<li><a href="#">sub0503</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="visual"></div>
+</body>
+</html>
