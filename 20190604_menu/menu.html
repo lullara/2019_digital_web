@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>가로형메뉴</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+
+		nav.menu{width: 1000px;margin: 0 auto;}
+		nav.menu>ul{position: relative;}
+		nav.menu>ul>li{float: left; width: 20%; background-color:gray; }
+		nav.menu>ul>li>a{display: block; line-height: 40px; text-align: center;}
+		nav.menu>ul>li>a:hover{}
+		nav.menu>ul>li:hover{background-color: skyblue;}
+
+		.submenu{width: 100%;display: none;position: absolute; background-color: skyblue;;left: 0; z-index: 1;}
+		.submenu>li{float: left;}
+		.submenu>li>a{display: block;line-height: 30px; padding:0 15px;}
+
+		/*.menu>ul>li:first-child .submenu{display: block;}*/
+		.menu>ul>li:hover .submenu{display: block;}
+
+		.menu>ul>li:nth-child(4) .submenu{padding-left:560px;}
+		.menu>ul>li:nth-child(5) .submenu{padding-left:726px;}
+		
+		.visual{height: 500px; background-color: violet;}
+
+
+		/*아래는 서브메뉴바닥이 전체적으로 보이도록 마크업한 것*/
+	
+		.menubar{width: 100%; height: 30px; background-color: skyblue; left: 0; position: absolute; left: 0; display: none;}
+		.menu:hover .menubar{display: block;}
+	
+
+
+
+
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu" style="padding-left: 160px;">
+					<li><a href="#">sub0201</a></li>
+					<li><a href="#">sub0202</a></li>
+					<li><a href="#">sub0203</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu"style="padding-left: 365px;">
+					<li><a href="#">sub0301</a></li>
+					<li><a href="#">sub0302</a></li>
+					<li><a href="#">sub0303</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu">
+					<li><a href="#">sub0401</a></li>
+					<li><a href="#">sub0402</a></li>
+					<li><a href="#">sub0403</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu">
+					<li><a href="#">sub0501</a></li>
+					<li><a href="#">sub0502</a></li>
+					<li><a href="#">sub0503</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="menubar"></div>
+
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>
