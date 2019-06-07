@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var result=0;
+		function dan(num){
+			for(var i=1;i<=9;i++){
+			result = num * i;
+			document.write(num + " x " + i +" = " + result + "<br>" );
+			}
+
+		}
+
+		// function printMsg(name,age){
+		// 	document.wrtie("학생이름 : " + name + "<br>");
+		// 	document.wrtie("학생나이 : " + age + "<br>");
+		// }
+
+		// var printM = function(mber){
+		// 	document.write(mber);
+		// }
+
+		// function van(jo){
+		// 	for(var k=1;k<10;k++){
+		// 	document.write(jo + " x " + k + " = " jo*k + "<br>" );
+		// 	}
+		// }
+		function dan(jo){
+			for(var i=1;i<=9;i++){
+			
+			document.write(jo + " x " + i +" = " + jo*i + "<br>" );
+			}
+
+		}
+
+
+	</script>
+	<style>
+		
+	</style>
+</head>
+<body>
+		
+	<script>
+		// dan(2);
+		dan(3);
+	</script>
+	<!-- <button type=button onclick="dan(3);"> 3단 출력 </button>
+	<button type=button onclick="printMsg('홍길동',25);">홍길동</button>
+	<button type=button onclick="printM(10);">엠버튼</button> -->
+</body>
+</html>
