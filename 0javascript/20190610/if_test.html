@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연습</title>
+<!-- 	<script>
+		var point = 90;
+		var grade = "";
+
+		if(point >= 90){
+			grade = "A";
+		}else if(point >= 80){
+			grade = "B";
+		
+
+		}else if (point >= 70){
+			grade = "C";
+
+		}else if (point >= 60){ 
+			grade = "D";
+
+		}else if { 
+			grade = "F";}
+		
+		document.write(point + "점 이상은 " + grade + "입니다 " + "<br>");
+		
+		
+
+	</script> -->
+	<script>
+		// var score = 85;
+		// var grade = "";
+		// if(score >= 90){grade = "A";}
+		// else if(score >= 80){grade = "B";}
+		// else if(score >= 70){grade = "C";}
+		// else if(score >= 60){grade = "D";}
+		// else if{grade = "F";}
+
+		// document.write("당신의 성적은 " + grade + " 입니다.");
+
+
+		//감소
+		for(var i=5;i>0;i--){
+			var result = "";
+			for(var k=0;k<i;k++){
+			result += "*";
+		}
+			document.write(result + "<br>");
+		}
+
+
+		// 증감
+		for(var z=0;z<5;z++){
+			var result = "";
+			for(var x=0;x<=z;x++){
+			result += "*";
+		}
+			document.write(result + "<br>");
+		}
+
+		var sum = 0;
+		for(var y=1;y<=10;y++){
+			sum+=y; //sum = sum + y;
+
+		}
+		document.write(sum + "<br>");
+
+
+
+		var total = 0;
+		for(var a=1;a<=10;a++){
+			var result = "";
+			for(var b=1;b<=a;b++){
+				result = result + b;
+				if(b != a) result = result + "+"
+				total = total + b;
+			}
+			//total = total + a;
+			document.write(result + " = " + total + "<br>")
+			total = 0;
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
