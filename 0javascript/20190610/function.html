@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function</title>
+	<script>
+		// function name(){
+		// 	실행문장
+		// }
+		function add(name,data){
+			document.write(name + " 님, 1부터 " + data + "까지 덧셈 수행")
+			var sum=0;
+			for(var i=1;i<=data;i++){
+				sum = sum + i; // sum += i;
+			}
+			return sum;
+		}
+
+	</script>
+</head>
+<body>
+	<script>
+		// result = name();
+		// document.write(result);
+		result = add("홍길동",10);
+		document.write(result+"<br>");
+	</script>
+	<script>
+		result = add ("한서용",40);
+		document.write(result);
+	</script>
+</body>
+</html>
