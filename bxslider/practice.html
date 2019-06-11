@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		 $(document).ready(function(){
+		 	var slider01 = $(".slider").bxSlider({
+		 		controls:false,		 	
+		 		touchEnabled:false
+		 		//pagerCustom:'bx-pager'
+		 	});
+			
+			$(".prevBtn").click(function(){
+				slider01.goToPrevSlide();
+				return false;
+			});
+
+			$(".nextBtn").click(function(){
+				slider01.goToPrevSlide();
+				return false;
+			});
+
+		 });
+		
+
+
+	</script>
+	<style>
+
+		.main_slider{width: 1200px; margin: 0 auto; position: relative;}
+
+		.bx-wrapper {
+	    -moz-box-shadow:none;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	    border: 0 none;
+	    background: #fff;
+	    margin-bottom: 0;
+		}
+
+		.main_slider h1{position: absolute; top: 190px;left: 390px;color: #fff;}
+		.main_slider p{position: absolute; top: 280px; text-align: center; width: 100%; color: #fff;}
+		.main_slider h1:after{content:"";display: block; 
+			border-bottom: 1px solid #fff; padding: 12px;}
+		.main_slider .button{position: absolute;top: 350px; left: 545px; font-weight: bold; color:#fff; border: 3px solid #fff; padding: 10px 20px; border-radius: 25px;}
+		.main_slider .button:hover{background-color: #fff; color: #000; cursor: pointer;}
+		.main_slider .prevBtn, .main_slider .nextBtn{position: absolute;top: 200px;}
+		.main_slider .prevBtn{left: 30px;}
+		.main_slider .nextBtn{right: 30px;}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main_slider">
+			<ul class="slider">
+				<li>
+					<img src="../images/pc01.jpg" alt="pc01">
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, alias!</p>
+					<div class="button" onclick="location.href='http://www.naver.com'">바로가기</div>
+				</li>
+				<li>
+					<img src="../images/pc02.jpg" alt="pc02">
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, alias!</p>
+					<div class="button">바로가기</div>
+				</li>
+				<li>
+					<img src="../images/pc03.jpg" alt="pc03">
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, alias!</p>
+					<div class="button">바로가기</div>
+				</li>
+			</ul>
+			<div class="prevBtn"><a href="#"><img src="images/btn_prev.png" alt="prevbtn"></a></div>
+			<div class="nextBtn"><a href="#"><img src="images/btn_next.png" alt="nextbtn"></a></div>
+			<div class="main_slider_pager">
+				<div class="bx-pager">
+					<a href="#" data-slide-index="0">Lorem ipsum dolor.</a>
+					<a href="#" data-slide-index="1">Lorem ipsum dolor.</a>
+					<a href="#" data-slide-index="2">Lorem ipsum dolor.</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
