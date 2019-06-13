@@ -12,8 +12,8 @@
 		 $(document).ready(function(){
 		 	var slider01 = $(".slider").bxSlider({
 		 		controls:false,		 	
-		 		touchEnabled:false
-		 		//pagerCustom:'bx-pager'
+		 		touchEnabled:false,
+		 		pagerCustom:'.bx-pager'
 		 	});
 			
 			$(".prevBtn").click(function(){
@@ -54,6 +54,11 @@
 		.main_slider .prevBtn{left: 30px;}
 		.main_slider .nextBtn{right: 30px;}
 
+		.main_slider_pager{width: 1200px;}
+		.main_slider_pager a{float: left;display: block; width: 33.33%; text-align: center;font-weight: bold;background: #dd8;line-height: 60px;font-size: 20px;}
+		.bx-pager a.active{background-color: #888;}
+
+
 
 
 	</style>
@@ -84,8 +89,8 @@
 			<div class="prevBtn"><a href="#"><img src="images/btn_prev.png" alt="prevbtn"></a></div>
 			<div class="nextBtn"><a href="#"><img src="images/btn_next.png" alt="nextbtn"></a></div>
 			<div class="main_slider_pager">
-				<div class="bx-pager">
-					<a href="#" data-slide-index="0">Lorem ipsum dolor.</a>
+				<div class="bx-pager clearfix">
+					<a href="#" data-slide-index="0">menu1</a>
 					<a href="#" data-slide-index="1">Lorem ipsum dolor.</a>
 					<a href="#" data-slide-index="2">Lorem ipsum dolor.</a>
 				</div>
