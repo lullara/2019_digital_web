@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+		div.box{width: 100px; height: 100px; background-color: #f00; 
+			transition: all 0.4s linear; 
+			/*transition-delay: 2s;
+			transition-duration: 0.4s; 
+			transition-timing-function:linear;*/
+			}
+		div.box:hover{width: 300px;height: 300px;background-color:blue;}
+		
+		.wrap{width: 300px;	height: 300px;	background-color: skyblue;position: relative;	cursor: pointer; 
+			overflow: hidden;color:white;font-weight: bold; border-radius: 150px;}
+		.wrap  .overlay{width: 300px;	height: 300px;	 background-color: rgba(0,0,0,0.5);
+				position: absolute;	top: 0;left:-300px;transition:0.5s;	}
+
+		.wrap img{display: block;	}
+		.wrap:hover div.overlay{left: 0px; 	opacity: 0.7; 
+				color:white;font-weight: bold; background-color: rgba(0,0,0,0.8);}
+		.wrap .text{width: 150px; background-color: skyblue;line-height: 50px;text-align: center; left:50%; top: 50%; position: absolute;transform:translate(-50%,-50%);}
+		/*	1.transform:translate(-50%,-50%);
+		2.margin-left:-72.5px; margin-top: -25px; 가운데 정렬*/
+
+
+
+
+
+		.content_wrap{display: none;}
+		.content{width: 1230px;margin: 20px auto;}
+		.content li{float: left; width: 300px;height: 300px; position: relative; overflow: hidden;
+			margin-right: 10px;border-radius: 150px;cursor:pointer;}
+		.content li:last-child{margin-right: 0;}
+		.content img{display: block;}
+		.content .overlay{width: 300px; height: 300px; position: absolute; bottom: -300px;background-color: #000;	transition:0.3s; opacity:0;}
+		.content>li:hover .overlay{bottom: 0; opacity: 0.7; }
+		.content .title{color:white; width: 150px;line-height: 50px;background-color: gray;text-align: center;left:50%;top: 50%; transform:translate(-50%,-50%);position: absolute; border-radius: 25px;}
+		.content_wrap{padding: 10px;}
+		.content_wrap>h2{text-align: center;}
+		.content_wrap>h2:after{content:"";display: block;width: 150px; height: 5px; background-color: #000;margin: 10px auto;}
+		.content_wrap>p{text-align: center;margin-bottom: 40px;}
+		.orange{background-color: orange;}
+		.skyblue{background-color: skyblue;}
+		.back01{background:url(../images/pc01.jpg) no-repeat center;background-size:cover;background-attachment:fixed}
+
+
+
+
+	</style>
+</head>
+<body>
+<!-- 	<div class="box"></div>
+	<div class="wrap"><img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="text">Lorem ipsum.</div>
+		</div>
+	</div> -->
+
+	<div class="content_wrap orange">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+		<ul class="content clearfix">
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+	
+		</ul>
+	</div>
+	<div class="content_wrap back01">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+		<ul class="content clearfix">
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="content_wrap skyblue">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+		<ul class="content clearfix">
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="title">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+	<style>
+		/*.section_wrap{display: none;}*/
+		.section_wrap{width: 1000px;margin: 0 auto;}
+		.section>li{width: 25%; height: 300px;float: left;border: 1px solid #000;}
+		.section>li:nth-child(2n){background-color: skyblue;}
+		.section>li:nth-child(1){width: 75%;}
+		.section>li:nth-child(8){width: 75%;}
+
+	</style>
+
+<div class="section_wrap">
+	<ul class="section">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<style>
+	.section01{width: 300px;height: 300px;position: relative;overflow: hidden;}
+	.section01>.over{width: 300px;height: 300px;background-color: orange;
+			position: absolute;top: 0; right:-300px; transition:0.3s; background-color:rgba(211,123,85,0.8);}
+	.section01:hover .over{right: 0; }
+	.section01 .lastText{width: 150px; line-height: 50px; color: white; background-color: #000;text-align: center;
+		font-weight: bold;top: 50%;left: 50%;transform:translate(-50%,-50%);position: absolute;}
+
+
+</style>
+<div class="section01">
+	<img src="../images/testimg.jpg" alt="">
+	<div class="over">
+		<div class="lastText">Lorem ipsum.</div>
+	</div>
+</div>
+
+
+</body>
+</html>
