@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ticker</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var updown = $('.slider').bxSlider({
+				mode:'vertical',
+				pager:false,
+				controls:false,
+				auto:true,
+				touchEnabled:false
+			});
+			$(".upBtn").click(function(){
+				updown.goToPrevSlide();
+				return false;
+
+			});
+
+			$(".downBtn").click(function(){
+				updown.	goToNextSlide();
+				return false;
+
+			});
+
+		});
+	</script>
+	<style>
+		body{background-color: #cdcdcd;}
+		.wrap{position: relative;}
+		.slider > div{height: 80px;position: relative;}
+		.slider .iconPhoto{width: 50px; height: 50px;border-radius: 25px; background: red url(../images/testimg.jpg) no-repeat center; text-indent: -9999px;}
+		.slider .title {width: 300px; line-height: 25px; font-size: 1.2em; color: red; font-weight: bold; position: absolute; left: 60px; top: 0;}
+		.slider .subject{width: 800px; line-height: 40px;background-color: white; border-radius: 20px; padding: 5px 20px;position:absolute; left: 60px;bottom: 0;}
+		.slider .subject:after{content:"";border-width: 10px; border-style: solid; 
+		/*border-color:red orange yellow green; */
+		border-color:transparent  blue transparent transparent  ; 
+		position: absolute; left: -23px; top: 15px;}
+		.bx-wrapper {
+	    -moz-box-shadow: none;
+	    -webkit-box-shadow :none;
+	    box-shadow: none;
+	    border: 0 none;
+	    background: transparent;
+		}
+		.wrap .upBtn, .wrap .downBtn{position: absolute;}
+		.wrap .upBtn{top: 32px; left: 865px;}
+		.wrap .downBtn{top: 58px; left: 865px;}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="slider">
+			<div>
+				<div class="iconPhoto">사진</div>
+				<div class="title">컴퓨터학과</div>
+				<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+			</div>
+			<div>
+				<div class="iconPhoto">사진</div>
+				<div class="title">디지털미디어</div>
+				<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+			</div>
+		</div>
+			<div class="upBtn"><a href="#"><img src="../images/upBtn.png" alt="up_button"></a></div>
+			<div class="downBtn"><a href="#"><img src="../images/downBtn.png" alt="up_button"></a></div>
+	</div>
+</body>
+</html>
