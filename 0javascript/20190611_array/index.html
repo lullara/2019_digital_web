@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array</title>
+	<script>
+		 var city = ["Seoul",, "Busan",, "Incheon"];
+		// var city =[];
+		// city[0] = "seoul";
+		// city[1] = "Busan";
+		// city[2] = "Incheon";
+		// city[3] = "Mokpo";
+
+		function printArr(){
+			for(var i=0;i<city.length;i++){//city.length... city의 개수
+			document.write("배열데이터 ["+i+"] : " +city[i]+"<br>");
+		}
+
+		// for(var i=0;i<3;i++){//city.length... city의 개수
+		// 	document.write("배열데이터 ["+i+"] : " +city[i]+"<br>");
+		}
+
+
+		var com = [95,85,,50,35,44,90,100,70,85];
+		var getAvg;
+		
+		function printAvg(){
+		
+		var sum=0;
+		var n =com.length; //length 개수를 구함
+		//alert(n);
+		for(var i=0;i<n;i++){
+			if(com[i] == undefined) continue;
+			sum+=com[i];
+
+		}
+		document.write(sum);
+		return (sum /n); //return은 밖으로 표출해주는 값
+		// getAvg = sum / n;
+
+		
+		}
+		getAvg = printAvg();
+    	document.write( "평균은 " + getAvg + "점 입니다.");
+	
+	</script>
+
+	<script> 
+		// var com = [95,85,75,64,35,44,90,100,70,85];
+
+		// var sum=0;
+		// var getAvg;
+		// var n =com.length;
+		// for(var i=0;i<n;i++){
+		// 	sum+=com[i];
+
+		// }
+		// getAvg = sum / n;
+		// document.write("국어 전체 총점 : " + sum + "점, 평균은" + getAvg + "점 입니다.");
+
+	</script>
+
+</head>
+<body>
+	<script>
+		// printArr(); 함수호출
+	</script>
+	
+</body>
+</html>
