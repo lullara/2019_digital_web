@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object</title>
+	<style>
+		#var1{width: 100px;height: 100px;background-color: skyblue;}
+	</style>
+</head>
+<body>
+	<div id="var1"></div>
+	<button type="button" onclick="inputCar1()">버튼1</button>
+	<button type="button" onclick="inputCar2()">버튼2</button>
+	<button type="button" onclick="inputCar3()">버튼3</button>
+	<script>
+		var car = ["sonata",100,"white"];
+		var color = ['red', 'blue','yellow']
+
+		// for(var i=0;i<car.length;i++){
+		// 	document.write(car[i] + "<br>");
+		// }
+		function inputCar1(){
+		 document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		 document.getElementById('var1').style.backgroundColor = color[0];
+		}
+		function inputCar2(){
+		 document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		 document.getElementById('var1').style.backgroundColor = color[1];
+		}
+		function inputCar3(){
+		 document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		 document.getElementById('var1').style.backgroundColor = color[2];
+		}
+
+	</script>
+</body>
+</html>
