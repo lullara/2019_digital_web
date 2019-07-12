@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>image</title>
+	<script>
+		var files = [
+		"../../images/img1.jpg",
+		"../../images/img2.jpg",
+		"../../images/img3.jpg",
+		"../../images/img4.jpg",
+		"../../images/img5.jpg",
+		"../../images/img6.jpg",
+		"../../images/img7.jpg",
+		
+		];
+
+	var imgs = new Array();
+	for(var i=0;i<files.length;i++){
+		imgs[i] = new Image();
+		imgs[i].src = files[i];
+
+	}
+
+	var next =1;
+	function change(img){
+		img.src = imgs[next].src //img[1].src = "../../images/img2.jpg"
+		next++; //next = next +1;
+		// if(next ==7) next=0;
+		next %= imgs.length; //next = next % imgs.length -> next = next % 7
+		console.log(next);
+
+	}
+
+	//document.getElementsByTagName("img")[0].src = "../../images/img2.jpg";
+	</script>
+</head>
+<body>
+	<h3>new image()로 이미지 로딩</h3>
+	<img src="../../images/img1.jpg" alt="image1" onclick="change(this)">
+</body>
+</html>
