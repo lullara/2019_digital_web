@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>사계절</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		div#wrapper{width: 522px;}
+		div#wrapper li{float: left; width: 123px; height: 40px; margin-right: 10px;}
+		#wrapper li:last-child{margin-right: 0;}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".nav li:eq(0)").click(function()
+				$(".image > img").attr("src","../images/spring.jpg").attr("alt","봄");
+
+			});
+			$(".nav li:eq(1)").click(function(){
+				$(".image > img").attr("src","../images/summer.jpg").attr("alt","여름");
+
+			});
+			$(".nav li:eq(2)").click(function(){
+				$(".image > img").attr({src:"../images/fall.jpg",alt:"가을"});
+
+			});
+			$(".nav li:eq(3)").click(function(){
+				$(".image > img").attr({src:"../images/winter.jpg",alt:"겨울"});
+
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="nav">
+			<ul class="clearfix">
+				<li><a herf="#"><img src="../images/btn1_1.jpg" alt="btn1"></a></li>
+				<li><a herf="#"><img src="../images/btn2_1.jpg" alt="btn1"></a></li>
+				<li><a herf="#"><img src="../images/btn3_1.jpg" alt="btn1"></a></li>
+				<li><a herf="#"><img src="../images/btn4_1.jpg" alt="btn1"></a></li>
+			</ul>
+		</div>
+		<div class="image">
+			<img src="../images/spring.jpg" alt="봄">
+		</div>
+	</div>
+</body>
+</html>
