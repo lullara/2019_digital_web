@@ -152,16 +152,43 @@
 
 	</style>
 
+	<style>
+		img{display: block;}
+		ul>li:nth-child(3){width: 300px; height: 225px; background-color: pink; position: relative; overflow: hidden; }
+		/*ul>li:nth-child(3) .img01{position: absolute; z-index: 1;}*/
+		ul>li:nth-child(3) .img02{position: absolute; top:0px; transition:0.3s}
+		/*ul>li:nth-child(3):hover .img02{top: 0;}*/
+		/*ul>li:nth-child(3) .back{width: 300px;  height: 225px; background-color: #000; position: absolute; opacity: 0;transition:0.3s; transform:scale(1);}*/
+		/*ul>li:nth-child(3):hover .back{opacity: 0.5;}*/
+		ul>li:nth-child(3):hover .img02{ transform:scale(1.2);}
+		
+		/*ul>li:nth-child(3) .img01:hover ~ ul>li:nth-child(3) .back{opacity: 0.5;}
+		ul>li:nth-child(3) .img01:hover + ul>li:nth-child(3) .img02{transform:scale(0.9);}
+
+		li .img01:hover ~ div.back{opacity: 0.5;}
+		li .img01:hover + div.img02{trasform:scale(1.2);}*/
+
+		
+
+
+	</style>
+
 <div class="section_wrap">
 	<ul class="section">
 		<li></li>
 		<li></li>
+		<li>
+			
+			<img src="../images/01.png" alt="" class="img01">
+			<img src="../images/img6.jpg" alt="" class="img02">
+			<div class="back"></div>
+		</li>
+		<!-- <li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li></li>
-		<li></li>
+		<li></li> -->
 	</ul>
 </div>
 <style>
