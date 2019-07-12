@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>javascript menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		ul{width: 1000px; margin: 0 auto; background-color: gray;}
+		li{float: left; width: 20%; line-height: 40px; text-align: center;}
+
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+		var li = document.getElementsByTagName("li");
+		
+			for(var i=0;i<li.length;i++){
+				
+			
+			// li[0].onmouseover = over1
+			li[i].onmouseover = function(){
+				this.style.backgroundColor = "red";
+			}
+			// li[0].onmouseout =out1
+			li[i].onmouseout = function(){
+				this.style.backgroundColor = "gray";
+			}
+			}
+
+		function over1(){
+			li[0].style.backgroundColor="red";
+
+		}
+		function out1(){
+			li[0].style.backgroundColor="gray";
+		}
+	</script>
+	
+</body>
+</html>
