@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>마우스 이벤트 객체의 프로퍼티</title>
+	<style>
+		#div{background: skyblue; width: 250px;}
+		
+	</style>
+	
+</head>
+<body >
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="../../images/testimg.jpg" alt="test" onmousemove="where(event)"><br>
+	<div id="div"></div>
+	<script>
+		var div = document.getElementById("div");
+		function where(e){
+			var text = "(screenX, screenY)=" + e.screenX + "," + e.screenY + "<br>";
+			text += "(clientX, clientY)= " + e.clientX + "," + e.clientY +"<br>";
+			text += "(offsetX, offsetY)=" + e.offsetX + "," +e.offsetY + "<br>";
+			div.innerHTML =  text;
+ 
+		}
+	</script>
+
+</body>
+</html>
