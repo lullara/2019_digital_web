@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- meta:vp -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		img{width: 100%;}
+		ul{width:100%; margin: 0 auto;}
+		li{float: left; width: 25%;}
+		
+		@media screen and (max-width:576px){
+			html{background-color: red;}
+			li{width: 50%;}
+		}
+		@media screen and (min-width:577px) and (max-width:949px){
+			html{background-color: pink;}
+		}
+		@media screen and (min-width:950px){
+			html{background-color: #000;}
+			li{width: 33.333%;}
+			li.del{display: none;}
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li class="del"><img src="../images/testimg.jpg" alt=""></li>
+	</ul>
+</body>
+</html>
