@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+
+		function change(){
+			var span = document.getElementById("my_span");
+			var firstP = document.getElementById("firstP");
+			span.style.color="green";
+			span.style.fontSize="30px";
+			span.style.display="block";
+			span.style.border="2px solid magenta";
+			span.style.margin="20px";
+
+			firstP.innerHTML = "나의 <img src='../../images/testimg.jpg'>강아지입니다.";
+		}
+
+		function imgBack(obj,size,color){
+			obj.style.color = color;
+			obj.style.fontSize = size;		}
+	</script>
+</head>
+<body>
+	<h3>css스타일변경</h3>
+	<hr>
+	<p style="color: blue" id="firstP">이것은 <span id="my_span" style="color: red">문장입니다.</span></p>
+	<button type="button" onclick="change()">스타일변경</button>
+	<button type="button" onclick="imgBack(this,'30px','red')">버튼</button>
+	<button type="button" onclick="imgBack(this,'30px','blue')">버튼</button>
+	<div onclick="imgBack(this, '25px', 'orange')">클릭시 크기 색 변화</div>
+
+
+	<script> 
+		function my_fruit(){
+			var spanArray = document.getElementsByTagName("b");
+			spanArray[0].style.color = "red";
+			spanArray[1].style.color = "red";
+			spanArray[2].style.color = "red";
+			spanArray[3].style.color = "red";
+			spanArray[0].style.fontSize = "20px";
+			spanArray[1].style.fontSize = "20px";
+			spanArray[2].style.fontSize = "20px";
+			spanArray[3].style.fontSize = "20px";
+
+			for(var i=0; i<spanArray.length;i++){
+				spanArray[i].style.color ="red";
+				spanArray[i].style.fontSize ="20px";
+
+			}
+		}
+	</script>
+
+	<h3>내가 좋아하는 과일
+		<button type="button" onclick="my_fruit()">누르세요</button></h3>
+		<hr>
+		Lorem ipsum dolor sit amet, <b>사과</b>nsectetur adipisicing elit. Culpa et, tenetur id dignissimos soluta consequatur beatae, vitae voluptatum accusantium natus assumenda <b>체리</b>voluptas libero ipsum minima, itaque necessitatibus. Modi non error et <b>바나나</b>asperiores culpa accusantium, a deserunt, nulla inventore repudiandae, fugit nam blanditiis eos, reiciendis omnis. Cumque rerum natus <b>자두</b>explicabo ducimus?
+	
+	<script>
+		function createDiv() {
+			var obj = document.getElementById("parent");
+			var newDiv = document.createElement("div");
+			newDiv.innerHTML = "저는 ㅇㅇㅇ입니다."
+
+			obj.appendChild(newDiv);
+		}
+	</script>
+	<div id="parent" style="border:1px solid #000">
+		<h2>안녕하세요</h2>
+		
+	</div>
+
+		<a href="javascript:createDiv()">div생성</a>
+
+</body>
+</html>
