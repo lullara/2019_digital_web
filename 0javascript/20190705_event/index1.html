@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=	">
+	<meta charset="UTF-8">
+	<title>마우스관련 리스너</title>
+	<script>
+		var width = 1;
+		function down(obj){
+			obj.style.fontStyle = "italic";
+		}
+
+		function up(obj){
+			obj.style.fontStyle = "normal";
+		}
+		function over(obj){
+			obj.style.borderColor ="violet";
+		}
+		function out(obj){
+			obj.style.borderColor = "lightgray";
+		}	
+
+		function wheel(e,obj){
+			if(e.wheelDelta < 0){
+				width--;
+				if(width < 0) width = 0; 
+
+			}else
+			width++;
+			if(width < 0) width =0;
+			obj.style.borderStyle = "solid";
+			obj.style.borderWidth = width+"px";		
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+	
+	<h3>마우스 관련 리스너</h3>
+	<hr>
+	<div>마우스 관련 <span onmousedown="down(this)" onmouseup="up(this)" onmouseover="over(this)" onmouseout="out(this)" onwheel="wheel(event,this)">이벤트</span> 발생합니다.	
+	</div>
+
+</body>
+</html>
