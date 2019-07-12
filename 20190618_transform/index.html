@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<style>
+		/*body{background-color: pink;}*/
+		/*div{margin: 0 auto;width: 100px;height: 100px; border: 1px solid #000; background-color: skyblue;overflow: hidden;}*/
+		.box_wrap{position: absolute; width: 300px;height: 300px; top: 50%; left: 50%; transform:translate(-50%,-50%); cursor: pointer;}
+		.box2{position: absolute;background-color: pink;
+			transform:translateX(250px) 
+			translateY(250px) 
+			rotate(45deg)
+			scaleX(1)
+			/*skewX(-45deg) */
+			;}
+			.box_wrap:hover .box2{transform:translateX(300px)translateY(300px)	rotate(45deg); transition:.2s;}
+			
+			.box1{position: absolute;background-color:pink;
+			transform:translateX(250px) 
+			translateY(-50px) 
+			rotate(45deg)
+			scaleX(1)
+			/*skewX(45deg) */
+			;}
+			.box_wrap:hover .box1{transform:translateX(300px)translateY(-100px)	rotate(45deg); transition:.2s;}
+
+
+
+			.box3{position: absolute;background-color: pink;
+			transform:translateX(-50px) 
+			translateY(-50px) 
+			rotate(45deg)
+			scaleX(1)
+			/*skewX(-45deg) */
+			;}
+			.box_wrap:hover .box3{transform:translateX(-100px)translateY(-100px)rotate(45deg); transition:.2s;}
+			
+			.box4{position: absolute;background-color: pink;
+			transform:translateX(-50px) 
+			translateY(250px) 
+			rotate(45deg)
+			scaleX(1)
+			/*skewX(45deg) */
+			;}
+			.box_wrap:hover .box4	{transform:translateX(-100px)translateY(300px) 	rotate(45deg) ; transition::2s;}
+		
+		
+		.box_wrapper{width: 200px; height: 200px;  background-color: darkblue;position: absolute;left: 50%; top: 50%; transform:translate(-50%,-50%); overflow: hidden;}
+		.box{width: 200px; height: 200px; background-color: blue;transition:.3s; position: absolute;transform-origin: 50% 0%;}
+		.box:hover{transform:rotate(5deg); }
+
+	</style>
+</head>
+<body>
+	
+	<!-- <div class="box_wrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		
+	</div>
+ -->
+
+	<div class="box_wrapper">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
