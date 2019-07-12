@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		function init(){
+			var p = document.getElementById("p");		
+			p.onmouseover = over;
+			p.onmouseout = out;
+
+			var p1 = document.getElementById("p1");
+			p1.addEventListener("mouseover",over1);
+			p1.addEventListener("mouseout",out1);
+		
+
+		}
+		function over(){
+			p.style.backgroundColor = "orchid";
+		}
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+		
+		function over1(){
+			p1.style.backgroundColor = "orchid";
+		}
+		function out1(){
+			p1.style.backgroundColor = "white";
+		}
+		
+	</script>
+</head>
+<body onload="init();">
+	<h2>1.html태그에 리스너 작성</h2>
+	<p onmouseover="this.style.backgroundColor='orchid'" onmouseout="this.style.backgroundColor='white'">마우스를 올리면 색변경</p>
+	
+	<h2>2.DOM객체의 이벤트 리스너 등록</h2>
+	<p id="p">마우스를 올리면 색 변경</p>
+
+	<h2>3. addEventListener</h2>
+	<p id="p1">마우스를 올리면 색 변경</p>
+</body>
+</html>
