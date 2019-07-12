@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>string object</title>
+	<script>
+		var theText = "web js hi city"
+		document.write(theText.bold()+"<br>");
+		document.write(theText.link("http://www.naver.com")+"<br>");	
+		document.write(theText.length+"<br>");
+		document.write(theText.toLowerCase()+"<br>");
+		document.write(theText.toUpperCase()+"<br>");
+		document.write(theText.indexOf("i")+"<br>"); //단어찾아줌
+		document.write(theText.lastIndexOf("i")+"<br>"); //단어찾아줌
+		document.write(theText.charAt(0)+"<br>"); 
+		document.write(theText.substring(4,6)+"<br>"); 
+		document.write(theText.substr(10,4)+"<br>");  //10번에서 4번째까지
+		document.write(theText.replace("web","bye")+"<br>");  //web이랑bye위치 바꾸기
+		document.write(theText.concat("good")+"<br>");  
+		document.write(theText.slice(7,11)+"<br>");  //자기자신의 바로 전까지 포함
+		document.write(theText.split(" ")+"<br>");  //빈공란을 배열로 지정
+		
+		var bText = "영어/수학/국어/국사"
+		var aText = bText.split("/"); //aText=["web","js","hi","city"]
+		document.write(aText[0]+"<br>");
+	
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
