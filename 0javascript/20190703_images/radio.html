@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>selet radio</title>
+	<script>
+		function findChecked(){
+			var kcity = document.getElementsByName("city");
+			
+
+			for(var i=0; i<kcity.length;i++){
+				if(kcity[i].checked == true){
+					found = kcity[i];
+				}
+			}
+		console.log(found.value);
+		// alert(found.value);
+		document.getElementById("text").innerHTML = found.value;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="radio" name="city" value="seoul">서울
+		<input type="radio" name="city" value="busan">부산
+		<input type="radio" name="city" value="chunchen">춘천
+		<input type="button" value="라디오전송" onclick="findChecked();">
+	</form>
+	<div id="text"></div>
+</body>
+</html>
