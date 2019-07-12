@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.tapWrap{width: 500px; margin: 0 auto;}
+		.tapWrap ul{}
+		.tapWrap ul li{float: left; width: 20%; line-height: 40px; text-align: center;border-right: 1px solid gray;}
+		.tapWrap ul li:first-child{border-left: 1px solid gray; cursor: pointer;}
+		.tapWrap ul li:hover{background-color: skyblue;}
+		.boxWrap > div{display: none;}
+		.tapWrap ul li.active{background-color: darkblue; color:white;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".boxWrap > div").hide(); 
+			// $(".boxWrap > div").eq(0).show();
+			$(".boxWrap > div").eq(0).fadeIn();
+			
+			$(".tapWrap > ul >li").click(function(){
+				//console.log($(this).index()); 자기 자신의 index를 구함
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".tapWrap > ul >li").removeClass();
+				$(this).addClass("active");
+				//console.log($(this).index());
+				$(".boxWrap > div").hide();
+				// $(".boxWrap > div").eq(liNum).show();
+				$(".boxWrap > div").eq(liNum).fadeIn();
+			});
+
+
+
+
+
+
+			// $(".tapWrap > ul > li").eq(0).click(function(){
+			// 	$(".boxWrap > div").hide(); 
+			// 	$(".boxWrap > div").eq(0).show();
+			// });
+			// $(".tapWrap > ul > li").eq(1).click(function(){
+			// 	$(".boxWrap > div").hide(); 
+			// 	$(".boxWrap > div").eq(1).show();
+			// });
+
+			// $(".tapWrap > ul > li").eq(2).click(function(){
+			// 	$(".boxWrap > div").hide(); 
+			// 	$(".boxWrap > div").eq(2).show();
+			// });
+
+			// $(".tapWrap > ul > li").eq(3).click(function(){
+			// 	$(".boxWrap > div").hide(); 
+			// 	$(".boxWrap > div").eq(3).show();
+			// });
+
+			// $(".tapWrap > ul > li").eq(4).click(function(){
+			// 	$(".boxWrap > div").hide(); 
+			// 	$(".boxWrap > div").eq(4).show();
+			// });
+
+			
+
+			// 선택자만 달리해새ㅓ 보여주는 방법, 다 똑같음 div에 첫번째를 보여준다.
+			// $(".box1").show();
+			// $("boxWrap > div.box1").show();
+			//$(".boxWrap > div:eq(0)").show();
+			//$(".boxWrap > div").first().show();
+			// $(".boxWrap").children().fisrt().show();
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+	<div class="tapWrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>			
+		</ul>
+		<div class="boxWrap">
+			<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis similique eum nostrum nisi, veniam voluptatum iure dignissimos in sunt incidunt?</div>
+			<div class="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, deleniti, natus! Aperiam repellendus impedit blanditiis laudantium modi, repudiandae ut quis!</div>
+			<div class="box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quod ipsa error, sed veniam deserunt earum enim quae illo animi.</div>
+			<div class="box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt placeat odit optio beatae eius libero perferendis ullam neque rem hic.</div>
+			<div class="box5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum atque laborum quod soluta est libero magni, distinctio reprehenderit officiis, dolores.</div>
+		</div>
+	</div>
+
+</html>
