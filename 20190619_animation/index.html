@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+
+	<style>
+		.box{
+			position: absolute;width: 100px; height: 100px; background-color: #f00;
+			animation:boxmove 2s linear ;   top: 300px; border-radius: 50px;
+	
+			}
+			@keyframes boxmove{
+				0%{left: 0;}
+				50%{left: 300px;}
+				100%{left: 0px;}
+			}
+
+		.box01{width: 200px; height: 10px; background-color: blue; animation:lines 2s;}
+			@keyframes lines{
+				from{width: 0px;}
+				to{width: 200px;}
+			}
+
+		.box02{width: 0px; height: 10px; background-color: skyblue; animation: lines2 2s linear; 
+			animation-delay: 2s; animation-fill-mode:forwards;position: absolute;left: 208px; top: 8px;}
+			@keyframes lines2{
+				from{width: 0;}
+				to{width: 200px;}
+			}
+
+
+		.button{width: 200px; height: 40px;line-height: 40px; background-color: orange;text-align: center; position: relative;}
+		.bar{width: 200px; height: 5px; position: absolute; bottom: 0px; background-color: #f00; animation:btnBar 0.8s;
+			animation-play-state: paused;}
+
+		.button:hover .bar{
+			animation-play-state: running;
+		}
+				
+			@keyframes btnBar{
+				from{width: 0;}
+				to{width: 200px;}
+			}
+
+		.button1{width: 200px; height: 40px;line-height: 40px; background-color:skyblue;text-align: center; position: relative;}
+		.bar1{width: 0px; height: 5px; position: absolute; bottom: 0px; background-color: #f00; }
+
+
+		.button1:hover .bar1{width: 200px; transition: 0.3s}
+
+
+		.button2{width: 200px; height: 40px;line-height: 40px; background-color:skyblue;text-align: center; position: relative;}
+		.bar2{width: 200px; height: 5px; position: absolute; bottom: 0px; background-color: #f00; transition:0.3s;transform:scaleX(0); }
+	
+		.button2:hover .bar2{transform:scaleX(1);}
+		
+
+
+
+
+	.ver{width: 500px; height: 500px; background-color: orange; position: relative; }
+	
+	.top{width: 500px;height: 5px; background-color: #000;position: absolute;top: 0; animation:topBar 1s linear;animation-play-state: paused;}
+
+
+		
+	.right{width: 5px;height: 0px; background-color: red;position: absolute;right: 0;animation:rightBar 1s linear;animation-play-state: paused; animation-delay: 1s; animation-fill-mode: forwards;}
+
+
+	.bottom{width:0px;height: 5px; background-color: green; position: absolute;bottom: 0;animation:bottomBar 1s linear ;animation-play-state: paused; animation-delay: 2s; animation-fill-mode: forwards;}
+
+
+	.left{width: 5px;height: 0px; background-color: blue;position: absolute;left: 0;animation:leftBar 1s linear;animation-play-state: paused; animation-delay: 3s; animation-fill-mode: forwards;}
+
+	
+
+
+	.ver:hover .top{animation-play-state: running;}
+	@keyframes topBar{
+		from{width: 0;}
+		to{width: 500px;}
+	}
+	.ver:hover .right{animation-play-state: running;}
+	
+	@keyframes rightBar{
+			from{height: 0; }
+			to{height: 500px;}
+			}
+	.ver:hover .bottom{animation-play-state: running;}
+	
+	@keyframes bottomBar{
+			from{width: 0px; left: 500px;}
+			to{width: 500px; left: 0;}
+			}
+	.ver:hover .left{animation-play-state: running;}
+	
+	@keyframes leftBar{
+			from{height: 0; top: 500px;}
+			to{height: 500px;top: 0;}
+			}
+
+	
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>	
+	<div class="box01"></div>
+	<div class="box02"></div>
+	<div class="button">
+		안녕하세요
+		<div class="bar"></div>
+	</div>
+	<div class="button1">
+		안녕하세요
+		<div class="bar1"></div>
+	</div>
+	<div class="button2">
+		안녕하세요
+		<div class="bar2">
+		</div>
+	</div>
+
+
+	<div class="ver">
+		<div class="top"></div>
+		<div class="right"></div>
+		<div class="bottom"></div>
+		<div class="left"></div>
+	</div>
+
+</body>
+</html>
