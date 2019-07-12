@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		#upspeed{width: 200px; height: 100px; background-color: skyblue; padding: 10px; color: white;}
+	</style>
+</head>
+<body>
+	<!-- <p id="upspeed"></p>
+	<p id="downspeed"></p>
+	<button type="button" onclick="printup()">upspeed</button>
+	<button type="button" onclick="printdown()">downspeed</button> -->
+	
+	<p> - car1</p>
+	<p id="data10"></p>
+	<p id="data20"></p>
+	<p id="data30"></p>
+
+	<p> - car2</p>
+	<p id="data11"></p>
+	<p id="data21"></p>
+	<p id="data31"></p>
+
+	<p> - car3</p>
+	<p id="data12"></p>
+	<p id="data22"></p>
+	<p id="data32"></p>
+	<script>
+		// var car = {
+		// 	name:"sonata",
+		// 	speed:100,
+		// 	color:"white",
+		// 	speedUp:function(a){
+		// 		var sp = this.speed + a;
+		// 		return sp;
+		// 	},
+		// 	speedDown:function(a){
+		// 		var sp = this.speed - a;
+		// 		return sp;
+		// 	}
+
+		// }
+
+		// function printup(){
+		// var upspeed = document.getElementById("upspeed").innerHTML = car.speedUp(100);
+		
+		// }
+		// function printdown(){
+		// 	var downspeed = document.getElementById("upspeed").innerHTML = car.speedDown(150);
+		// }
+
+		var myCar = [
+		{name:"sonata",color:"blue",speed:30},
+		{name:"jeep",color:"red",speed:70},
+		{name:"passt",color:"white",speed:100}
+
+		]
+		for(var i=0;i<3;i++){
+			var myCarName = document.getElementById("data1" + i);
+			myCarName.innerHTML =  myCar[i].name;
+			myCarName.innerHTML =  myCar[i].color;
+			myCarName.innerHTML =  myCar[i].speed;
+
+			// document.getElementById("data1" + i).innerHTML = myCar[i].name;
+			// document.getElementById("data2" + i).innerHTML = myCar[i].color;
+			// document.getElementById("data3" + i).innerHTML = myCar[i].speed;
+
+		}
+		
+
+
+		var fruit = ['포도','사과','바나나','망고'];
+		// for(var k=0;k<fruit.length;k++){
+		// 	document.write(fruit[k]);
+
+		// }
+		for(var k in fruit){
+			document.write(fruit[k]+"<br>");
+
+		}
+		
+//외워!! 
+		function wOpen(){
+
+			window.open(
+				'http://www.naver.com',
+				'winPopup',
+				'width=400,height=300'
+				);
+			}
+		button
+
+	</script>
+	<button type="button" onclick="wOpen()">새창</button>
+</body>
+</html>
