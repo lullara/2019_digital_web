@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>date object</title>
+	<script>
+		// var today = new Date();
+		// var nowDay = today.getDay();
+
+		// if(nowDay == 1 ){
+		// 	document.write("<img src='../../images/img1.jpg'>");
+		// }else if(nowDay == 2){
+		// 	document.write("<img src='../../images/img2.jpg'>");
+		// }else if(nowDay == 3){
+		// 	document.write("<img src='../../images/img3.jpg'>");
+		// }else if(nowDay == 4){
+		// 	document.write("<img src='../../images/img4.jpg'>");
+		// }else if(nowDay == 5){
+		// 	document.write("<img src='../../images/img5.jpg'>");
+		// }else if(nowDay == 6){
+		// 	document.write("<img src='../../images/img6.jpg'>");
+		// }else{
+		// 	document.write("<img src='../../images/img7.jpg'>");
+		// }
+		
+
+
+
+		//document.write(nowDay); //0:일요일 1:월요일
+
+
+	</script>
+</head>
+<body>
+	<h1 id="clock" style="color:gray">00:00</h1>
+	<script>
+		
+		var clockTarget = document.getElementById("clock");
+		
+		function clock(){
+		var date = new Date();
+		var month = date.getMonth()+1; //월의 시작은 0
+		var day = date.getDate(); //금일 일
+		var clockDay = date.getDay();
+		var week = ["일","월","화","수","목","금","토",]
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var seconds = date.getSeconds();
+		
+
+		clockTarget.innerHTML = month + "월 " + day + "일 " + week[clockDay]+"요일 " + hours + "시 " + minutes + "분 "+ seconds + "초 ";
+		}
+
+		clock();
+		setInterval(clock,1000); // 1000 = 1초
+	</script>
+	
+</body>
+</html>
