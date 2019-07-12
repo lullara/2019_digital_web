@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		window.onload=function(){
+			var div = document.getElementById("div");
+		function where(e){
+			var text = "screenX, screenY = " + e.screenX + "," + e.screenY + "<br>";
+			text += "clientX, clientY = " + e.clientY + "," + e.clientY+ "<br>";
+			text += "offsetX, offsetY = " + e.offsetY + "," + e.offsetY;
+			div.innerHTML = text;
+		}
+
+	};</script>
+</head>
+<body onload="alert('문서로드왈료')">
+	<p id="p1">마우스를 올려보세요.</p>
+
+	<script>
+		
+		// document.getElementById("p1").onmouseover = f;
+		// function f(e){
+		// 	alert("안녕하세요");
+		// }
+	</script>
+
+	<h3>계산기</h3>
+	<form>
+		<input type="text" id="st">
+		*<input type="text" id="exp"><br>
+		값<input type="text" id="result">
+		<input type="button" value="계산" onclick="calculate()">
+	</form>
+	<script>
+		function calculate(){
+			var st = document.getElementById("st");
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result");
+
+			result.value = eval(exp.value * st.value);
+		}
+	</script>
+
+	<div>마우스관련
+		<span onmousedown="down(this)" onmouseup="up(this)" onmouseover="over(this)" onmouseout="out(this)" onwheel="wheel(event,this)">이벤트</span>가 발생했습니다.</div>
+		<script> 
+			function down(obj){
+				obj.style.fontStyle = "italic";
+				obj.style.fontSize = " 2em";
+			}
+			function up(obj){
+				obj.style.fontStyle = "normal";
+				obj.style.fontSize = " 1em";
+
+			}
+
+			function over(obj){
+				obj.style.borderColor = "violet";
+				obj.style.borderWidth = "1px";
+				obj.style.borderStyle = "solid";	
+
+			}
+			function out(obj){
+				obj.style.borderColor = "lightgray";
+				obj.style.borderWidth = "0px";	
+			}
+
+			function wheel(e,obj){
+				if(e.wheelDelta<0){ //휠을 아래로 굴릴 때
+					width--; //width = width - 1;
+					if(width<0) width=0;
+				}else{//휠을 위로 굴리 때
+					width++; //width = width + 1;
+				}
+
+				console.log(width);
+				obj.style.borderStyle = "solid";
+				obj.style.borderWidth = width + "px";
+			}
+			var width=1;
+	</script>
+
+
+	<style>
+		#div{width: 250px; background-color: skyblue;}
+	</style>
+
+	<h3>마우스 이벤트객체의 프로퍼티 onmousemove</h3>
+	<img src="../../images/testimg.jpg" onmousemove="where(event)">
+	<div id="div"></div>
+	<script>
+		var div = document.getElementById("div");
+		function where(e){
+			var text = "screenX, screenY = " + e.screenX + "," + e.screenY + "<br>";
+			text += "clientX, clientY = " + e.clientY + "," + e.clientY+ "<br>";
+			text += "offsetX, offsetY = " + e.offsetY + "," + e.offsetY;
+			div.innerHTML = text;
+		}
+	</script>
+</body>
+</html>
