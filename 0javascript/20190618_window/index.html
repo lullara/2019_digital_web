@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>새창</title>
+	<style>
+		.button{width: 150px; height: 50px; background-color: skyblue; text-align: center; line-height: 50px;}
+	</style>
+	<script>
+		function popup(){
+			myClose = window.open("http://www.naver.com",
+				"네이버","width=500,height=300,resizable=no"
+
+				);
+		}
+		function myclose(){
+			myClose.close();
+		}
+
+		function moveNaver(i){
+			if (i==1){
+			location.href="http://www.naver.com";
+		}else{
+			location.href="http://www.daum.net"
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="button" onclick="popup()">새창</div>
+	<button type="button" onclick="popup()" > 새창</button>
+	<button type="button" onclick="myclose()" > 닫기</button>
+	<button type="button" onclick="moveNaver(1)" > 네이버로 이동</button>
+	<button type="button" onclick="moveNaver(2)" > 다음으로로 이동</button>
+</body>
+</html>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum perspiciatis voluptates pariatur sequi totam natus deserunt sit doloribus, aliquam cum ullam vitae illo saepe debitis consectetur magnam dignissimos odio ipsa sed, sint, fuga eaque.
