@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>선택된 라디오 버튼 알아내기</title>
+	<script>
+		function findChecked(){
+			var found = null;
+			var kcity = document.getElementsByName("city");
+			for(var i=0;i<kcity.length;i++){
+				if(kcity[i].checked == true)
+					found = kcity[i];
+				//<input type="radio" name="city" value="seoul" checked>
+
+			}
+			alert(found.value + "이 선택되었음");
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<hr>
+	<form>
+		<input type="radio" name="city" value="seoul"> 서울
+		<input type="radio" name="city" value="busan"> 부산
+		<input type="radio" name="city" value="chunchen" checked> 춘천
+		<input type="button" value="find checked" onclick="findChecked()">
+	
+
+		
+		
+	</form>
+</body>
+</html>
