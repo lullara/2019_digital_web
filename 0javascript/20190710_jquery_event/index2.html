@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.tapWrap{width: 600px; margin: 0 auto;}
+		.tapWrap>ul{}
+		.tapWrap>ul>li{float: left; border-left: 1px solid #000; line-height: 30px; width: 33.33%; text-align: center; }
+		.tapWrap>ul>li:last-child{border-right: 1px solid #000;}
+		.tapWrap>ul>li:hover{background-color: pink;}
+		.boxWrap > div{display: none;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".boxWrap > div").hide();
+			$(".boxWrap > div").eq(0).show();
+
+			$(".tapWrap > ul > li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".boxWrap > div").hide();
+				$(".boxWrap > div").eq(liNum).show();
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div class="tapWrap">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+		</ul>
+		<div class="boxWrap">
+			<div class="box1">1Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laboriosam fugit, ullam est perferendis sit corrupti veniam reiciendis aut iure.</div>
+			<div class="box2">2Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laboriosam fugit, ullam est perferendis sit corrupti veniam reiciendis aut iure.</div>
+			<div class="box3">3Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laboriosam fugit, ullam est perferendis sit corrupti veniam reiciendis aut iure.</div>
+		</div>
+	</div>
+	
+</body>
+</html>
