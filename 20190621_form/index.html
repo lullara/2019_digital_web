@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>form</title>
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		.f_layer{width: 400px; margin: 0 auto;}
+		.f_layer label{display: block; padding: 5px 0 ;}
+		.f_layer select{width: 100%; height:40px;	 font-size: 1.2em; font-weight: bold; 
+			border-radius: 5px; text-indent: 8px;}
+		.f_layer input{width: 100%; height: 40px; font-size: 1.2em; font-weight: bold; border-radius: 5px;border: 1px solid #999;}
+		.f_layer .f_cell .cleft{float: left; width: 50%;padding-right: 10px;}
+		.f_layer .f_cell .cright{float: right; width: 50%;	
+	</style>
+</head>
+<body>
+	<form action="update.php" class="f_layer">
+		<ul>
+			<li>
+				<label for="golo">가고싶은 나라를 선택하세요</label>
+				<select name="nara" id="golo">
+					<option value="">선택하세요</option>
+					<option value="미국">미국</option>
+					<option value="일본">일본</option>
+					<option value="중국">중국</option>
+				</select>
+			</li>
+			<li class="f_cell clearfix">
+				<!-- for와 id는항상 같아야한다 -->
+				<div class="cleft">
+					<label for="sdate">출발일</label>
+					<input type="date" id="sdate">
+				</div>
+				<div class="cright">
+					<label for="edate">도착일</label>
+					<input type="date" id="edate">
+				</div>
+
+			</li>
+			<li class="f_cell clearfix">
+				<!-- for와 id는항상 같아야한다 -->
+				<div class="cleft">
+					<label for="cgrade">좌석등급</label>
+					<select  id="cgrade">
+						<option value="비지니스">비지니스</option>
+						<option value="이코노미">이코노미</option>
+					</select>
+			</div>
+
+				<div class="cright">
+					<label for="num">인원</label>
+					<input type="number" id="num" placeholder="1">
+				</div>
+
+			</li>
+		</ul>
+		
+	</form>
+	
+</body>
+</html>
