@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>mobile slide menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		div.toggleMenu{width: 50px; height: 50px; position: relative; border:1px solid #ccc;
+			cursor: pointer; z-index: 1;}
+		div.toggleMenu div{width: 35px;height: 5px; background-color: #000;
+			position: absolute; border-radius: 3px; left: 7px; transition:.3s; }
+		.bar1{top: 11px;}
+		.bar2{top: 21px;}
+		.bar3{top: 31px;}
+		.change .bar1{transform:rotate(-45deg); top: 21px;background-color: #fff;}
+		.change .bar2{opacity:0;}
+		.change .bar3{transform:rotate(45deg); top:21px;background-color: #fff;}
+
+		.menuView{position: fixed; width: 100%; height: 100%;background-color: pink; top: 0; left:-100%;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass);
+				if(myClass == "toggleMenu"){
+					$(this).addClass("change");
+					$(".menuView").stop().animate({left:0},300);
+				}else{$(this).removeClass("change");
+				$(".menuView").stop().animate({left:"-100%"},300);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="toggleMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="menuView">test</div>
+</body>
+</html>
