@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#wrap{width: 800px; margin: 60px auto; position: relative;}
+		#wrap .menu{}
+		#wrap .menu li{float: left; width: 20%; line-height: 70px; text-align: center; background-color: #eaeaea; 
+			border-radius: 20px 20px 0 0; color:#00f; cursor: pointer;}
+
+		#wrap .menu li.active{background-color: #afd5ef; font-weight: bold; color:black; border: 1px solid #6197bc;  border-bottom: 0 none; }
+		.boxWrap{width: 800px;height: 150px;padding: 20px 5px;border: 2px solid #6197bc; border-top: 0 none;position: relative;
+			 overflow: hidden;}
+		.content{width: 4025px; height: 150px;position: relative;}
+		.boxWrap .content div{width: 800px; float: left;}
+	</style>
+	<script>
+		
+	$(document).ready(function(){
+		// $(".boxWrap div").hide();
+		// $(".boxWrap div").eq(0).show();
+		$("#wrap .menu li").click(function(){
+			var list = $(this).index();
+			console.log(list)
+			$("#wrap .menu li").removeClass();
+			$(this).addClass("active");
+			// $(".boxWrap div").hide()
+			// $(".boxWrap div").eq(list).show();
+			move = list * 800 * -1;
+			$(".boxWrap .content").stop().animate({left:move});
+
+		});
+		
+	});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="menu">
+			<ul class="clearfix">
+				<li class="active">Today</li>
+				<li>Story</li>
+				<li>Life</li>
+				<li>Twitter</li>
+				<li>Game</li>
+			</ul>
+			<div class="boxWrap">
+				<div class="content clearfix">
+					<div class="box1">1Lqorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate illo reiciendis, magnam quidem cum iusto, distinctio aspernatur velit illum, repellat culpa et. Autem ex atque, quaerat eius sunt! Tempore dolores sunt distinctio enim laudantium quas, nihil nemo dolor! Minus culpa excepturi veniam dolor dicta velit, mollitia debitis fuga consequatur sint.</div>
+					<div class="box2">2wMagni, ipsam suscipit tenetur pariatur mollitia, hic quas, incidunt cupiditate aut neque distinctio, harum officiis inventore velit porro ex quisquam illum necessitatibus. Sunt asperiores nulla repellat nostrum voluptatum non totam recusandae officia nam ex, officiis suscipit rem, doloremque culpa aut. Adipisci, rerum dolorem. Magni quam enim, ducimus fugit quas impedit.</div>
+					<div class="box3">3eAut assumenda doloribus ullam, nisi odio alias fuga rem excepturi labore sunt eius velit in, a nostrum perspiciatis totam blanditiis placeat quod ut quasi quidem iste laborum debitis architecto? Cupiditate officia, suscipit explicabo minima assumenda quas similique possimus temporibus dolorum! Nisi voluptate aperiam saepe possimus vel maxime rerum cumque dolor.</div>
+					<div class="box4">4Quod atque incidunt nisi rerum itaque? Enim est atque similique, voluptas aliquam, ipsam laboriosam odit adipisci voluptate quod, officiis sapiente! Hic voluptates qui impedit delectus pariatur quisquam itaque aliquid omnis ipsam culpa nam ea corrupti quae, earum, vero tempore, provident nobis ipsa iure accusantium. Quibusdam dicta quas, sint laboriosam modi.</div>
+					<div class="box5">5Nemo veniam eligendi, voluptas, ea sapiente saepe ut cumque. Rerum nobis nesciunt dolor ipsam fugiat voluptatibus exercitationem alias corrupti cupiditate, assumenda aut quis, ipsa quaerat, soluta totam laborum blanditiis repellat dignissimos quidem nam omnis vero at officia. Atque illum sint neque tempora eligendi voluptatem, aperiam numquam quidem deserunt iure ratione.</div>
+								</div>
+				</div>
+		</div>
+	</div>
+	
+</body>
+</html>
