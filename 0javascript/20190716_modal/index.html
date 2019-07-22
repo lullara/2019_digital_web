@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+
+	<style>
+		ul{width: 550px; margin: 20px auto; }
+		ul>li{float: left;}
+		ul li img{margin: 10px;}
+		#glayLayer{position:fixed; width: 100%; height: 100%; background-color: #000;top: 0;left: 0;opacity: .6; display: none;}
+		#overLayer{position:fixed; top: 50%; left: 50%; transform:translate(-50%,-50%);
+			/*-*/display: none;}
+	</style>
+	<script>
+		// $(function(){});
+		$(function(){
+			$("body").append("<div id='glayLayer'></div><div id='overLayer'></div>");
+			$("a.modal").click(function(){
+				$("#glayLayer").show();
+				$("#overLayer").show().html("<img src='" +$(this).attr("href") +"'>");
+				return false;
+			});
+			$("#glayLayer,#overLayer").click(function(){
+				$("#glayLayer").hide();
+				$("#overLayer").hide();
+			});
+			//colorbox modal
+			$(".group1").colorbox({rel:"group1",transition:"fade"});
+			$("utube").colorbox({iframe:true,innerWidth:560,innerheght:315});
+
+
+
+
+		});
+			
+	</script>
+</head>
+<body>
+	<!-- ul>li*6>a[href="images/tourgallery_j$a.jpg"].modal>img[src="images/tourgallery_j$.jpg"] -->
+	<ul class="clearfix">
+		<li>
+			<a href="images/tourgallery_j1a.jpg" class="modal">
+				<img src="images/tourgallery_j1.jpg" alt="">
+			</a>
+		</li>
+		<li><a href="images/tourgallery_j2a.jpg" class="modal"><img src="images/tourgallery_j2.jpg" alt="">
+		</a></li>
+		<li><a href="images/tourgallery_j3a.jpg" class="modal"><img src="images/tourgallery_j3.jpg" alt=""></a></li>
+		<li><a href="images/tourgallery_j4a.jpg" class="modal"><img src="images/tourgallery_j4.jpg" alt=""></a></li>
+		<li><a href="images/tourgallery_j5a.jpg" class="modal"><img src="images/tourgallery_j5.jpg" alt=""></a></li>
+		<li><a href="images/tourgallery_j6a.jpg" class="modal"><img src="images/tourgallery_j6.jpg" alt=""></a></li>
+	</ul>
+	<ul class="clearfix">
+		<li>
+			<a href="images/tourgallery_j1a.jpg" class="group1">
+				<img src="images/tourgallery_j1.jpg" alt="">
+			</a>
+		</li>
+		<li><a href="images/tourgallery_j2a.jpg" class="group1" title="여행1"><img src="images/tourgallery_j2.jpg" alt="">
+		</a></li>
+		<li><a href="images/tourgallery_j3a.jpg" class="group1" title="여행2"><img src="images/tourgallery_j3.jpg" alt=""></a></li>
+		<li><a href="images/tourgallery_j4a.jpg" class="group1" title="여행3"><img src="images/tourgallery_j4.jpg" alt=""></a></li>
+		<li><a href="images/tourgallery_j5a.jpg" class="group1" title="여행4"><img src="images/tourgallery_j5.jpg" alt=""></a></li>
+		<li><a href="https://www.youtube.com/embed/0eAgFDZJNaU" alt=""></a></li>
+	</ul>
+</body>
+</html>
