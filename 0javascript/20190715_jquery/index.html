@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tap</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".content_wrap li").click(function(){
+				var liNum = $(this).index();
+				// console.log($(this).index());
+				console.log(liNum);
+				$(".content_wrap li").removeClass();
+				$(this).addClass("active");
+			
+				$(".content_txt > div").hide();
+				$(".content_txt > div").eq(liNum).show();
+				// $(".content_txt > div:eq("+liNum+")").fadeIn();
+			});
+
+		});
+	</script>
+	<style>
+		.content_wrap{width: 1000px; margin: 20px auto;}
+		.content_wrap ul{}
+		.content_wrap li{float: left; width: 16.66%; height: 40px;line-height: 40px; text-align: center;cursor: pointer; border-radius:20px;}
+		.content_wrap li:hover{background-color: skyblue;}
+		.content_wrap li.active{background-color: orange; color:white;}
+		.content_wrap .content_txt{border: 1px solid #cdcdcd;}
+
+		.content_wrap .content_txt div{padding: 20px; display: none; }
+		.content_wrap .content_txt div:nth-child(1){display: block;}
+	</style>
+
+</head>
+<body>
+	<div class="content_wrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+			<li>menu6</li>
+		</ul>
+		<div class="content_txt">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolore, velit, excepturi eaque sapiente facilis, reprehenderit tempore maxime impedit odit nobis odio at, ullam repellendus sunt hic. Quis, voluptatum, repellat.</div>
+			<div>Iusto sit, nulla suscipit tempore, officiis tenetur dolores placeat, dolore ullam quo in ex sed autem nesciunt impedit possimus! Modi et hic adipisci corporis eveniet saepe, natus quod ducimus eligendi.</div>
+			<div>Adipisci quis enim quasi saepe a doloremque, numquam optio obcaecati perspiciatis placeat voluptas provident dignissimos illum voluptate unde facere, voluptatibus officiis, voluptatum qui rerum? Suscipit, minus sunt perferendis nihil non.</div>
+			<div>Dolores qui delectus vitae temporibus fugiat ea, asperiores. Deleniti atque iste, dignissimos aspernatur tempora aut dolorum modi alias. Quis placeat quia reprehenderit similique hic fugiat corrupti illo quam qui officia?</div>
+			<div>Repudiandae dolore officiis, quae corporis laborum mollitia deleniti unde, tempora quam iste tenetur. Iure inventore repellat quam doloremque iste totam, harum sapiente explicabo doloribus natus quasi illum et, adipisci incidunt.</div>
+			<div>Velit, nisi in ut aliquam corporis quam voluptatum eaque reprehenderit. Earum veritatis quisquam maxime, necessitatibus repudiandae, molestias sint unde quo! Nisi vero facilis inventore doloremque in ratione veritatis rem aut.</div>
+		</div>
+	</div>
+
+	<style>
+		.wrapper{width: 522px; margin: 0 auto;}
+		.wrapper ul li{float: left; width: 123px; height: 40px; margin-right: 10px;}
+		.wrapper ul li:last-child{margin-right: 0;}
+	</style>
+	<script>
+		// $(document).ready(function(){
+			var viewImg = [
+			"../images/spring.jpg",
+			"../images/summer.jpg",
+			"../images/fall.jpg",
+			"../images/winter.jpg"
+			]; //viewImg[0]
+
+
+			$(document).ready(function(){
+				
+				$(".wrapper > ul >li").click(function(){
+					var num = $(this).index();
+					$(".image>img").attr("src",viewImg[num]); //배열변수인덱스
+				});
+			//});
+			// $(".wrapper > ul > li:eq(0)").click(function(e){
+			// 	//$(".선택자").attr(속성, 속성값)/set .attr("속성")/get;
+			// 	$(".image > img").attr("src","../images/spring.jpg"); //속성, 속성값
+
+			// });
+			// $(".wrapper > ul > li:eq(1)").click(function(e){
+			// 	$(".image > img").attr("src","../images/summer.jpg");
+			// });
+			// $(".wrapper > ul > li:eq(2)").click(function(e){
+			// 	$(".image > img").attr("src","../images/fall.jpg");
+			// });
+			// $(".wrapper > ul > li:eq(3)").click(function(e){
+			// 	$(".image > img").attr("src","../images/winter.jpg");
+				//return false;
+				//e.preventDefault();
+				//매개변수 e 써야함
+			// });
+		});
+	</script>
+	<div class="wrapper">
+		<ul class="clearfix">
+			<li><a href="javascript void(0)"><img src="../images/btn1_1.jpg" alt="봄"></a></li>
+			<li><a href="#"><img src="../images/btn2_1.jpg" alt="여름"></a></li>
+			<li><a href="#"><img src="../images/btn3_1.jpg" alt="가을"></a></li>
+			<li><a href="#"><img src="../images/btn4_1.jpg" alt="겨울"></a></li>
+		</ul>
+		<div class="image">
+			<img src="../images/spring.jpg" alt="봄">
+		</div>
+	</div>
+	
+	
+</body>
+</html>
