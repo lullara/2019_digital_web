@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>현대 자동차</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+	.wrap{width: 800px; height: 35px; margin: 20px auto;background-color: #2c2d31;position: relative;}
+	.menu{width: 800px;position: absolute; top: 0; left: 245px;}
+	.menu>ul>li{float: left; line-height: 35px; color:white; padding: 0 20px; 
+		cursor: pointer;text-align: center; font-weight: bold;}
+	.menu>ul>li.active{background-color: white; color:#000; display: block;}
+
+	.content{position: relative;}
+	.content>ul{display: none; background-color: #fbfbfb; width: 800px; height: 90px;}
+	.content>ul>li{float: left;} 
+	.Xbtn{position: absolute;top: 0;right: 0; cursor:pointer; }
+	.sCount{position: absolute;}
+	
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".content > ul").hide();
+			$(".content > ul").eq(0).show();
+			var sCount = $(".content ul").eq(0).find("li").length;
+				console.log(sCount);
+				$(".sCount").html(sCount);
+			$(".menu li").click(function(){
+				var Carlist = $(this).index();
+				//console.log(Carlist);
+				$(".menu li").removeClass();
+				$(this).addClass("active");
+				$(".content > ul").hide();
+				$(".content > ul").eq(Carlist).show();
+				$(".content div").show();
+				
+
+				sCount = $(".content ul").eq(Carlist).find("li").length;
+				console.log(sCount);
+				$(".sCount").html(sCount);
+				
+
+			});
+				
+			$(".content div").click(function(){
+				var xBtn = $(this).index();
+				$(".content > ul").hide();
+				$(".content div").hide();
+				$(".menu li").removeClass();
+				
+
+
+			});		
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		
+		<div>
+			<img src="../images/tab_logo.jpg" alt="logo">
+		</div>
+		<div class="menu">
+			<ul class="clearfix">
+				<li class="active">승용</li>
+				<li>견적</li>
+				<li>상담</li>
+				<li>이벤트</li>
+			</ul>
+		</div>	
+			<div class="content">
+				<ul class="clearfix">
+					<li><img src="../images/car1_01.gif" alt="car"></li>
+					<li><img src="../images/car1_02.gif" alt="car"></li>
+					<li><img src="../images/car1_03.gif" alt="car"></li>
+					<li><img src="../images/car1_04.gif" alt="car"></li>
+					<li><img src="../images/car1_05.gif" alt="car"></li>
+					<li><img src="../images/car1_06.gif" alt="car"></li>
+				</ul>
+				<ul>
+					<li><img src="../images/estimate_01.gif" alt="estimate"></li>
+					<li><img src="../images/estimate_02.gif" alt="estimate"></li>
+					<li><img src="../images/estimate_03.gif" alt="estimate"></li>
+					<li><img src="../images/estimate_04.gif" alt="estimate"></li>
+				</ul>
+				<ul>
+					<li><img src="../images/consult_01.gif" alt=""></li>
+					<li><img src="../images/consult_02.gif" alt=""></li>
+					<li><img src="../images/consult_03.gif" alt=""></li>
+					<li><img src="../images/consult_04.gif" alt=""></li>
+				</ul>
+				<ul>
+					<li><img src="../images/event_01.gif" alt=""></li>
+					<li><img src="../images/event_02.gif" alt=""></li>
+				</ul>
+				<div class="Xbtn"><img src="../images/x.jpg" alt=""></div>
+		
+		</div>
+	</div>
+	<!-- container -->
+	<div class="sCount"></div>
+</body>
+</html>
