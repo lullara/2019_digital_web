@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#gallery{width: 824px;height: 595px; background: gray; margin: 20px auto;}
+		#image{width: 760px; height: 470px; margin: 0 auto;}
+		#image p{display: none;}
+		#thumbnail{width: 824px; height: 95px; margin-top: 30px; background-color: skyblue; position: relative;	}
+		#thumbnail div{float: left;}
+		#thumbnail .left{position:absolute;left: 0;top:30px; width:33px;	 height:95px; cursor:pointer; text-align: center;}
+		#thumbnail .right{position: absolute;right: 0;top:30px; width:33px;	 height:95px; cursor:pointer; text-align: center;}
+
+		#thumbnail .container{width: 760px; height: 95px; position: relative; left: 33px;overflow:hidden;}
+		#thumbnail .container ul{position: absolute; width: 2280px;}
+		#thumbnail .container ul li{float: left; width: 120px; height: 95px; margin-left: 8px;}
+		#thumbnail .container .ml0{margin-left: 0;}
+	</style>
+	<script>
+		$(function(){
+			$(".thumb").click(function(){
+				var i = $(this).index();
+				$("#image > p").hide().eq(i).show();
+			});
+
+			var current = 0;
+			$(".right").click(function(){
+				if(current<2){
+					current++; //current = current + 1;
+				}
+				move();
+				
+			});
+			$(".left").click(function(){
+				if(current>0){
+					current--;
+				}
+				move();
+			});
+			
+			function move(){
+				var num = current * 760 * -1;
+				// $(".container > ul").css("left",num);
+				$(".container > ul").animate({"left":num},300);
+				console.log(current);
+			}
+			
+			
+
+			
+
+		});
+	</script>
+</head>
+<body>
+	<div id="gallery">
+		<div id="image">
+			<p style="display: block"><img src="gallery/0.jpg" alt=""></p>
+			<p><img src="gallery/1.jpg" alt=""></p>
+			<p><img src="gallery/2.jpg" alt=""></p>
+			<p><img src="gallery/3.jpg" alt=""></p>
+			<p><img src="gallery/4.jpg" alt=""></p>
+			<p><img src="gallery/5.jpg" alt=""></p>
+			<p><img src="gallery/6.jpg" alt=""></p>
+			<p><img src="gallery/7.jpg" alt=""></p>
+			<p><img src="gallery/8.jpg" alt=""></p>
+			<p><img src="gallery/9.jpg" alt=""></p>
+			<p><img src="gallery/10.jpg" alt=""></p>
+			<p><img src="gallery/11.jpg" alt=""></p>
+			<p><img src="gallery/12.jpg" alt=""></p>
+			<p><img src="gallery/13.jpg" alt=""></p>
+			<p><img src="gallery/14.jpg" alt=""></p>
+			<p><img src="gallery/15.jpg" alt=""></p>
+			<p><img src="gallery/16.jpg" alt=""></p>
+			<p><img src="gallery/17.jpg" alt=""></p>
+		</div>
+		<div id="thumbnail" class="clearfix">
+			<div class="left">
+				<img src="gallery/btn_left.gif" alt="">
+			</div>
+			
+			<div class="container">
+				<ul class="clearfix">
+					<li class="thumb ml0"><img src="gallery/thumb0.jpg" alt="">00</img></li>
+					<li class="thumb"><img src="gallery/thumb1.jpg" alt="">01</img></li>
+					<li class="thumb"><img src="gallery/thumb2.jpg" alt="">02</img></li>
+					<li class="thumb"><img src="gallery/thumb3.jpg" alt="">03</img></li>
+					<li class="thumb"><img src="gallery/thumb4.jpg" alt="">04</img></li>
+					<li class="thumb"><img src="gallery/thumb5.jpg" alt="">05</img></li>
+
+					<li class="thumb ml0"><img src="gallery/thumb6.jpg" alt="">06</img></li>
+					<li class="thumb"><img src="gallery/thumb7.jpg" alt="">07</img></li>
+					<li class="thumb"><img src="gallery/thumb8.jpg" alt="">08</img></li>
+					<li class="thumb"><img src="gallery/thumb9.jpg" alt="">09</img></li>
+					<li class="thumb"><img src="gallery/thumb10.jpg" alt="">10</img></li>
+					<li class="thumb"><img src="gallery/thumb11.jpg" alt="">011</img></li>
+
+					<li class="thumb ml0"><img src="gallery/thumb12.jpg" alt="">12</img></li>
+					<li class="thumb"><img src="gallery/thumb13.jpg" alt="">13</img></li>
+					<li class="thumb"><img src="gallery/thumb14.jpg" alt="">14</img></li>
+					<li class="thumb"><img src="gallery/thumb15.jpg" alt="">15</img></li>
+					<li class="thumb"><img src="gallery/thumb16.jpg" alt="">16</img></li>
+					<li class="thumb"><img src="gallery/thumb17.jpg" alt="">17</img></li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="gallery/btn_right.gif" alt="">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
