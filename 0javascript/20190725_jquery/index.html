@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		body{font-size:30px;}
+		li{border: 1px solid #000;}
+
+		.num>div{border: 1px solid #000;}
+		.num>div:nth-child(2n){background-color: skyblue;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			// var wLi = $("#wrapper li");
+			// var wUl = $("#wrapper ul");
+			// wUl.find(".view").css("background-color","red");
+			// wLi.filter(".view").css("color","white");
+		
+			//위에꺼 최초본은 이렇게 생김
+			// $("#wrapper ul").find(".view").css("background-color","red");
+			// $("#wrapper li").filter(".view").css("color","white");
+
+
+			var liView = $("#wrapper li.view").css("background-color","pink");
+			liView.find(".sview").css({
+				"background-color":"blue",
+				"color":"white"
+				//backgroundColor:"blue",
+				//color:"white"
+
+			});
+			$("#wrapper li").first().nextAll(".view")
+			.children().find("li").first()
+			.css("color","red");
+
+			$("#wrapper>ul").append("<li>7<li>");
+			$("#wrapper>ul").prepend("<li>0<li>");
+
+
+			var current = 0;
+			$(".btn").click(function(){
+				current++;
+				console.log(current);
+				$(".num").append("<div>" + current + "</div>");
+
+
+			});
+			$(".dbtn").click(function(){
+				$(".num>div").last().remove();
+				current = 0;
+			});
+		});
+			
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li class="view">4
+				<ul>
+					<li>sub1</li>
+					<li class="sview">sub2</li>
+					<li>sub3</li>
+				</ul>
+			</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<button class="btn">증가</button>
+	<button class="dbtn">감소</button>
+	<div class="num"></div>
+</body>
+</html>

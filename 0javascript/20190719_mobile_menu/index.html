@@ -28,9 +28,10 @@
 				if(myClass == "toggleMenu"){
 					$(this).addClass("change");
 					$(".menuView").stop().animate({left:0},300);
-				}else{$(this).removeClass("change");
-				$(".menuView").stop().animate({left:"-100%"},300);
-				}
+				}else{
+					$(this).removeClass("change");
+					$(".menuView").stop().animate({left:"-100%"},300);
+					}
 			});
 		});
 	</script>

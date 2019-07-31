@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>width</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var box = $("#wrapper");
+			$(".width").text(box.width());
+			$(".inwidth").text(box.innerWidth());
+			$(window).resize(function(){
+				$(".dwidth").text($("body").width());
+	
+			});
+			$(window).trigger("resize");
+		});
+	</script>
+	<style>
+		#wrapper{width: 600px;border: 1px solid #000; height: 100px;padding: 20px;}
+	</style>
+</head>
+<body>
+	<div>
+		문서의 크기<span class="dwidth">0</span><br>
+		box width<span class="width">0</span><br>
+		box innner width<span class="inwidth">0</span><br>
+	</div>
+	<div id="wrapper"></div>
+</body>
+</html>

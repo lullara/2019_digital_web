@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>문서 제목</title>
+	<title>갤러리 원본</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<style>
@@ -28,6 +28,28 @@
 				$("#image > p").css("display","none")
 				$("#image > p").eq(i).css("display","block")
 
+			});
+			var current = 0;
+			$(".left").click(function(){
+				if(current>0){
+				var num = current * 760 * -1
+				current--;
+				$(".container > ul").css("left",num);
+				// $(".container > ul").animate({"left":num},300);
+				console.log(current);
+				}
+
+			});
+
+			$(".right").click(function(){
+				if(current>2){
+				var num = current * 760 * -1
+				current++;	
+
+				$(".container > ul").animate({"left":num},300);
+				console.log(current);
+				
+				}	
 			});
 
 		});

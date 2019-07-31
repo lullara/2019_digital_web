@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>문서 제목</title>
+	<title>갤러리 연습용</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<style>
@@ -25,7 +25,7 @@
 			$(".thumb").click(function(){
 				var i = $(this).index();
 				$("#image > p").hide().eq(i).show();
-			});
+			}); 
 
 			var current = 0;
 			$(".right").click(function(){
@@ -48,7 +48,7 @@
 				$(".container > ul").animate({"left":num},300);
 				console.log(current);
 			}
-			
+
 			
 
 			

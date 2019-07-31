@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import "pc.css" all and (min-width: 961px);
+@import "tablet.css" all and (max-width: 960px);
+
+
+
+
+
+@media all and (max-width:630px){
+	#main_header{height: 600px;}
+	.slider_wrap ul li{height: 300px;}
+	.slider_wrap h3{font-size: 2em;}
+	.slider_wrap p{font-size: 0.7em;}
+	#main_header .content li{height: 250px;}
+
+
+}
+
+@media all and (max-width:520px){
+	#main_header{height: 550px;}
+	.slider_wrap ul li{height: 200px;}
+/*	.slider_wrap h3{font-size: 2em;}
+	.slider_wrap p{font-size: 0.7em;}
+	#main_header .content li{height: 250px;}
+*/
+
+
+
+
+
+}
