@@ -2,7 +2,7 @@
 
 
 
-@media all and (max-width: 960px){
+
 #main_header{height: 1180px;position: relative;}
 #header_top{
 	width:100%;height: 50px;
@@ -174,4 +174,4 @@
 #footer_wrap .footer>div.copy a{display: block; line-height: 25px; padding: 5px 20px;}
 #footer_wrap .footer>div.copy address{font-style: normal; padding-left: 20px; line-height: 1.5em; color:#aaa;}
 
-}
+
