@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-
-
-@media all and (min-width:961px){
-
 body{min-width:1260px;}
 #main_header{height: 1950px;position: relative;margin-bottom:100px;}
 #header_top{
@@ -208,5 +204,3 @@ body{min-width:1260px;}
 #footer_wrap .footer>div.copy li:nth-child(1):after{content: ""; display: none;}
 #footer_wrap .footer>div.copy a{display: block; line-height: 25px; padding: 5px 20px;}
 #footer_wrap .footer>div.copy address{font-style: normal; padding-left: 20px; line-height: 1.5em; color:#aaa;}
-
-}
