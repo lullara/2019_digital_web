@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>자동차</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#pannel{width: 600px; height: 300px;border: 1px solid #000;position: relative;}
+		#bar{position: absolute; width: 500px; height: 20px;background-color: #f00;left: 50px; top: 190px;}
+		#img{position: absolute; left: 50px; top: 120px;}
+		.view{transform:rotateY(180deg);}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			var objBar = $("#bar"); //bar
+			var objCar = $("#img"); //자동차
+			var nStarX = objBar.position().left; //자동차 시작 위치
+			var nEndX = nStarX + objBar.width() - objCar.width(); //50-500-120 =430, 자동차 끝나는 위치
+			//console.log(nEndX);
+			var nCurrent = nStarX; // 자동차 현재 위치
+			var nStep = 2.5; //움직임
+			var nTimerId = 0; //버튼 계속 눌림 방지
+
+			function move(){
+			nCurrent += nStep; //nCurrent = nCurrent + nStep; 
+			if(nCurrent > nEndX){
+				nStep= -2.5;
+				objCar.addClass("view");
+			}
+			if(nCurrent < nStarX){
+				nStep=2.5;
+				objCar.removeClass("view");
+			}
+			$(".txt").html(nCurrent);
+			objCar.css("left",nCurrent);
+			
+			}
+
+			// setInterval(move,30);
+
+			$("#btn_start").click(function(){
+				if(nTimerId == 0 ){
+				nTimerId = setInterval(move,30);
+				console.log(nTimerId);
+				}
+
+			});
+
+			$("#btn_stop").click(function(){
+				if(nTimerId != 0){
+				clearInterval(nTimerId);
+				nTimerId = 0;
+			}
+
+
+			});
+
+
+
+
+		});
+
+	</script>
+</head> 
+<body>
+	<div id="pannel">
+		<div id="bar"></div>
+		<div id="img" class="view"><img src="../../images/car.png" alt=""></div> 
+	</div>
+	<button id="btn_start">시작</button>
+	<button id="btn_stop">정지</button>
+	<div class="txt"></div>
+</body>
+</html>
