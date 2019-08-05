@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>FULL PAGE</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st"],
+				menu:"#topMenu",
+				navigation:true,
+				slidesNavigation:true,
+				navigationPosition:'right',
+				navigationTooltips:["menu1","menu2","menu3","menu4"],
+				afterLoad:function(anchorslink,index){
+					console.log("anchor:" + anchorslink + ", index:" + index);
+					if(index == 2){
+						$("#onView").addClass("move");
+					}else{
+						$("#onView").removeClass("move");
+					}
+
+				}
+			});
+
+		});
+	</script>
+	<style>
+		#fullpage{width: 100%; height: 100%;}
+		#page1{background-image: url(images/bg1.jpg);}
+		#page2{background-image: url(images/bg2.jpg);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+		.page{background-repeat: no-repeat;
+			background-position:center top;
+			background-size:cover;}
+		
+
+		.main{width: 400px; position: absolute; left: 50%; top: 50%; color:white; transform:translate(-50%,-50%); text-align: center; }
+
+		#onView{opacity: 0; position: absolute; top: 0; transition:.5s;}
+		.main.move{opacity: 1  !important;  position: absolute  !important; left: 50%;top: 50% !important; transform:translate(-50%,-50%); }
+
+		.main h3{font-size: 3em; text-shadow: 1px 1px 3px #333;}
+		.main p{font-size: 1.5em; margin-bottom: 20px;}
+		.main>a{display: block; width: 150px;border: 1px solid #fff;background-color: none;line-height: 35px;
+			text-align: center; color:white; border-radius: 5px; transition:1s;margin: 0 auto;}
+
+		.main>a:hover{background-color: #fff;color:#000;}
+		
+		.main>.down{background-color: #000; width: 100px; height: 100px; border-radius: 50px; position: absolute; bottom: -350px; left: 40%; transform: translateY(-50%); animation:goDown .8s infinite alternate; }
+		@keyframes goDown{
+			from{transform: translateY(0);}
+			to{transform: translateY(20px);}
+		}
+
+
+		.main>.down>a{text-align: center; line-height: 100px;display: block; color:white; }
+
+
+
+
+
+
+
+		/*menu*/
+		#navTop{
+			position:fixed;height: 50px; width: 100%;
+			background-color: #cdcdcd; z-index: 1;
+		}
+		#navTop li{float: left; }
+		#navTop li a{display: block; line-height: 50px; text-align: center; padding: 0 10px;}
+		#navTop li.active{background-color: #f00;}
+		#navTop li.active a{color:white; font-weight: bold;}
+		.right{right: 30px;}
+
+
+		.slide{position: relative;}
+		.slide .sView1, .slide .sView2{position: absolute; width: 1024px; height: 500px; left: 50%; transform: translate(-50%,-50%);}
+		.sView1{background-color: #f00;}
+		.sView2{background-color: #0f0;}
+		
+	</style>
+</head>
+<body>
+	<nav id="navTop">
+		<ul id="topMenu" class="clearfix">
+			<li data-menuanchor="1st"><a href="#1st">MENU1</a></li>
+			<li data-menuanchor="2st"><a href="#2st">MENU2</a></li>
+			<li data-menuanchor="3st"><a href="#3st">MENU3</a></li>
+			<li data-menuanchor="4st"><a href="#4st">MENU4</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section page" id="page1" data-anchor="1st">
+			<div class="main">
+				<h3>Lorem ipsum.</h3>
+				<p>Lorem ipsum dolor sit.</p>
+				<a href="#">more</a>
+				<div class="down"><a href="#2st">DOWN</a></div>
+			</div>
+		</div>
+		<div class="section page" id="page2" data-anchor="2st">
+			<div class="main" id="onView">
+				<h3>Lorem ipsum.</h3>
+				<p>Lorem ipsum dolor sit.</p>
+				<a href="#">more</a>
+				<div class="down"><a href="#3st">DOWN</a></div>
+			</div>
+		</div>
+		<div class="section page" id="page3" data-anchor="3st">
+			<div class="main">
+				<div class="down"><a href="#4st">DOWN</a></div>
+			</div>
+		</div>
+		<div class="section page" id="page4" data-anchor="4st">
+			<div class="slide">
+				<div class="sView1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vel corporis quam laborum, nobis est.</div>
+			</div>
+			<div class="slide">
+				<div class="sView2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vel corporis quam laborum, nobis est.</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
