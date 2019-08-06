@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>공지사항</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.table_layout{width: 700px;margin: 0 auto;}
+		.table_layout ul{display: table; width: 100%; border-collapse: collapse;} /*table*/
+		.table_layout ul> li {display: table-row;} /*tr*/
+		.table_layout ul> li > div{display: table-cell; text-align: center;
+			height: 40px;
+			border-bottom: 1px solid #eee; vertical-align:middle;
+			} /*td*/
+		div.table_layout ul li div.subject{text-align: left; padding: left:5px;}
+		div.table_layout>ul>li.table_th{
+			border-top: 3px solid #0e71b8; border-bottom: 1px solid #eee; background-color: #fbfbfb; font-weight: bold;
+		}
+
+		/*page*/
+		.pagination{width: 700px; margin: 0 auto;}
+		.pagination .page_wrap{width: 400px; margin: 15px auto;}
+		.pagination .page_wrap a{float: left; width: 40px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #eee; margin:0 5px;}
+		.pagination .page_wrap a:hover{background-color: #eee;}
+		.pagination .page_wrap a.active{background-color: #eee;}
+	</style>
+	
+</head>
+<body>
+	<div class="table_layout">
+		<ul>
+			<li class="table_th">
+				<div>번호</div>
+				<div>제목</div>
+				<div>등록일</div>
+				<div>조회</div>
+			</li>
+			<li class="table_tr">
+				<div>5</div>
+				<div class="subject">안녕하세요, 홈페이지를 오픈하였습니다.</div>
+				<div>2019-08-06</div>
+				<div>100</div>
+			</li>	
+			<li class="table_tr">
+				<div>4</div>
+				<div class="subject">안녕하세요, 홈페이지를 오픈하였습니다.</div>
+				<div>2019-08-06</div>
+				<div>100</div>
+			</li>	
+			<li class="table_tr">
+				<div>3</div>
+				<div class="subject">안녕하세요, 홈페이지를 오픈하였습니다.</div>
+				<div>2019-08-06</div>
+				<div>100</div>
+			</li>	
+			<li class="table_tr">
+				<div>2</div>
+				<div class="subject">안녕하세요, 홈페이지를 오픈하였습니다.</div>
+				<div>2019-08-06</div>
+				<div>100</div>
+			</li>	
+			<li class="table_tr">
+				<div>1</div>
+				<div class="subject">안녕하세요, 홈페이지를 오픈하였습니다.</div>
+				<div>2019-08-06</div>
+				<div>100</div>
+			</li>	
+
+		</ul>
+	</div>
+	<div class="pagination">
+		<div class="page_wrap clearfix">
+			<a href="#"><img src="../images/arrow_ll.gif" alt="btnll"></a>
+			<a href="#"><img src="../images/arrow_lb.gif" alt="btnlb"></a>
+			<a href="#" class="active">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+		
+			
+			<a href="#"><img src="../images/arrow_rb.gif" alt="btnrb"></a>
+			<a href="#"><img src="../images/arrow_rr.gif" alt="btnrr"></a>
+		</div>
+	</div>
+</body>
+</html>
