@@ -6,6 +6,7 @@
 	<title>공지사항</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<style>
+		h3{width: 90%; margin: 20px auto; text-align: center;}
 		.table_layout{width: 700px;margin: 0 auto;}
 		.table_layout ul{display: table; width: 100%; border-collapse: collapse;} /*table*/
 		.table_layout ul> li {display: table-row;} /*tr*/
@@ -24,10 +25,54 @@
 		.pagination .page_wrap a{float: left; width: 40px; height: 40px; text-align: center; line-height: 40px; border: 1px solid #eee; margin:0 5px;}
 		.pagination .page_wrap a:hover{background-color: #eee;}
 		.pagination .page_wrap a.active{background-color: #eee;}
+
+
+
+		/*secrch*/
+		#bottom_wrap{width: 700px; margin: 30px auto;}
+		#bottom_wrap button{float: right; width: 20%; text-align: center;}
+		#bottom_wrap button.btn{
+			height: 42px; background-color: #0e71b8; color:white; font-weight: bold;
+			border-radius: 5px;border:none;
+		}
+		#bottom_wrap #bo_sch{width: 70%;float: left;border: 3px solid #ddd;
+			border-radius: 5px;position: relative;
+		}
+		#bo_sch legend{text-indent: -9999px; font-size:0;}
+		#bo_sch label.sound_only{position: absolute;font-size: 0;}
+		#bo_sch select{width: 90px; height: 37px; border:0; border-right: 1px solid #ddd;position: absolute;}
+		#bo_sch .sch_input{height: 37px; width: 100%; padding: 0 40px 0 100px;border:0; }
+		#bo_sch .sch_btn{width: 40px; height: 37px; color:#0e71b8; border:0; background-color: #fff;position: absolute; right: 0; top: 0;}
+		@media screen and (max-width: 600px){
+			.table_layout{width: 90%;}
+			.table_layout .table_th{display: none;}
+			.table_tr div:nth-child(3),
+			.table_tr div:nth-child(3){display: none;}
+			.table_tr div:nth-child(1){width: 30px; background-color: gray; 
+				color:white;height: 50px;}
+			.table_layout li:nth-child(2){border-top: 3px solid #0e71b8;}
+
+			/*page*/
+			.pagination{width: 90%;}
+			.pagination .page_wrap{width: 275px;}
+			.pagination .page_wrap a{width: 30px; height: 30px;margin: 0 2px; font-size:0.7em; line-height: 30px;}
+
+			
+
+			/*button*/
+			#bottom_wrap{width: 90%;}
+			#bottom_wrap button.btn{width: 100%; margin-bottom: 20px;}
+			#bottom_wrap #bo_sch{width: 100%;}
+		}
+
+
+
+
 	</style>
 	
 </head>
 <body>
+	<h3>공지사항</h3>
 	<div class="table_layout">
 		<ul>
 			<li class="table_th">
@@ -82,6 +127,26 @@
 			<a href="#"><img src="../images/arrow_rb.gif" alt="btnrb"></a>
 			<a href="#"><img src="../images/arrow_rr.gif" alt="btnrr"></a>
 		</div>
+	</div>
+	<div id="bottom_wrap" class="clearfix">
+		<button type="button" class="btn">글쓰기</button>
+		<fieldset id="bo_sch">
+			<legend>게시물 검색</legend>
+			<form name="fsearch" method="get">
+				<label for="sfl" class="sound_only">검색대상</label>
+				<select name="sfl" id="sfl">
+					<option value="">제목+내용</option>
+					<option value="subject">제목</option>
+					<option value="content">내용</option>
+					<option value="name">작성자</option>
+				</select>
+				<label for="sfx" class="sound_only">검색어</label>
+				<input type="text" name="sfx" id="sfx" size="25" 
+					maxlength="20" placeholder="검색어를 입력해 주세요." class="sch_input">
+			
+				<button type="submit" value="검색" class="sch_btn">검색</button>	
+			</form>
+		</fieldset>
 	</div>
 </body>
 </html>

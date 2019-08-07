@@ -13,9 +13,11 @@
 		#top_menu h1{float: left;padding-top: 40px;}
 		#top_menu ul.nav{float: right;}
 		#top_menu ul.nav li{float: left;}
-		#top_menu ul.nav li a{display: block;padding: 60px 0 0 60px;}
+		#top_menu ul.nav li a{display: block;padding: 60px 0 0 60px; color:white;}
+		#top_menu ul li.on a{color:red;}
 		#contents{padding-top: 115px;}
 		img{display: block;}
+		
 
 	</style>
 	<script>
@@ -33,6 +35,72 @@
 			$(window).scroll(function(){
 				var sct = $(window).scrollTop();
 				console.log("스크롤값:"+sct);
+				
+				
+				// if(sct >= contents.eq(0).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(0).addClass("on");
+				// }
+				 
+				// if(sct >=contents.eq(1).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(1).addClass("on");
+				// }
+				 
+				// if(sct >= contents.eq(2).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(2).addClass("on");
+				// }
+
+
+
+				// -------------each문-------------
+				// contents.each(function(index){
+				// 	if(sct >= contents.eq(index).offset().top-116){
+				// 	// if(sct >= $(this).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(index).addClass("on");
+				// 	}
+
+
+
+				// --------------for문-------------
+				for(var i=0; i<contents.length;i++){
+					if(sct >= contents.eq(i).offset().top-116){
+					menu.removeClass("on");
+					menu.eq(i).addClass("on");
+					}
+
+				}
+
+				
+
+
+
+
+				// 원래 했던거
+				// var paper = contents.eq(0).offset().top-116;
+				// if(sct >= paper){
+				// 	menu.removeClass("on");
+				// 	menu.eq(0).addClass("on");
+				// }
+				// var works = contents.eq(1).offset().top-116;
+				// if(sct >= works){
+				// 	menu.removeClass("on");
+				// 	menu.eq(1).addClass("on");
+				// }
+				// var email = contents.eq(2).offset().top-116;
+				// if(sct >= email){
+				// 	menu.removeClass("on");
+				// 	menu.eq(2).addClass("on");
+				// }
+
+
+
+
+
+				
+				
 			});
 
 		});
@@ -43,7 +111,7 @@
 		<header id="top_menu" class="clearfix">
 			<h1>logo</h1>
 			<ul class="nav clearfix">
-				<li><a href="#paper">paper</a></li>
+				<li class="on"><a href="#paper">paper</a></li>
 				<li><a href="#works">works</a></li>
 				<li><a href="#email">email</a></li>
 			</ul>

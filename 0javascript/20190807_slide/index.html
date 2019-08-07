@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slide</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.wrap{width: 1000px; margin: 0 auto;}
+		.banner{width: 100%; height: 400px;position: relative;overflow: hidden;}
+		.banner>ul{width: 5000px;position: absolute;}
+		.banner>ul>li{float: left;width: 1000px;}
+		.banner .btn{position: absolute;background-color: skyblue; width: 100%;
+			text-align: center;line-height: 40px;bottom: 10px;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var current = 0;
+			$(".bt_next").click(function(){
+				current++;
+				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1},400); //400 안적으면 기본값 400이 적용된다.
+			});
+			$(".bt_prev").click(function(){
+				current--;
+				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1},400); //400 안적으면 기본값 400이 적용된다.
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="banner">
+			<ul class="clearfix">
+				<li><img src="../../images/images01.jpg" alt="img1"></li>
+				<li><img src="../../images/images02.jpg" alt="img2"></li>
+				<li><img src="../../images/images03.jpg" alt="img3"></li>
+				<li><img src="../../images/images04.jpg" alt="img4"></li>
+				<li><img src="../../images/images05.jpg" alt="img5"></li>
+			</ul>
+			<div class="btn">
+				<span class="bt_prev">이전</span>
+				<span class="bt_next">다음</span>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
