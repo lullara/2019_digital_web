@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery.mousewheel.min.js"></script>
+	<style>
+		body{background-color: #545454;}
+		.wrap{width: 950px;margin: 0 auto;padding-bottom:400px;}
+		#top_menu{
+			width: 950px;height: 115px;
+			background-color: #545454;
+			position: fixed;
+		}
+		#top_menu h1{float: left;width: 125px;padding-top:40px;}
+		#top_menu ul.nav{float: right;}
+		#top_menu ul li{float: left;}
+		#top_menu ul li a{
+			display: block;padding:60px 0 0 60px;
+			color:white;
+		}
+		#top_menu ul li.on a{
+			color:red;font-weight:bold;
+		}
+		#contents{padding-top:115px;}
+		img{display: block;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var menu = $("#top_menu > ul > li"); //클릭메뉴선택자
+			var contents = $("#contents > div"); //이미지위치
+			var current=0;
+			menu.click(function(){
+				current = $(this).index();
+				var tt = contents.eq(current).offset().top-115;
+				$("html").stop().animate({scrollTop:tt});
+			});
+			$(window).scroll(function(){
+				var sct = $(window).scrollTop();
+				
+				// if(sct >= contents.eq(0).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(0).addClass("on");
+				// }
+				// if(sct >= contents.eq(1).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(1).addClass("on");
+				// }
+				// if(sct >= contents.eq(2).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(2).addClass("on");
+				// }
+				// for(var i=0;i<contents.length;i++){
+				// 	if(sct >= contents.eq(i).offset().top-116){
+				// 	menu.removeClass("on");
+				// 	menu.eq(i).addClass("on");
+				//  current = i;
+				// 	}
+				// }
+				contents.each(function(index){
+					if(sct >= contents.eq(index).offset().top-116){
+					menu.removeClass("on");
+					menu.eq(index).addClass("on");
+					current = index;
+					}
+				});
+			});
+
+			
+			$(window).mousewheel(function(event,delta){
+				console.log(delta);
+				if(delta > 0){
+					current--;
+					if(current < 0) current = 0;
+					//console.log(current);
+					var tt = contents.eq(current).offset().top-115;
+					$("html").stop().animate({scrollTop:tt});
+				}
+				if( delta < 0){
+					current++;
+					if(current == 3) current = 2;
+					//onsole.log(current);
+					var tt = contents.eq(current).offset().top-115;
+					$("html").stop().animate({scrollTop:tt});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_menu" class="clearfix">
+			<h1>LOGO</h1> <!-- float:left -->
+			<ul class="nav clearfix"> <!-- float:right -->
+				<li class="on"><a href="#paper">paper</a></li> <!-- float:left -->
+				<li><a href="#works">works</a></li>
+				<li><a href="#email">email</a></li>
+			</ul>
+		</header>
+		<div id="contents">
+			<div id="paper"><img src="../../images/paper.jpg" alt=""></div>
+			<div id="works"><img src="../../images/work.jpg" alt=""></div>
+			<div id="email"><img src="../../images/email.jpg" alt=""></div>
+		</div>
+	</div>
+</body>
+</html>
