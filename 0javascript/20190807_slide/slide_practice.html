@@ -13,12 +13,25 @@
 		.banner>ul{width:5000px;position: absolute;} /*이미지사이즈 1000x400px*/
 		.banner>ul>li{width: 1000px;position:absolute;}
 		.banner>ul>li:nth-child(1){z-index:1;}
+		.wrap .pager{position:relative; height: 40px;}
+		.wrap .pager span
+			{width:20px; 
+			height:20px;
+			background-color:#000;
+			display:block;
+			float: left; 
+			margin: 5px;
+			border-radius: 10px;
+			cursor:pointer;
+			text-indent:-9999px;}
+		.wrap .pager span.active{background-color: #f00;}
 	</style>
 	<script>
 		$(function(){
 			var current = 0;
 			var i;
 			var zI = 1;
+			var pager = $(".wrap .pager span");
 			function slider1(){  // left
 				//current++;
 				i = current + 1;
@@ -46,6 +59,7 @@
 				current = i;
 			}
 			//setInterval(slider2,3000);
+			
 			$(".bt_next").click(function(){ //next button
 				i = current + 1;
 				if(i==5){
@@ -63,10 +77,19 @@
 				}
 				slideView("prev");
 
+				pager.click(function(){
+					i = $(this).index();
+					slideView("next")
+
+				});
+
 				function slideView(view){
 
 					var currentEl = $(".banner > ul > li").eq(current); //curent
 					var nextEl = $(".banner > ul > li").eq(i); //current + 1
+
+					pager.removeClass("active");
+					pager.eq(i).addClass("active");
  
 					if(view == "next"){
 						currentEl.css({left:0}).stop().animate({left:-1000},1100);
@@ -82,14 +105,16 @@
 	
 				}
 			});
-			$(window).mousewheel(function(event,delta){
-				if(delta<0){
-					$(".bt_next").trigger("click");
-				}
-				if(delta>0){
-					$(".bt_prev").trigger("click");
-				}
-			});
+			
+				$(window).mousewheel(function(event,delta){
+					if(delta<0){
+						$(".bt_next").trigger("click");
+					}
+					if(delta>0){
+						$(".bt_prev").trigger("click");
+					}
+				});
+
 			//function trigger(){
 				// $선택자.trigger("이벤트명");
 				//$(".bt_next").trigger("click");
@@ -110,6 +135,13 @@
 				<li><img src="../../images/images04.jpg" alt="img4"></li>
 				<li><img src="../../images/images05.jpg" alt="img5"></li>
 			</ul>
+		</div>
+		<div class="pager">
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
 		</div>
 		<div class="btn">
 			<span class="bt_prev">이전</span>

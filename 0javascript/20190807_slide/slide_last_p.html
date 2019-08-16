@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery.mousewheel.min.js"></script>
+	<style>
+		.wrap{width: 1000px; margin: 0 auto;padding-top: 100px;}
+		.banner{width: 1000px; height: 400px; position: relative;overflow: hidden; }
+		.banner ul{width: 5000px;position: absolute;}
+		.banner ul li{position: absolute;}
+		.banner ul li:nth-child(1){z-index: 1;}
+		.pager{position: relative; height: 40px;}
+		.pager span{
+			width: 20px; height: 20px; background-color: #000; border-radius: 10px; text-indent: -9999px;
+			display: block; float: left;margin: 10px 5px;
+
+		}
+	</style>
+	<script>
+		var current = 0;
+		var i = 0;
+		var zI = 1;
+		$(function(){
+			
+			// 자동 슬라이드
+			// function slider(){
+			// 	current++;
+			// 	if(current == 5) current = 0;
+			// 	var tt = 1000* current * -1;
+			// 	$(".banner ul").stop().animate({left:tt});
+			// }
+
+
+			//왼쪽 방향 슬라이드
+			function slider1(){
+				i = current + 1;
+				if(i==5){
+					current=4;
+					i=0;
+				}
+
+				var currentEl = $(".banner ul li").eq(current);
+				var nextEl = $(".banner ul li").eq(i);
+
+				currentEl.css({left:0}).stop().animate({left:-1000});
+				nextEl.css({left:1000,"z-index":zI++}).stop().animate({left:0});
+				current = i; 
+			}
+
+			//오른쪽 방향 슬라이드
+			function slider2(){
+				i = current - 1;
+				if(i== -1){
+					current = 0;
+					i= 4;
+				}
+
+				var currentEl = $(".banner ul li").eq(current);
+				var nextEl = $(".banner ul li").eq(i);
+
+				currentEl.css({left:0}).stop().animate({left:1000});
+				nextEl.css({left:-1000,"z-index":zI++}).stop().animate({left:0});
+				current = i; 
+			}
+
+			//setInterval(slider2,3000);
+
+			
+
+			$(".bt_next").click(function(){
+				i = current + 1;
+				if(i==5){
+					current=4;
+					i=0;
+				}
+				slideView("next");
+
+			});
+
+			$(".bt_prev").click(function(){
+				i = current - 1;
+				if(i== -1){
+					current = 0;
+					i= 4;
+				}
+
+				slideView("prev");
+			
+			
+
+			});
+			function slideView(view){
+				var currentEl = $(".banner ul li").eq(current);
+				var nextEl = $(".banner ul li").eq(i);
+				if(view == "next"){
+					currentEl.css({left:0}).stop().animate({left:-1000});
+					nextEl.css({left:1000,"z-index":zI++}).stop().animate({left:0});
+					
+				}else{
+					currentEl.css({left:0}).stop().animate({left:1000});
+					nextEl.css({left:-1000,"z-index":zI++}).stop().animate({left:0});
+
+				}
+				current = i; 
+			}
+
+			$(window).mousewheel(function(event,delta){
+				if(delta<0){
+					$(".bt_next").trigger("click");
+				}
+				if(delta>0){
+					$(".bt_prev").trigger("click");
+				}
+			});
+			// function trigger(){
+			// 	$(".bt_next").trigger("click");
+			// }
+			// setInterval(trigger,3000); 
+		});
+
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="banner">
+			<ul class="clearfix">
+				<li><img src="../../images/images01.jpg" alt="img1"></li>
+				<li><img src="../../images/images02.jpg" alt="img2"></li>
+				<li><img src="../../images/images03.jpg" alt="img3"></li>
+				<li><img src="../../images/images04.jpg" alt="img4"></li>
+				<li><img src="../../images/images05.jpg" alt="img5"></li>
+			</ul>
+		</div>
+		<div class="pager clearfix">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+		<div class="btn">
+			<span class="bt_prev">이전</span>
+			<span class="bt_next">이후</span>
+		</div>
+	</div>
+</body>
+</html>
