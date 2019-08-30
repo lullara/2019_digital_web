@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>car 연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			
+            function carMove(){
+            	console.log($(".carWrap img").length);
+            if( $(".carWrap img").length == 0){
+                $(".carWrap").html("이제 차 없..<br><img src='../../images/car.png'>");
+                return;
+            }
+                $(".carWrap img:eq(0)").animate({left:"-=100"},1000,function(){
+                    $(".carWrap img:eq(0)").animate({left:"+=100"},1000,
+                                                    carMove)
+                })
+            
+            }
+            carMove();
+            $(".btn").click(function(){
+                $(".carWrap img:animated").animate({left:"-=400"},function(){
+                    $(this).remove();
+                    carMove();
+                })
+            });
+		});
+		
+	</script>
+	<style>
+		.carWrap{height: 220px; text-align: center; margin-top: 50px;}
+		.carWrap img{position: relative;}
+	</style>
+</head>
+<body>
+	<div class="carWrap">
+		<img src="../../images/car.png" alt="car">
+		<img src="../../images/car.png" alt="car">
+		<img src="../../images/car.png" alt="car">
+		<img src="../../images/car.png" alt="car">
+	</div>
+	<button class="btn">다음차</button>
+</body>
+</html> 

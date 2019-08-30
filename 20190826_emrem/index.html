@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>em/rem</title>
+    <style>
+        body{font-size: 10px;}
+        html{fontsize:15px;}
+        .wrapper{font-size:20px;}
+        h1{font-size:3em;}
+        .txt1{font-size:1.5em;}
+        .txt2{font-size:1em;}
+
+        .wrapper2 div{font-size: 2em;}
+        .wrapper3 div{font-size: 2rem; font-size: 30px;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>3em의 제목</h1>
+        <p class="txt1">11.5em</p>
+        <p class="txt1">1em</p>
+    </div>
+     <div class="wrapper1">
+        <h1>3em의 제목</h1>
+        <p class="txt1">11.5em</p>
+        <p class="txt1">1em</p>
+    </div>
+    <div class="wrapper2">
+        <div>1.5em 20px
+             <div>1.5em 40px
+                <div>1.5em 80px</div>
+             </div>
+
+        </div>
+    </div>
+    <div class="wrapper3">
+        <div>1.5em 16*2=32px
+             <div>1.5em
+                <div>1.5em</div>
+             </div>
+
+        </div>
+    </div>
+</body>
+</html>

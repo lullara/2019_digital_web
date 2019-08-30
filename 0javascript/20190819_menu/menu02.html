@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu02</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#menu{width: 1000px; margin: 0 auto;position: relative;}
+		#menu>ul{width: 100%;}
+		#menu>ul>li{float: left; width: 20%;}
+		#menu>ul>li:hover{background-color: #eee;}
+		#menu>ul>li:hover ul.sub{background-color: #eee;}
+		#menu>ul>li>a{display: block;line-height: 40px; text-align: center;}
+
+		ul.sub{display: none;position: absolute;left: 0;width: 100%;}
+		#menu>ul>li:hover ul.sub{display: block;}
+		ul.sub > li{float: left;}
+		ul.sub > li > a{display: block; text-align: center; padding: 5px 10px;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#menu>ul>li").hover(function(){
+				var index = $(this).index();
+				$("ul.sub").eq(index).stop().slideDown();
+			},function(){
+				$("ul.sub").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- nav#menu>ul>li*5>a[#]>{menu$}^ul.sub>li*5>a[#]>{smenu$} -->
+	<nav id="menu">
+		<ul>
+			<li>
+				<a href="#">menu1</a>
+				<ul class="sub clearfix">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu2</a>
+				<ul class="sub clearfix" style="padding-left:150px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu3</a>
+				<ul class="sub clearfix" style="padding-left:400px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu4</a>
+				<ul class="sub clearfix" style="padding-left:600px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu5</a>
+				<ul class="sub clearfix" style="padding-left:600px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div style="height:400px; background:red;"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			function boxMove(){
+				if( !$(".box").is(":animated")){
+
+				$(".box").animate({left:470},1000)
+					.queue(function(){
+						$(".box")
+						.css("background","skyblue")
+						.dequeue();
+					})
+				$(".box").animate({top:470},1000)
+					.queue(function(){
+						$(".box")
+						.css("background","pink")
+						.dequeue();
+					})
+				$(".box").animate({left:0},1000)
+					.queue(function(){
+						$(".box")
+						.css("background","green")
+						.dequeue();
+					})
+				$(".box").animate({top:0},1000)
+				.queue(function(){
+					$(".box")
+					.css("background","black")
+					.dequeue();
+				})
+			}
+			
+			}
+			// boxMove();
+			// setInterval(boxMove);
+			$(".btn").click(function(){
+				boxMove();
+			});
+		});
+		
+	</script>
+	<style>
+		.boxWrap{width: 500px; height: 500px; margin: 0 auto;
+			border: 1px solid #000;position: relative;}
+		.box{width: 30px; height: 30px; border-radius: 15px;
+			background-color: #000;position: absolute;}
+	</style>
+</head>
+<body>
+	<button class="btn">실행</button>
+	<div class="boxWrap">
+		<div class="box"></div>
+	</div>
+	
+</body>
+</html>

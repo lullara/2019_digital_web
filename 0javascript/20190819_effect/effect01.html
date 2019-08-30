@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>effect01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.content{
+			width: 400px;
+			background-color: #eee;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".btn2").hide();
+			$(".btn1").click(function(){
+				$(".box").slideUp(1000,"swing",
+					function(){
+						$(".btn1").hide();
+						$(".btn2").show();
+						//alert("슬라이드 업 되었습니다.");
+
+				});
+			});
+			$(".btn3").click(function(){
+				$(".box").slideDown(1000,"linear",
+					function(){
+						$(".btn1").show();
+						$(".btn2").hide();
+						//alert("슬라이드 다운 되었습니다.");			
+					});
+				});
+				$(".btn2").click(function(){
+					$(".box").fadeIn(1000,"swing",
+						function(){
+							$(".btn1").show();
+							$(".btn2").hide();
+						});
+				});
+				$(".btn4").click(function(){
+					$(".box").slideToggle();
+					// $(".box").toggle();
+				});
+				$(".btn5").click(function(){
+					$(".box").fadeTo(1000,0.3);
+				});
+				$(".btn6").click(function(){
+					$(".box").fadeTo(1000,1);
+				});
+			});
+	</script>
+</head>
+<body>
+	<div>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">fadeIn</button>
+		<!-- <button class="btn3">slideDown</button> -->
+	</div>
+	<div>
+		<button class="btn4">slideToggle</button>
+	</div>
+	<div>
+		<button class="btn5">fadeTo 0.3</button>
+		<button class="btn6">fateTo 1</button>
+	</div>
+	<div class="box">
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam enim voluptatem accusantium cum magnam rerum, molestias dolores quidem qui odio quis maxime, quasi? Nemo dolorum facere itaque. Unde nulla ullam adipisci earum, culpa minus beatae reiciendis, eligendi labore et modi corrupti voluptatem quasi aut totam eaque. Possimus veritatis placeat, numquam voluptate modi in sit perferendis magni corrupti, suscipit consequatur labore non aliquam atque tempore mollitia incidunt dolor nam, sint asperiores maiores! Atque rerum tempora vitae, necessitatibus consectetur repellat explicabo blanditiis. Ratione consequuntur adipisci, quaerat eum magnam saepe ex vitae pariatur optio harum at temporibus unde molestias mollitia iste, totam ipsam!</div>
+	</div>
+	<div style="height: 500px; background-color: red;"></div>
+</body>
+</html>

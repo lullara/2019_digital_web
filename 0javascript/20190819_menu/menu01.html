@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		#menu{width: 1000px; margin: 0 auto;}
+		#menu>ul{width: 100%;}
+		#menu>ul>li{float: left;width: 20%;line-height: 40px;border-right: 1px solid #000;position: relative;}
+		#menu>ul>li:hover{background-color: #eee;}
+		#menu>ul>li:first-child{border-left: 1px solid #000;}
+		#menu>ul>li>a{display: block;text-align: center; font-weight: bold;}
+
+
+		/*#menu>ul>li:hover ul.sub{display: block;}*/
+	
+
+
+
+
+
+		#menu ul.sub{_display: none; position: absolute;width:100%; background-color: #eee;}
+		#menu ul.sub>li{width: 100%;}
+		#menu ul.sub>li:hover{background-color: #aaa;}
+		#menu ul.sub>li>a{display: block; text-align: center;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			//css()활용
+			//$("ul.sub").css("display","none");
+			//$("#menu>ul>li").mouseover(function(){
+				//var index =$(this).index();
+				//방법1
+				//$("#menu>ul>li:eq("+index+") ul.sub").css("display","block");
+				//방법2
+				// $("#menu>ul>li").eq(index).find("ul.sub").css("display","block");
+				//방법3
+				//$("#menu>ul>li:eq("+index+")").find("ul.sub").css("display","block");
+				//$("ul.sub").css("display","block");				
+			//});
+			//$("#menu>ul>li").mouseout(function(){
+				//$("ul.sub").css("display","none");
+
+			//});
+
+
+			//show() hide()활용
+			// $("ul.sub").hide();
+			// $("#menu>ul>li").mouseover(function(){
+			// 	var index =$(this).index();
+			// 	$("#menu>ul>li").find("ul.sub").eq(index).show();
+
+			// }).mouseout(function(){
+			// 	$("ul.sub").hide();
+			// });
+
+			// $("ul.sub").hide();
+			// $("#menu>ul>li").mouseenter(function(){
+			// 	var index =$(this).index();
+			// 	$("ul.sub").eq(index).stop().slideDown();
+
+			// }).mouseleave(function(){
+			// 	$("ul.sub").slideUp();
+			// });
+
+			//$("ul.sub").hide();
+
+
+
+// -----------------------------------------------------------------
+// 내가한거
+// 			$("#menu>ul>li").mouseover(function(){
+// 				$("ul.sub").show();
+// 			});
+// 			$("#menu>ul>li").mouseout(function(){
+// 				$("ul.sub").hide();
+// 			});
+// -----------------------------------------------------------------
+
+			//hover활용
+			$("ul.sub").hide();
+			// $("#menu>ul>li").hover(function(){호버값},function(){호버 아웃값});
+			$("#menu>ul>li").hover(function(){
+				var index = $(this).index();
+				// $("ul.sub").eq(index).stop().slideDown(400,"linear");
+				$("ul.sub").eq(index).stop().slideDown(100,"linear");
+
+			},function(){
+				$("ul.sub").hide();
+			});
+
+		});
+	
+
+
+	</script>
+</head>
+<body>
+	<nav id="menu">
+		<ul class="clearfix">
+			<li>
+				<a href="#">menu1</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu2</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu3</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu4</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu5</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div style="height:400px;background-color:red;"> </div>
+</body>
+</html>

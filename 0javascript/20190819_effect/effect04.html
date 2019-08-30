@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>effect04</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+
+		//if( !$(".box").is(":animated")){ 애니메이트가 실행되고 있지 않으면 실행된다. 
+		//2번클릭해도 애니메이트가 실행되고 있기 때문에 실행되지 않는다.
+		$(document).ready(function(){
+			function move(){
+				if( !$(".box").is(":animated")){ //애니메이션 재실행 시작
+					$(".box")
+			.animate({left:470},1000)
+			.animate({top:470},1000)
+			.queue(function(){
+				$(".box")
+				.css("background","red")
+				.dequeue();
+
+				})
+			.animate({left:0},1000)
+			.animate({top:0},1000)
+			.queue(function(){
+				$(".box")
+				.css("background","black")
+				.dequeue();
+
+				})
+				} //애니메이션 재실행 끝
+
+
+			}
+			
+			// move(); //1번실행
+			// setInterval(move,4000) //반복실행
+
+
+
+			$(".btn").click(function(){
+				move();
+			});
+		});
+
+
+
+
+
+
+		// $(document).ready(function(){
+		// 	function move(){
+		// 	$(".box")
+		// 	.animate({left:470},1000)
+		// 	.animate({top:470},1000)
+		// 	.queue(function(){
+		// 		$(".box")
+		// 		.css("background","red")
+		// 		.dequeue();
+
+		// 		})
+		// 	.animate({left:0},1000)
+		// 	.animate({top:0},1000)
+		// 	.queue(function(){
+		// 		$(".box")
+		// 		.css("background","black")
+		// 		.dequeue();
+
+		// 		})
+		// 	}
+			// move(); //1번실행
+			// setInterval(move,4000) //반복실행
+
+
+
+		// 	$(".btn").click(function(){
+		// 		move();
+		// 	});
+		// });
+	</script>
+	<style>
+		.boxWrap{width: 500px; height: 500px; margin: 0 auto; border: 1px solid #000;position: relative;}
+		.box{width: 30px; height: 30px; border-radius: 15px;background-color: #000;position: absolute;}
+	</style>
+</head>
+<body>
+	<button class="btn">실행</button>
+	<div class="boxWrap">
+		<div class="box"></div>
+	</div>
+</body>
+</html>

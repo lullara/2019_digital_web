@@ -12,17 +12,17 @@
 		ul{width: 550px;margin:20px auto;}
 		ul>li{float: left;}
 		ul li img{margin:10px;}
-		#glayLayer{
-			position:fixed;width:100%;height:100%;
-			background-color:#000;top:0;left:0;opacity:.6;
-			display:none;
-		}
-		#overLayer{
-			position:fixed;top:50%;left:50%;
-			transform:translate(-50%,-50%);
-			/*width:500px;height:300px;background-color:skyblue;*/
-			display:none;
-		}
+ 		#glayLayer{
+	position:fixed;width:100%;height:100%;
+	background-color:#000;top:0;left:0;opacity:.6;
+	display:none;
+}
+#overLayer{
+	position:fixed;top:50%;left:50%;
+	transform:translate(-50%,-50%);
+	width:500px;height:300px;background-color:skyblue;
+	display:none;
+} 
 	</style>
 	<script>
 		// $(document).ready(function(){});
@@ -40,7 +40,7 @@
 			});
 			//colorbox modal
 			$(".group1").colorbox({rel:"group1"});
-			$(".youtube").colorbox({iframe:true,innerWidth:600,innerHeight:338});
+			$(".youtube").colorbox({iframe:true,innerWidth:900,innerHeight:500});
 		});
 	</script>
 </head>
