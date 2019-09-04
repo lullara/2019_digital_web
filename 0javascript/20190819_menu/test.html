@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu01_test</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <style>
+/*reset*/
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a{color:#333; text-decoration: none;}
+        li{list-style: none;}
+        a:link, a:visited{color:#000;}
+        .clearfix:after{content: ''; display: block; clear: both;}
+        
+/*menu*/
+        #menu{width: 1000px; margin: 0 auto;}
+        #menu>ul{width: 100%;}
+        #menu>ul>li{float: left; width: 20%; line-height: 40px; position: relative;
+            border-right: 1px solid #ddd;text-align: center;}
+/*#menu>ul>li:nth-child(1){border-left: 1px solid #ddd;}*/
+        #menu>ul>li:first-child{border-left: 1px solid #ddd;}
+        #menu>ul>li:hover{background-color: #eee;}
+        #menu>ul>li>a{display: block;font-weight: bold;}
+        #menu>ul>li>a:hover{color:olivedrab;}
+       
+        
+        
+        #menu ul.sub{display: none;width: 100%;position: absolute;}
+        #menu ul.sub>li{background-color: #eee;}
+        #menu ul.sub>li:hover{background-color: #aaa;}
+        #menu ul.sub>li>a{display: block; text-align: center;}
+    
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <nav id="menu">
+        <ul class="clearfix">
+            <li>
+                <a href="#">menu01</a>
+                <ul class="sub">
+                    <li><a href="#">subM01</a></li>
+                    <li><a href="#">subM02</a></li>
+                    <li><a href="#">subM03</a></li>
+                    <li><a href="#">subM04</a></li>
+                    <li><a href="#">subM05</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu02</a>
+                <ul class="sub">
+                    <li><a href="#">subM01</a></li>
+                    <li><a href="#">subM02</a></li>
+                    <li><a href="#">subM03</a></li>
+                    <li><a href="#">subM04</a></li>
+                    <li><a href="#">subM05</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu03</a>
+                <ul class="sub">
+                    <li><a href="#">subM01</a></li>
+                    <li><a href="#">subM02</a></li>
+                    <li><a href="#">subM03</a></li>
+                    <li><a href="#">subM04</a></li>
+                    <li><a href="#">subM05</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu04</a>
+                <ul class="sub">
+                    <li><a href="#">subM01</a></li>
+                    <li><a href="#">subM02</a></li>
+                    <li><a href="#">subM03</a></li>
+                    <li><a href="#">subM04</a></li>
+                    <li><a href="#">subM05</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu05</a>
+                <ul class="sub">
+                    <li><a href="#">subM01</a></li>
+                    <li><a href="#">subM02</a></li>
+                    <li><a href="#">subM03</a></li>
+                    <li><a href="#">subM04</a></li>
+                    <li><a href="#">subM05</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div style="height:300px; background:#f00"></div>
+</body>
+</html>
