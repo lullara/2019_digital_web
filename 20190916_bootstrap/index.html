@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        /*
+        .container{background-color: skyblue; height: 300px;}
+        .row > div {height: 100px;}
+        .bg-sky{background-color: skyblue;}
+*/
+
+        /*      .container-fluid{height: 200px;}*/
+        .bg-sky {
+            background-color: skyblue;
+        }
+
+        .container {}
+
+        .bg-pink {
+            background-color: pink;
+        }
+
+        .h200 {
+            height: 200px;
+        }
+
+        .h100 {
+            height: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-4 col-md-3 col-lg-6 bg-primary">1</div>
+            <div class="col-12 col-sm-4 col-md-3 d-lg-none bg-success">2</div>
+            <div class="col-12 col-sm-4 col-md-3 col-lg-6 bg-info">3</div>
+            <div class="col-12 d-sm-none d-md-block col-md-3 d-lg-none bg-sky">4</div>
+        </div>
+   </div>
+-->
+    <!--   <div class="container-fluid bg-sky "> 전체화면-->
+    <div class="wrap bg-sky">
+        <div class="container bg-success">
+            <div class="row text-white font-weigth-bold h100">
+                <div class="col-8 col-sm-4 col-lg-3 col-xl-6 bg-primary">1</div>
+                <div class="col-4 col-sm-4 col-lg-3 d-xl-none bg-success">2</div>
+                <div class="col-3 col-sm-4 col-lg-3 col-xl-6 bg-info">3</div>
+                <div class="col-9 d-sm-none d-lg-bolck col-lg-3 bg-danger">4</div>
+            </div>
+        </div>
+    </div>
+    <!--    0-0
+        1-0.25rem 4px(16px)
+        2-0.5rem  8px(16px)
+        3-1rem   16px(16px)
+        4-1.5rem 24px(16px)  
+        5-3rem   48px(16px)      
+         -->
+    <div class="container mt-3">
+        <div class="row bg-pink p-2">
+            <button type="button" class="btn btn-primary">primary</button>
+            <button type="button" class="btn btn-secondary ml-2">secondary</button>
+            <button type="button" class="btn btn-success ml-2">success</button>
+            <button type="button" class="btn btn-info ml-2">info</button>
+            <button type="button" class="btn btn-warning ml-2">warning</button>
+            <button type="button" class="btn btn-danger ml-2">danger</button>
+            <button type="button" class="btn btn-dark ml-2">dark</button>
+            <button type="button" class="btn btn-light ml-2">light</button>
+            <button type="button" class="btn btn-link ml-2">link</button>
+        </div>
+    </div>
+    <div class="container">
+        <!--       
+      **align**
+      align-items-start / align-items-end /align-items-center
+      align-items-stretch /align-items-baseline
+      
+      **justify**
+       justify-content-start / justify-content-end / justify-content-center
+       justify-content-between /justify-content-around
+       
+       -->
+        <div class="row bg-success p-2 align-items-center h100 justify-content-around">
+            <a href="#" class="btn btn-primary btn-lg">basic</a>
+            <a href="#" class="btn btn-secondary active btn-sm">secondary</a>
+            <a href="#" class="btn btn-secondary active btn-sm btn-block">secondary</a>
+
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row p-2">
+            <button type="button" class="btn btn-outline-primary">primary</button>
+            <button type="button" class="btn btn-outline-secondary ml-2">secondary</button>
+            <button type="button" class="btn btn-outline-success ml-2">success</button>
+            <button type="button" class="btn btn-outline-info ml-2">info</button>
+            <button type="button" class="btn btn-outline-warning ml-2">warning</button>
+            <button type="button" class="btn btn-outline-danger ml-2">danger</button>
+            <button type="button" class="btn btn-outline-dark ml-2">dark</button>
+            <button type="button" class="btn btn-outline-light ml-2">light</button>
+            <button type="button" class="btn btn-outline-link ml-2">link</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="btn-group align-items-start">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">LG</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--              a[#].btn.btn-primary>{Apple}-->
+            <!--              <div class="btn-group-vertical"> 메뉴 세로방향-->
+
+            <div class="btn-group  ml-auto">
+                <div class="btn-group">
+                    <a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Apple</a>
+                    <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">smenu11</a>
+                        <a href="#!" class="dropdown-item">smenu12</a>
+                        <a href="#!" class="dropdown-item">smenu13</a>
+                    </div>
+                </div>
+                <!-- 
+                      **dropdown 메뉴 생성**
+                      1. 1st 메뉴 btn-group 생성
+                      2. submenu dropdown-menu 생성 > dropdown-item
+                      3. 1st 메뉴 클래스 dropdown-toggle 추가
+                      4. 1st 메뉴 data-toggle="dropdown" 추가
+                      -->
+
+                <div class="btn-group">
+                    <a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Samsung</a>
+                    <div class="dropdown-menu">
+                        <a href="#!" class="dropdown-item">smenu31</a>
+                        <a href="#!" class="dropdown-item">smenu32</a>
+                        <a href="#!" class="dropdown-item">smenu33</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">LG</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">smenu1</a>
+                        <a href="#!" class="dropdown-item">smenu2</a>
+                        <a href="#!" class="dropdown-item">smenu3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-dark col-12">
+                    <a href="#!" class="navbar-brand text-white">로고</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-white">link1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-white">link2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-white">link3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--                     <a href="#!" class="nav-bar">link</a>-->
+
+                </nav>
+
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Lorem ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia magni, laudantium cum eos. Rem, molestiae corporis architecto labore! Itaque quisquam officia dolorum officiis esse iure consectetur tenetur, labore magni quibusdam.</p>
+        </div>
+    </div>
+    <div class="wrap bg-dark mt-3">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-dark col-12">
+                    <a href="#!" class="navbar-brand text-white">로고</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu2">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item pl-md-4 pr-md-4">
+                                <a href="#!" class="nav-link text-white">link1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-white">link2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link text-white">link3</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#" id="dm1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    link4
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right menu" aria-labelledby="dm1">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="dm1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    link5
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right menu" aria-labelledby="dm1">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".navbar-nav>li.nav-item.dropdown").mouseover(function() {
+            $(this).find(".dropdown-menu").addClass("show");
+        });
+        $(".navbar-nav>li.nav-item.dropdown").mouseout(function() {
+            $(this).find(".dropdown-menu").removeClass("show");
+        });
+
+    </script>
+    <style>
+        .bgimg1 {
+            background-image: url(../images/pc01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+    </style>
+    <div class="wrap bg-info bgimg1">
+        <div class="container">
+            <div class="jumbotron bg-transparent text-md-center text-white mb-0">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for
+                    calling extra attention to featured content or information.</p>
+
+                <p>It uses utility classes for typography and
+                    spacing to space content out within the larger container.</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 
+        **grid**
+        col-        < 576
+        col-sm  576 <= sm < 768
+        col-md  768 <= md < 992
+        col-lg  992 <= lg < 1200
+        col-xl 1200 <= lx
+         -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 p-3">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">menu1</a></li>
+                    <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">menu2</a></li>
+                    <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">menu3</a></li>
+                    <li class="nav-item"><a href="#tab4" class="nav-link" data-toggle="tab">menu4</a></li>
+                </ul>
+                <div class="tab-content p-3">
+                    <div class="tab-pane active" id="tab1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla, sed facilis inventore repudiandae molestiae.</div>
+                    <div class="tab-pane fade" id="tab2">Animi saepe rem, assumenda in explicabo, cum quasi, adipisci minima expedita ut blanditiis labore dolorem.</div>
+                    <div class="tab-pane fade" id="tab3">Reprehenderit, laborum animi! Sequi, consectetur nihil dolorem perspiciatis recusandae debitis omnis porro cum sint quo.</div>
+                    <div class="tab-pane fade" id="tab4">Repellat repudiandae eligendi quam, unde ipsam mollitia eius consequatur natus enim quaerat labore ut facere.</div>
+                </div>
+            </div>
+
+            <div class="col-md-6 p-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a href="#tab21" class="nav-link active" data-toggle="tab">menu1</a></li>
+                    <li class="nav-item">
+                        <a href="#tab22" class="nav-link" data-toggle="tab">menu2</a></li>
+                    <li class="nav-item">
+                        <a href="#tab23" class="nav-link" data-toggle="tab">menu3</a></li>
+                    <li class="nav-item">
+                        <a href="#tab24" class="nav-link" data-toggle="tab">menu4</a></li>
+                </ul>
+                <div class="tab-content p-3">
+                    <div class="tab-pane active" id="tab21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nulla, sed facilis inventore repudiandae molestiae.</div>
+                    <div class="tab-pane fade" id="tab22">Animi saepe rem, assumenda in explicabo, cum quasi, adipisci minima expedita ut blanditiis labore dolorem.</div>
+                    <div class="tab-pane fade" id="tab23">Reprehenderit, laborum animi! Sequi, consectetur nihil dolorem perspiciatis recusandae debitis omnis porro cum sint quo.</div>
+                    <div class="tab-pane fade" id="tab24">Repellat repudiandae eligendi quam, unde ipsam mollitia eius consequatur natus enim quaerat labore ut facere.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <img src="../images/testimg.jpg" class="rounded" alt="">
+    <img src="../images/testimg.jpg" class="rounded-circle" alt="">
+    <img src="../images/testimg.jpg" class="img-thumbnail" alt=""> -->
+    <style>
+        img {
+            display: block;
+            width: 100%;
+        }
+
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+            <div class="col-sm-6 col-md-3"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+            <div class="col-sm-6 col-md-3 mt-sm-3 mt-md-0"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+            <div class="col-sm-6 col-md-3 mt-sm-3 mt-md-0"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row no-gutterscol-sm-6 ">
+           <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="../images/testimg.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mr. ddd</h4>
+                        <p class="card-text">Lorem ipsum dolor.</p>
+                        <a href="#!" class="btn btn-info">profile</a>
+                    </div>
+                    <!-- <div class="card-footer">footer</div> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="../images/testimg.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mr. ddd</h4>
+                        <p class="card-text">Lorem ipsum dolor.</p>
+                        <a href="#!" class="btn btn-info">profile</a>
+                    </div>
+                    <!-- <div class="card-footer">footer</div> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="../images/testimg.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mr. ddd</h4>
+                        <p class="card-text">Lorem ipsum dolor.</p>
+                        <a href="#!" class="btn btn-info">profile</a>
+                    </div>
+                    <!-- <div class="card-footer">footer</div> -->
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="../images/testimg.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Mr. ddd</h4>
+                        <p class="card-text">Lorem ipsum dolor.</p>
+                        <a href="#!" class="btn btn-info">profile</a>
+                    </div>
+                    <!-- <div class="card-footer">footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+             <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../images/pc01.jpg" data-src="holder.js/900x400?theme=social" alt="First slide">
+           <div class="carousel-caption d-none d-md-block">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../images/pc02.jpg" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../images/pc03.jpg" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+
+
+  <div class="container">
+        <div class="btn btn-primary">아코디언</div>
+      <a href="#!" class="btn btn-primary">아코디언</a>
+      <button class="btn btn-primary">아코디언</button>
+      
+      
+      <a href="#view" class="btn btn-primary" data-toggle="collapse">메뉴</a>
+      <div class="collapse" id="view">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sed dolore laudantium dolores velit in eum quos provident asperiores beatae ut, quia excepturi voluptas repellendus error atque hic nihil. Repudiandae?
+      </div>
+  </div>
+
+    <div id="accord">
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="#list1" data-toggle="collapse">아코디언 메뉴</a>
+                    <div class="collapse" id="list1" data-parent="#accord">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius odio quam cupiditate incidunt optio enim suscipit in eos veniam harum, hic alias dolorum ipsum deleniti, omnis, eum impedit consequuntur, esse.
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <a href="#list2" data-toggle="collapse">아코디언 메뉴2</a>
+                    <div class="collapse" id="list2" data-parent="#accord">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius odio quam cupiditate incidunt optio enim suscipit in eos veniam harum, hic alias dolorum ipsum deleniti, omnis, eum impedit consequuntur, esse.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
