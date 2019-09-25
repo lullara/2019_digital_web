@@ -6,9 +6,11 @@
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <title>bootstrap</title>
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/animate.css">
    <script src="../js/jquery-3.3.1.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    <script src="js/bootstrap.min.js"></script>
+   <script src="js/wow.js"></script>
 </head>
 <style>
    .header_wrap {
@@ -19,6 +21,9 @@
    .bg-gray{background: #f0f1f4;}
 
 </style>
+<script>
+  new WOW().init();
+</script>
 
 <body>
    <div class="header_wrap pb-5">
@@ -59,17 +64,17 @@
    <section class="gray py-5">
       <div class="container">
          <div class="row">
-            <div class="col-md-5 text-center text-md-left">
+            <div class="col-md-5 text-center text-md-left wow bounce">
             	<h2>Lorem ipsum dolor sit.</h2>
             	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eius assumenda veniam, minima beatae vel.</p>
-            	<a href="#!" class="btn btn-primary mt-3 d-block d-md-inline-block">more</a>
+            	<a href="#!" class="btn btn-primary mt-3 d-block d-md-inline-block ">more</a>
             </div>
-            <div class="col-md-7 mt-5 mt-md-0 " style="width: 100%"><img src="images/symu-panel-1.png" alt=""></div>
+            <div class="col-md-7 mt-5 mt-md-0 wow bounceIn" style="width: 100%"><img src="images/symu-panel-1.png" alt=""></div>
          </div>
       </div>
    </section>
 	<section class="py-5">
-      <div class="container">
+      <div class="container wow bounceInLeft">
          <div class="row">
          	 <div class="col-md-7 " style="width: 100%"><img src="images/symu-panel-2.png" alt=""></div>
             <div class="col-md-5 text-center text-md-left mt-5 mt-md-0">

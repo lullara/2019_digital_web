@@ -6,8 +6,10 @@
 	<title>FULL PAGE</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#fullpage").fullpage({
@@ -27,10 +29,12 @@
 
 				}
 			});
+			$(".iframe").colorbox({iframe:true,innerWidth:920,innerHeight:500});
 
 		});
 	</script>
 	<style>
+		body{min-width: 100 !important;}
 		#fullpage{width: 100%; height: 100%;}
 		#page1{background-image: url(images/bg1.jpg);}
 		#page2{background-image: url(images/bg2.jpg);}
@@ -102,7 +106,7 @@
 			<div class="main">
 				<h3>Lorem ipsum.</h3>
 				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
+				<a href="http://suns3t.dothome.co.kr/main/bbs/board.php?bo_table=fullpage_board001" class="iframe">more</a>
 				<div class="down"><a href="#2st">DOWN</a></div>
 			</div>
 		</div>
