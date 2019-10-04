@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*vw, vh: viewport*/
+		.container{
+			width: 100vw; height: 100vh; background-color: skyblue;display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			/*flex-wrap: nowrap;*/
+			/*flex-flow: row wrap;*/
+			/*justify-content: flex-start;
+		
+			justify-content: flex-end;
+			justify-content: flex-center;*/
+			justify-content: space-between;
+			margin-right: 	10px;
+			align-items: center;
+		}
+
+		.container > div{
+			width: 100px;height: 100px;background-color: blue; color:white;font-weight: bold;
+			margin-right: 	10px;
+		}
+		.container > div:last-child{margin-right: 0;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*vw, vh: viewport*/
+		.container{
+			width: 100%;
+			margin: 0 auto;
+			background-color: skyblue;
+			display: flex;	
+		}
+
+		.container > div{
+			width: 100px;
+			height: 100px;
+			background-color:tomato; 
+			color:white;font-weight: bold;
+			margin-right: 10px; 
+			flex-grow: 1; 
+			flex-basis: 300px;
+			flex-shrink: 1;
+		}
+		
+		/*shrink 한 것 만 화면을 줄였을때 줄어듬*/
+		.container > div.box3{flex-shrink: 2; background-color: blue;}
+		.container > div:last-child{margin-right: 0;}
+	
+
+		.container > div.box1{order:2;}
+		.container > div.box2{order:1;}
+		.container > div.box3{order:3;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		
+		
+	</div>
+</body>
+</html>

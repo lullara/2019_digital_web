@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	
+</head>
+
+<body>
+	<section class="container">
+		<div class="slick_view">
+			<div><img src="images/1.jpg" alt=""></div>
+			<div><img src="images/2.jpg" alt=""></div>
+			<div><img src="images/3.jpg" alt=""></div>
+			<div><img src="images/4.jpg" alt=""></div>
+			<div><img src="images/5.jpg" alt=""></div>
+			<div><img src="images/6.jpg" alt=""></div>
+			<div><img src="images/7.jpg" alt=""></div>
+		</div>
+	</section>
+	<section class="container">
+		<div class="slick01">
+			<div><img src="images/thumb1.jpg" alt=""></div>
+			<div><img src="images/thumb2.jpg" alt=""></div>
+			<div><img src="images/thumb3.jpg" alt=""></div>
+			<div><img src="images/thumb4.jpg" alt=""></div>
+			<div><img src="images/thumb5.jpg" alt=""></div>
+			<div><img src="images/thumb6.jpg" alt=""></div>
+			<div><img src="images/thumb7.jpg" alt=""></div>
+		</div>
+	</section>
+	<section class="container1">
+		<div class="slick_re">
+			<div><img src="images/thumb1.jpg" alt=""></div>
+			<div><img src="images/thumb2.jpg" alt=""></div>
+			<div><img src="images/thumb3.jpg" alt=""></div>
+			<div><img src="images/thumb4.jpg" alt=""></div>
+			<div><img src="images/thumb5.jpg" alt=""></div>
+			<div><img src="images/thumb6.jpg" alt=""></div>
+			<div><img src="images/thumb7.jpg" alt=""></div>
+		</div>
+	</section>
+	<style>
+		body{background-color: tomato;}
+		.container{width: 560px; margin: 0 auto;
+
+		}
+		.slick01 img{width: 150px; text-align: center;}
+		.slick_view{margin-bottom: 10px;}
+
+		.container1{
+			width: 1000px; margin: 0 auto; 
+		}
+		.slick_re img{width: 190px; margin: 0 auto;}
+
+		@media screen and (max-width: 768px){
+			.container1{width: 768px;}
+			.container{display: none;}
+		}
+		@media screen and (max-width: 600px){
+			.container1{width: 100%;}
+			.container{display: none;}
+			.slick_re img{width: 90%;}
+		}
+	</style>
+	<script>
+		$(".slick_view").slick({
+			  //dots: true, // 하단 paging 버튼 노출 (true는 노출/false 노출안됨)
+			  infinite: true, //양방향 무한 모션
+			  speed:300, // 슬라이드 스피드 1000 = 1초
+			  autoplay: true, //자동 플레이 
+			  autoplaySpeed:4000, // 자동플레이 1000 = 1초
+			  slidesToShow: 1, //한 화면에 보여줄 아이템수
+			  slidesToScroll: 3, // 한번에 슬라이드 시킬 아이템수
+			  arrows: false, //좌우 화살 버튼 비노출(false는 비노출 / true는 노출)
+			  //fade: true, //페이드모션 실행 여부
+			  //cssEase: 'linear' //css easing 모션 함수
+			  asNavFor:'.slick01'
+		});
+
+		
+		$(".slick01").slick({
+			 dots: true, // 하단 paging 버튼 노출 (true는 노출/false 노출안됨)
+			  infinite: true, //양방향 무한 모션
+			  speed:300, // 슬라이드 스피드 1000 = 1초
+			  autoplay: true, //자동 플레이 
+			  autoplaySpeed:4000, // 자동플레이 1000 = 1초
+			  slidesToShow: 3, //한 화면에 보여줄 아이템수
+			  slidesToScroll: 1, // 한번에 슬라이드 시킬 아이템수
+			  //arrows: false, //좌우 화살 버튼 비노출(false는 비노출 / true는 노출)
+			  //fade: true, //페이드모션 실행 여부
+			  //cssEase: 'linear' //css easing 모션 함수
+			  asNavFor:'.slick_view',
+			  focusOnSelect:true,
+			  centerMode:true
+		});
+
+		$(".slick_re").slick({
+			 dots: true, // 하단 paging 버튼 노출 (true는 노출/false 노출안됨)
+			  infinite: true, //양방향 무한 모션
+			  speed:300, // 슬라이드 스피드 1000 = 1초
+			  autoplay: true, //자동 플레이 
+			  autoplaySpeed:4000, // 자동플레이 1000 = 1초
+			  slidesToShow: 3, //한 화면에 보여줄 아이템수
+			  slidesToScroll: 1, // 한번에 슬라이드 시킬 아이템수
+			  //arrows: false, //좌우 화살 버튼 비노출(false는 비노출 / true는 노출)
+			  //fade: true, //페이드모션 실행 여부
+			  //cssEase: 'linear' //css easing 모션 함수
+			   responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        slidesToShow: 3
+			      }
+			    },
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        slidesToShow: 1
+			      }
+			    }
+			  ]
+				
+		});
+
+
+			
+
+	</script>
+</body>
+</html>
